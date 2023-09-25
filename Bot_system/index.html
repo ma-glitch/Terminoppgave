@@ -16,18 +16,18 @@
 <button class="open-button" onclick="openForm()">Login</button>
 
       <div class="form-popup" id="myForm">
-        <form action="/action_page.php" class="form-container">
+        <div class="form-container">
           <h1>Login</h1>
       
           <label for="email"><b>Brukernavn</b></label>
-          <input type="text" placeholder="Skriv in Brukernavn" name="email" required>
+          <input id="bruker" type="text" placeholder="Skriv in Brukernavn" name="email" required>
       
           <label for="psw"><b>Passord</b></label>
-          <input type="password" placeholder="Skriv in Passord" name="psw" required>
+          <input id="Passord"   type="password" placeholder="Skriv in Passord" name="psw" required>
       
-          <button type="submit" class="btn">Login</button>
+          <button class="btn" onclick="login()">Login</button>
           <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
-        </form>
+        </div>
       </div>
       
       <h1 class="velkommen">velkommen Martin tangen!</h1>
@@ -41,30 +41,10 @@
           <th>Total</th>
           <th>Total ubetalt</th>
         </tr>
-        <tr>
+        <tr id="liste">
           <td>Alfreds Futterkiste</td>
           <td>2000 Kr</td>
           <td>400 Kr</td>
-        </tr>
-        <tr>
-          <td>Berglunds snabbköp</td>
-          <td>1969 Kr</td>
-          <td>1000 Kr</td>
-        </tr>
-        <tr>
-          <td>Centro comercial Moctezuma</td>
-          <td>1650 Kr</td>
-          <td>100 Kr</td>
-        </tr>
-        <tr>
-          <td>Ernst Handel</td>
-          <td>1500 Kr</td>
-          <Td>0 Kr</Td>
-        </tr>
-        <tr>
-        <th>Total alle</th>
-        <td> 4000 Kr</td>
-        <td>1500 Kr</td>
         </tr>
       </table>
 
