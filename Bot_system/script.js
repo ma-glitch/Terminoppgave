@@ -1,4 +1,4 @@
-var mySql = require("sync-mysql");
+/*var mySql = require("sync-mysql");
 
 var connection = new mySql({
   host: "localhost",
@@ -41,7 +41,7 @@ function displaymembers() {
       "</tr>";
     document.getElementById("score").innerHTML += HTMLString;
   }
-}
+}*/
 
 function betalbtn() {
   document.getElementById("betal").style.display = "block";
