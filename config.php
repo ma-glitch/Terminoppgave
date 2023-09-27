@@ -13,7 +13,7 @@ $password = "Admin";
 $dbname = "BotDB";
 
 // Create connection
-$link = new mysqli_connect($servername, $username, $password, $dbname);
+$link = new mysqli($servername, $username, $password, $dbname);
 
 // Check connection
 if ($link->connect_error) {
