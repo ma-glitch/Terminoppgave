@@ -26,7 +26,7 @@ require_once "config.php";
       </ul>
 
       
-      <h1 class="velkommen">velkommen Martin tangen!</h1>
+      <h1 class="velkommen">Velkommen Martin tangen!</h1>
 
       <button class="betalebtn" onclick="betalbtn()">Betale Bot</button>
       <h1 id="betal">Vipps til dette Nummeret:  2134214. NB husk a skrive at du betaler bot.</h1>
