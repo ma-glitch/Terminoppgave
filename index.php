@@ -37,7 +37,6 @@ require_once "config.php";
           <th>Total</th>
           <th>Total ubetalt</th>
         </tr>
-        <tr>
         <?php
         // Define the SQL query to retrieve data from your table
         $sql = "SELECT navn, total, ubetalt FROM login";
@@ -61,7 +60,6 @@ require_once "config.php";
 
         // Close the MySQLi connectio
         ?>
-        </tr>
       </table>
 
     <script src="script.js"></script>
