@@ -5,7 +5,7 @@ $password = "Admin";
 $dbname = "BotDB";
 
 // Create connection
-$conn = new  mysqli_connect($servername, $username, $password, $dbname);
+$conn =mysql_connect($servername, $username, $password, $dbname);
 
 // Check connection
 if ($conn->connect_error) {
