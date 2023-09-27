@@ -1,5 +1,5 @@
 <?php
-$mysqli = new mysqli("localhost", "root", "Admin", "CData MariaDB Sys","3306");
+$mysqli = new mysqli("localhost", "root", "Admin", "BotDB","3306");
 
 $result = $mysqli->query("SELECT login, martin FROM navn");
 while($row = $result->fetch_assoc()) {
