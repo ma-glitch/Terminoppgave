@@ -2,11 +2,12 @@
 // Initialize the session
 session_start();
  
+require_once "config.php";
 // Check if the user is logged in, if not then redirect him to login page
-if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
+/*if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     header("location: Terminoppgave/login.php");
     exit;
-}
+}*/
 ?>
 
 <!DOCTYPE html>
@@ -37,9 +38,29 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
           <th>Total ubetalt</th>
         </tr>
         <tr>
-          <td>Alfreds Futterkiste</td>
-          <td>2000 Kr</td>
-          <td>400 Kr</td>
+        <?php
+        // Define the SQL query to retrieve data from your table
+        $sql = "SELECT navn, total, ubetalt FROM login";
+
+        // Execute the query
+        $result = $mysqli->query($sql);
+
+        // Check if there are rows in the result
+        if ($result->num_rows > 0) {
+            // Output data of each row
+            while ($row = $result->fetch_assoc()) {
+                echo "<tr>";
+                echo "<td>" . $row["navn"] . "</td>";
+                echo "<td>" . $row["total"] . "</td>";
+                echo "<td>" . $row["ubetalt"] . "</td>";
+                echo "</tr>";
+            }
+        } else {
+            echo "<tr><td colspan='3'>No records found</td></tr>";
+        }
+
+        // Close the MySQLi connectio
+        ?>
         </tr>
       </table>
 
