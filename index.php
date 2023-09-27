@@ -1,3 +1,7 @@
+<?php
+$mysqli = new mysqli("localhost", "root", "Admin", "CData MariaDB Sys","3306");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
