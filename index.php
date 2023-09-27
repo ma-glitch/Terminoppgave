@@ -1,5 +1,5 @@
 <?php
-$servername = "localhost";
+$servername = "10.200.1.117";
 $username = "root";
 $password = "Admin";
 $dbname = "BotDB";
