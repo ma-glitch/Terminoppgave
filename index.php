@@ -29,22 +29,6 @@ echo "Connected successfully";
         <li><a href="leggtil.html">Legg til</a></li>
       </ul>
 
-<button class="open-button" onclick="openForm()">Login</button>
-
-      <form action="/index.php" class="form-popup" id="myForm">
-        <div class="form-container">
-          <h1>Login</h1>
-      
-          <label for="email"><b>Brukernavn</b></label>
-          <input id="bruker" type="text" placeholder="Skriv in Brukernavn" name="email" required>
-      
-          <label for="psw"><b>Passord</b></label>
-          <input id="Passord"   type="password" placeholder="Skriv in Passord" name="psw" required>
-      
-          <button class="btn" onclick="login()">Login</button>
-          <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
-        </div>
-      </form>
       
       <h1 class="velkommen">velkommen Martin tangen!</h1>
 
