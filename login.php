@@ -17,8 +17,8 @@ $username_err = $password_err = "";
 // Check if the form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "GET") {
     // Retrieve user input
-    $username = $_GET["bruker"];
-    $password = $_GET["passord"];
+    $username = $_GET["root"];
+    $password = $_GET["Admin"];
 
     // Perform validation and authentication here
     // You should use prepared statements to prevent SQL injection
