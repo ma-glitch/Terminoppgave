@@ -20,11 +20,9 @@
         <form action="leggtil.php" method="post">
         Kina 25Kr: <input type="checkbox" name="kina"><br>
         Glemme drakt 500Kr <input type="checkbox" name="glemmeDrakt"><br>
+        Glemme viktig utstyr 50Kr <input type="checkbox" name="glemmeViktig"><br>
 <!--
-        <label class="container">Glemme drakt 500Kr
-          <input type="checkbox">
-          <span class="checkmark"></span>
-        </label>
+
         <label class="container">Glemme viktig utstyr 50Kr
           <input type="checkbox">
           <span class="checkmark"></span>
@@ -33,10 +31,9 @@
           <input type="checkbox">
           <span class="checkmark"></span>
         </label> 
-        
-        <button class="leggtilbtn">Legg til</button>
 -->
-      </form>  
+      </form>        
+      <button class="leggtilbtn" >Legg til</button>  
         <h1 class="lagttil">Lagt til, Når du har betalt kommer den ubatalte boten din til a bli borte!</h1>
       </div>
       <script src="script.js"></script>
@@ -44,9 +41,9 @@
 </html>
 
 <?php
-
-function leggTilBot() {
   echo $_GET["kina"];
+function leggTilBot() {
+
 
 }
 ?>
