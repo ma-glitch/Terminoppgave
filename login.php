@@ -17,7 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
 
     // Step 5: Query the database
     $sql = "SELECT * FROM bruker WHERE username = '$username'";
-    $result = mysqli_query($conn, $sql);
+    $result = mysqli_query($link, $sql);
 
     if ($result) {
         // Step 6: Compare passwords (you should use password_verify() with hashed passwords)
@@ -33,11 +33,8 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
             echo "Invalid username or password.";
         }
     } else {
-        echo "Error: " . mysqli_error($conn);
+        echo "Error: " . mysqli_error($link);
     }
-
-    // Step 7: Close the database connection
-    mysqli_close($conn);
 }
 
 ?>
