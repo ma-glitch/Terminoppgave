@@ -13,7 +13,7 @@ require_once "config.php";
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bot system Linje-5</title>
-    <link rel="stylesheet" href="Terminoppgave/style.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/x-icon" href="linje5.jpg">
 </head>
 <body onload="displaymembers()">
