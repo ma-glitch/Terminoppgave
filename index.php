@@ -39,7 +39,7 @@ require_once "config.php";
         </tr>
         <?php
         // Define the SQL query to retrieve data from your table
-        $sql = "SELECT navn, total, ubetalt FROM login";
+        $sql = "SELECT * FROM login";
 
         // Execute the query
         $result = $conn->query($sql)
