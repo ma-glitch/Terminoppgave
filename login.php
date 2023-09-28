@@ -20,8 +20,8 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
         $username = $_GET["username"];
         $password = $_GET["password"];
         
-        echo $password
-        echo PASSWORD_DEFAULT
+        echo $password;
+        echo PASSWORD_DEFAULT;
         
         // Perform validation (you can add more validation as needed)
         if (empty($username)) {
