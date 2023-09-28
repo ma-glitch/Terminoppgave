@@ -17,10 +17,9 @@
 
     <div class="leggtil">
         <h1>Legg til bot</h1>
-        <label class="container">Kina 25Kr
-          <input type="checkbox">
-          <span class="checkmark"></span>
-        </label>
+        <form action="leggtil.php" method="post">
+        Kina 25 Kr: <input type="checkbox" name="kina"><br>
+
         <label class="container">Glemme drakt 500Kr
           <input type="checkbox">
           <span class="checkmark"></span>
@@ -32,10 +31,10 @@
         <label class="container">En håndspol 50Kr
           <input type="checkbox">
           <span class="checkmark"></span>
-        </label>
-  
+        </label> 
+        
         <button class="leggtilbtn">Legg til</button>
-
+      </form>  
         <h1 class="lagttil">Lagt til, Når du har betalt kommer den ubatalte boten din til a bli borte!</h1>
       </div>
       <script src="script.js"></script>
@@ -45,6 +44,7 @@
 <?php
 
 function leggTilBot() {
-  $test = 
+  echo $_GET["kina"];
+
 }
 ?>
