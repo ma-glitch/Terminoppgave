@@ -11,21 +11,33 @@ if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
 // Include config file (assuming this file contains your database connection)
 require_once "config.php";
 
-// Initialize variables for error messages
-$username_err = $password_err = "";
-
-// Check if the form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "GET") {
-    // Retrieve user input
-    $username = $_GET["root"];
-    $password = $_GET["Admin"];
+    // Step 4: Validate user input (you should add more validation)
+    $username = $_GET["username"];
 
-    // Perform validation and authentication here
-    // You should use prepared statements to prevent SQL injection
-    // Compare the hashed password with the stored hashed password in the database
+    // Step 5: Query the database
+    $sql = "SELECT * FROM bruker WHERE username = '$username'";
+    $result = mysqli_query($conn, $sql);
 
-    // If authentication is successful, set session variables and redirect
-    // If authentication fails, set appropriate error messages
+    if ($result) {
+        // Step 6: Compare passwords (you should use password_verify() with hashed passwords)
+        $row = mysqli_fetch_assoc($result);
+        $password = $_GET["password"];
+
+        if (password_verify($password, $row["hashed_password"])) {
+            // Authentication successful, redirect to a welcome page or perform other actions
+            header("Location: index.php");
+            exit();
+        } else {
+            // Authentication failed, display an error message
+            echo "Invalid username or password.";
+        }
+    } else {
+        echo "Error: " . mysqli_error($conn);
+    }
+
+    // Step 7: Close the database connection
+    mysqli_close($conn);
 }
 
 ?>
