@@ -4,7 +4,7 @@ require_once "config.php";
 
 if ($_SERVER["REQUEST_METHOD"] == "GET") {
     // Step 4: Validate user input (you should add more validation)
-    $username = $_GET["bruker"];
+    $username = $_GET["username"];
 
     // Step 5: Query the database
     $sql = "SELECT * FROM login WHERE bruker = '$username'";
