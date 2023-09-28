@@ -2,7 +2,7 @@
 // Initialize the session
 session_start();
  
-include "config.php";
+require_once "config.php";
 // Check if the user is logged in, if not then redirect him to login page
 /*if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     header("location: Terminoppgave/login.php");
@@ -39,10 +39,10 @@ include "config.php";
         </tr>
         <?php
         // Define the SQL query to retrieve data from your table
-        $sql = "SELECT * FROM login";
+        $sql = "SELECT navn, total, ubetalt FROM login";
 
         // Execute the query
-        $result = $conn->query($sql)
+        $result = $conn->query($sql);
         
         // Check if there are rows in the result
         if ($result->num_rows > 0) {
