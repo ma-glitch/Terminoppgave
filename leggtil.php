@@ -32,7 +32,7 @@
           <span class="checkmark"></span>
         </label> 
 -->
-<input type="submit">
+<input type="submit"> 
       </form>  
 Test <?php echo $_POST["kina"]; ?><br>
 Test2 <?php echo $_POST["glemmeDrakt"] ?><br>   
