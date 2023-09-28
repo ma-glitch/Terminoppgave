@@ -42,8 +42,8 @@ require_once "config.php";
         $sql = "SELECT navn, total, ubetalt FROM login";
 
         // Execute the query
-        $result = $conn->query($sql)
-
+        $result = $conn->query($sql);
+        
         // Check if there are rows in the result
         if ($result->num_rows > 0) {
             // Output data of each row
