@@ -33,7 +33,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
             // Perform the authentication using your database connection
             $sql = "SELECT id, bruker, passord FROM your_table WHERE bruker = ?";
 
-            if ($stmt = $mysqli->prepare($sql)) {
+            if ($stmt = $link->prepare($sql)) {
                 // Bind variables to the prepared statement as parameters
                 $stmt->bind_param("s", $param_username);
 
