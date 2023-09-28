@@ -41,3 +41,10 @@
       <script src="script.js"></script>
 </body>
 </html>
+
+<?php
+
+function leggTilBot() {
+  $test = 
+}
+?>
