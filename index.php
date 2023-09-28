@@ -18,8 +18,8 @@ require_once "config.php";
 </head>
 <body onload="displaymembers()">
     <ul class="topnav">
-        <li><a class="active" href="Terminoppgave/index.php">Hjem</a></li>
-        <li><a href="Terminoppgave/leggtil.php">Legg til</a></li>
+        <li><a class="active" href="index.php">Hjem</a></li>
+        <li><a href="leggtil.php">Legg til</a></li>
       </ul>
 
       
@@ -59,6 +59,6 @@ require_once "config.php";
         ?>
       </table>
 
-    <script src="Terminoppgave/script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
