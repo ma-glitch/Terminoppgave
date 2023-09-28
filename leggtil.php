@@ -18,7 +18,8 @@
     <div class="leggtil">
         <h1>Legg til bot</h1>
         <form action="leggtil.php" method="post">
-        Kina 25 Kr: <input type="checkbox" name="kina"><br>
+        Kina 25Kr: <input type="checkbox" name="kina"><br>
+        Glemme drakt 500Kr <input type="checkbox" name="glemmeDrakt"><br>
 <!--
         <label class="container">Glemme drakt 500Kr
           <input type="checkbox">
