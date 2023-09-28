@@ -35,7 +35,7 @@ require_once "config.php";
               
         ?>
 
-        <form action="" method="post">
+        <form action="REQUEST_METHOD" method="GET">
             <div class="form-group">
                 <label>Username</label>
                 <input type="text" name="username" class="form-control">
