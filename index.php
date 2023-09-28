@@ -18,8 +18,8 @@ require_once "config.php";
 </head>
 <body onload="displaymembers()">
     <ul class="topnav">
-        <li><a class="active" href="index.html">Hjem</a></li>
-        <li><a href="leggtil.html">Legg til</a></li>
+        <li><a class="active" href="index.php">Hjem</a></li>
+        <li><a href="leggtil.php">Legg til</a></li>
       </ul>
 
       
