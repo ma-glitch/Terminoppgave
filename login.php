@@ -7,25 +7,82 @@ if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
     header("location: Terminoppgave/index.php");
     exit;
 }
- 
-require_once "config.php";
 
+require_once "config.php";
 $username_err = $password_err = "";
 
 // Check if the form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "GET") {
-    // Retrieve user input
-    $username = $_GET["username"];
-    $password = $_GET["password"];
+    // Check if "username" and "password" are set in the form data
+    if (isset($_GET["username"]) && isset($_GET["password"])) {
+        // Retrieve user input
+        $username = $_GET["username"];
+        $password = $_GET["password"];
 
-    // Perform validation and authentication here
-    // You should use prepared statements to prevent SQL injection
-    // Compare the hashed password with the stored hashed password in the database
+        // Perform validation (you can add more validation as needed)
+        if (empty($username)) {
+            $username_err = "Username is required.";
+        }
 
-    // If authentication is successful, set session variables and redirect
-    // If authentication fails, set appropriate error messages
+        if (empty($password)) {
+            $password_err = "Password is required.";
+        }
+
+        // If there are no validation errors, attempt to authenticate
+        if (empty($username_err) && empty($password_err)) {
+            // Perform the authentication using your database connection
+            $sql = "SELECT id, bruker, passord FROM your_table WHERE bruker = ?";
+
+            if ($stmt = $mysqli->prepare($sql)) {
+                // Bind variables to the prepared statement as parameters
+                $stmt->bind_param("s", $param_username);
+
+                // Set parameters
+                $param_username = $username;
+
+                // Attempt to execute the prepared statement
+                if ($stmt->execute()) {
+                    // Store result
+                    $stmt->store_result();
+
+                    // Check if a row exists with the given username
+                    if ($stmt->num_rows == 1) {
+                        // Bind result variables
+                        $stmt->bind_result($id, $username, $hashed_password);
+                        
+                        if ($stmt->fetch()) {
+                            // Verify the password
+                            if (password_verify($password, $hashed_password)) {
+                                // Password is correct, start a new session
+                                session_start();
+                                
+                                // Store data in session variables
+                                $_SESSION["loggedin"] = true;
+                                $_SESSION["id"] = $id;
+                                $_SESSION["username"] = $username; 
+
+                                // Redirect the user to the welcome page
+                                header("location: Terminoppgave/index.php");
+                                exit();
+                            } else {
+                                // Password is not valid
+                                $password_err = "Invalid password.";
+                            }
+                        }
+                    } else {
+                        // Username not found
+                        $username_err = "Username not found.";
+                    }
+                } else {
+                    echo "Something went wrong. Please try again later.";
+                }
+
+                // Close statement
+                $stmt->close();
+            }
+        }
+    }
 }
-
 
 ?>
  
@@ -49,7 +106,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
         <span class="text-danger"><?php echo $username_err; ?></span>
         <span class="text-danger"><?php echo $password_err; ?></span>
 
-        <form action="databselogin.php" method="GET"> <!-- Specify the correct PHP script -->
+        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="GET"> 
             <div class="form-group">
                 <label>Username</label>
                 <input type="text" name="username" class="form-control">
