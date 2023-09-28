@@ -13,13 +13,13 @@ require_once "config.php";
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bot system Linje-5</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="Terminoppgave/style.css">
     <link rel="icon" type="image/x-icon" href="linje5.jpg">
 </head>
 <body onload="displaymembers()">
     <ul class="topnav">
-        <li><a class="active" href="index.php">Hjem</a></li>
-        <li><a href="leggtil.php">Legg til</a></li>
+        <li><a class="active" href="Terminoppgave/index.php">Hjem</a></li>
+        <li><a href="Terminoppgave/leggtil.php">Legg til</a></li>
       </ul>
 
       
@@ -59,6 +59,6 @@ require_once "config.php";
         ?>
       </table>
 
-    <script src="script.js"></script>
+    <script src="Terminoppgave/script.js"></script>
 </body>
 </html>
