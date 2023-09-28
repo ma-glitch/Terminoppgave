@@ -44,7 +44,7 @@
 <?php
 
 function leggTilBot() {
-  echo $_GET["kina"]
+  echo $_GET["kina"];
 
 }
 ?>
