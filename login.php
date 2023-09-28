@@ -2,16 +2,31 @@
 // Initialize the session
 session_start();
  
-// Check if the user is already logged in, if yes then redirect him to welcome page
+// Check if the user is already logged in, if yes then redirect them to the welcome page
 if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
     header("location: Terminoppgave/index.php");
     exit;
 }
  
-// Include config file
+// Include config file (assuming this file contains your database connection)
 require_once "config.php";
- 
 
+// Initialize variables for error messages
+$username_err = $password_err = "";
+
+// Check if the form is submitted
+if ($_SERVER["REQUEST_METHOD"] == "GET") {
+    // Retrieve user input
+    $username = $_GET["username"];
+    $password = $_GET["password"];
+
+    // Perform validation and authentication here
+    // You should use prepared statements to prevent SQL injection
+    // Compare the hashed password with the stored hashed password in the database
+
+    // If authentication is successful, set session variables and redirect
+    // If authentication fails, set appropriate error messages
+}
 
 ?>
  
@@ -31,20 +46,18 @@ require_once "config.php";
         <h2>Login</h2>
         <p>Please fill in your credentials to login.</p>
 
-        <?php 
-              
-        ?>
+        <!-- Display error messages here if needed -->
+        <span class="text-danger"><?php echo $username_err; ?></span>
+        <span class="text-danger"><?php echo $password_err; ?></span>
 
-        <form action="REQUEST_METHOD" method="GET">
+        <form action="login.php" method="GET"> <!-- Specify the correct PHP script -->
             <div class="form-group">
                 <label>Username</label>
                 <input type="text" name="username" class="form-control">
-                <span class="invalid-feedback"><?php echo $username_err; ?></span>
             </div>    
             <div class="form-group">
                 <label>Password</label>
                 <input type="password" name="password" class="form-control" >
-                <span class="invalid-feedback"><?php echo $password_err; ?></span>
             </div>
             <div class="form-group">
                 <input type="submit" class="btn btn-primary" value="Login">
