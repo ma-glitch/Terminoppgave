@@ -42,7 +42,7 @@
 </html>
 
 <?php
-  echo $_GET["kina"];
+  echo $_POST["kina"];
 function leggTilBot() {
 
 
