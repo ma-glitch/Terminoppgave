@@ -11,7 +11,7 @@
 
     <ul class="topnav">
         <li><a href="index.php">Hjem</a></li>
-        <li><a class="active" href="leggtil.html">Legg til</a></li>
+        <li><a class="active" href="leggtil.php">Legg til</a></li>
       </ul>
     
 

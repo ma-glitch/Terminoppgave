@@ -2,10 +2,10 @@
  
 require_once "config.php";
 // Check if the user is logged in, if not then redirect him to login page
-/*if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
-    header("location: Terminoppgave/login.php");
+*if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
+    header("location: login.php");
     exit;
-}*/
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -16,7 +16,7 @@ require_once "config.php";
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/x-icon" href="linje5.jpg">
 </head>
-<body onload="displaymembers()">
+<body>
     <ul class="topnav">
         <li><a class="active" href="index.php">Hjem</a></li>
         <li><a href="leggtil.php">Legg til</a></li>
