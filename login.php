@@ -13,10 +13,10 @@ require_once "config.php";
 
 if ($_SERVER["REQUEST_METHOD"] == "GET") {
     // Step 4: Validate user input (you should add more validation)
-    $username = $_GET["username"];
+    $username = $_GET["bruker"];
 
     // Step 5: Query the database
-    $sql = "SELECT * FROM bruker WHERE username = '$username'";
+    $sql = "SELECT * FROM login WHERE bruker = '$username'";
     $result = mysqli_query($link, $sql);
 
     if ($result) {
