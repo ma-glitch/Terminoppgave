@@ -50,7 +50,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
         <span class="text-danger"><?php echo $username_err; ?></span>
         <span class="text-danger"><?php echo $password_err; ?></span>
 
-        <form action="login.php" method="GET"> <!-- Specify the correct PHP script -->
+        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="GET"> <!-- Specify the correct PHP script -->
             <div class="form-group">
                 <label>Username</label>
                 <input type="text" name="username" class="form-control">
