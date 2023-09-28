@@ -45,7 +45,6 @@ Test2 <?php echo $_POST["glemmeDrakt"] ?><br>
 </html>
 
 <?php
-  echo $_POST["kina"];
 function leggTilBot() {
 
 
