@@ -2,7 +2,7 @@
 // Initialize the session
 session_start();
  
-require_once "config.php";
+include "config.php";
 // Check if the user is logged in, if not then redirect him to login page
 /*if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     header("location: Terminoppgave/login.php");
@@ -43,7 +43,7 @@ require_once "config.php";
 
         // Execute the query
         $result = $conn->query($sql)
-
+        
         // Check if there are rows in the result
         if ($result->num_rows > 0) {
             // Output data of each row
