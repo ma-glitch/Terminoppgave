@@ -34,7 +34,8 @@
 -->
 <input type="submit">
       </form>  
-Test <?php echo $_POST["kina"]; ?><br>     
+Test <?php echo $_POST["kina"]; ?><br>
+Test2 <?php echo $_POST["glemmeDrakt"] ?><br>   
       
       <button class="leggtilbtn" >Legg til</button>  
         <h1 class="lagttil">Lagt til, Når du har betalt kommer den ubatalte boten din til a bli borte!</h1>
