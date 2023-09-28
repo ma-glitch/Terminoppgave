@@ -1,6 +1,4 @@
 <?php
-// Initialize the session
-session_start();
  
 require_once "config.php";
 // Check if the user is logged in, if not then redirect him to login page
@@ -9,7 +7,6 @@ require_once "config.php";
     exit;
 }*/
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
