@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>leggtil</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="Terminoppgave/style.css">
     <link rel="icon" type="image/x-icon" href="linje5.jpg">
 </head>
 <body>
 
     <ul class="topnav">
-        <li><a href="index.php">Hjem</a></li>
-        <li><a class="active" href="leggtil.html">Legg til</a></li>
+        <li><a href="Terminoppgave/index.php">Hjem</a></li>
+        <li><a class="active" href="Terminoppgave/leggtil.html">Legg til</a></li>
       </ul>
     
 
@@ -38,6 +38,6 @@
 
         <h1 class="lagttil">Lagt til, Når du har betalt kommer den ubatalte boten din til a bli borte!</h1>
       </div>
-      <script src="script.js"></script>
+      <script src="Terminoppgave/script.js"></script>
 </body>
 </html>
