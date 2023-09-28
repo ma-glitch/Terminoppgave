@@ -31,7 +31,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
         // If there are no validation errors, attempt to authenticate
         if (empty($username_err) && empty($password_err)) {
             // Perform the authentication using your database connection
-            $sql = "SELECT id, bruker, passord FROM your_table WHERE bruker = ?";
+            $sql = "SELECT id, bruker, passord FROM login WHERE bruker = ?";
 
             if ($stmt = $link->prepare($sql)) {
                 // Bind variables to the prepared statement as parameters
