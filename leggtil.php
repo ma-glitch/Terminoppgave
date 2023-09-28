@@ -31,8 +31,6 @@
           <input type="checkbox">
           <span class="checkmark"></span>
         </label> 
-        
-
 -->
       </form>        
       <button class="leggtilbtn" >Legg til</button>  
