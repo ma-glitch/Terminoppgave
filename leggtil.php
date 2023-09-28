@@ -33,7 +33,9 @@
         </label> 
 -->
 <input type="submit">
-      </form>        
+      </form>  
+Test <?php echo $_POST["kina"]; ?><br>     
+      
       <button class="leggtilbtn" >Legg til</button>  
         <h1 class="lagttil">Lagt til, Når du har betalt kommer den ubatalte boten din til a bli borte!</h1>
       </div>
