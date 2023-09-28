@@ -10,6 +10,23 @@ if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
  
 require_once "config.php";
 
+$username_err = $password_err = "";
+
+// Check if the form is submitted
+if ($_SERVER["REQUEST_METHOD"] == "GET") {
+    // Retrieve user input
+    $username = $_GET["username"];
+    $password = $_GET["password"];
+
+    // Perform validation and authentication here
+    // You should use prepared statements to prevent SQL injection
+    // Compare the hashed password with the stored hashed password in the database
+
+    // If authentication is successful, set session variables and redirect
+    // If authentication fails, set appropriate error messages
+}
+
+
 ?>
  
 <!DOCTYPE html>
