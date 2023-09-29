@@ -18,10 +18,10 @@
     <div class="leggtil">
         <h1>Legg til bot</h1>
         <form action="leggtil.php" method="post">
-        Kina 25Kr: <input type="number" name="kina" value="25" ><br>
-        Glemme drakt 500Kr <input type="number" name="glemmeDrakt" value="500"><br>
-        Glemme viktig utstyr 50Kr <input type="number" name="glemmeViktig" value="50"><br>
-        En håndspol 50Kr <input type="number" name="haandspol" value="50"><br>
+        Kina 25Kr: <input type="checkbox" name="kina" value="25" ><br>
+        Glemme drakt 500Kr <input type="checkbox" name="glemmeDrakt" value="500"><br>
+        Glemme viktig utstyr 50Kr <input type="checkbox" name="glemmeViktig" value="50"><br>
+        En håndspol 50Kr <input type="checkbox" name="haandspol" value="50"><br>
 
 
 <input type="submit" class="leggtilbtn"> 
