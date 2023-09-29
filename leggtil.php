@@ -40,7 +40,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
             $botValue = $_GET['botValue'];
             echo "<div id='result'>Bot Verdi: $botValue</div>";
         
-            $sql_update = "UPDATE login SET total = total + ".$botValue.", ubetalt = ".$botValue." WHERE bruker = '".$_SESSION["bruker"]."'";
+            $sql_update = "UPDATE login SET total = total + ".$botValue.", ubetalt = ubetalt + ".$botValue." WHERE bruker = '".$_SESSION["bruker"]."'";
 
             
             if ($stmt = $link->prepare($sql_update)) {
