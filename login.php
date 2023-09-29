@@ -26,7 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
         // If there are no validation errors, you can proceed with authentication
         if (empty($username_err) && empty($password_err)) {
          // Attempt to retrieve the user's data from the database
-         $sql = "SELECT id, bruker, passord FROM login WHERE bruker = ".$username." ";
+         $sql = "SELECT id, bruker, passord FROM login WHERE bruker = '".$username."' ";
 
          if ($stmt = $link->prepare($sql)) {
              $stmt->bind_param("s", $param_username);
