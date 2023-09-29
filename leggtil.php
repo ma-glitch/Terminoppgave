@@ -38,7 +38,15 @@ function leggTilBot() {
 if ($_POST["kina"] = "on") {
   echo "Yes"
 }
-
+if ($_POST["glemmeDrakt"] = "on") {
+  echo "Yes"
+}
+if ($_POST["glemmeViktig"] = "on") {
+  echo "Yes"
+}
+if ($_POST["haandspol"] = "on") {
+  echo "Yes"
+}
   /*
 $kinaVerdi = 0
 $glemmeDraktVerdi = 0
