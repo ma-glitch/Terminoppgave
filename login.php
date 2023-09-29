@@ -43,7 +43,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
                      
                      if ($stmt->fetch()) {
                         $entered_password = "password";
-                         if (password_verify($entered_password, $hashed_passord)) {
+                         if (password_verify($entered_password, $hashed_password)) {
                              // Password is correct, start a new session
                              session_start();
                              
