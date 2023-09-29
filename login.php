@@ -36,10 +36,10 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
                  $stmt->store_result();
                  
                  if ($stmt->num_rows == 1) {
-                     $stmt->bind_result($id, $username, $hashed_password);
+                     $stmt->bind_result($id, $username, $password);
                      
                      if ($stmt->fetch()) {
-                         if (password_verify($password, $hashed_password)) {
+                         if (password_verify($password)) {
                              // Password is correct, start a new session
                              session_start();
                              
