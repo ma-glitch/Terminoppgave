@@ -19,9 +19,9 @@
         <h1>Legg til bot</h1>
         <form action="leggtil.php" method="post">
         Kina 25Kr: <input type="checkbox" name="kina" value="25" ><br>
-        Glemme drakt 500Kr <input type="checkbox" name="glemmeDrakt"><br>
-        Glemme viktig utstyr 50Kr <input type="checkbox" name="glemmeViktig"><br>
-        En håndspol 50Kr <input type="checkbox" name="haandspol"><br>
+        Glemme drakt 500Kr <input type="checkbox" name="glemmeDrakt" value="500"><br>
+        Glemme viktig utstyr 50Kr <input type="checkbox" name="glemmeViktig" value="50"><br>
+        En håndspol 50Kr <input type="checkbox" name="haandspol" value="50"><br>
 
 
 <input type="submit" class="leggtilbtn"> 
@@ -34,44 +34,21 @@
 </html>
 
 <?php
-/*
-$kina = $_POST["kina"];
-
-if ($kina = "on") {
-  echo "on";
-  echo $kina;
-} else {
-  echo "off";
-  echo $kina;
-}
-*/
 echo $_POST["kina"];
 
 
 function leggTilBot() {
-/*
-$kinaVerdi = 0
-$glemmeDraktVerdi = 0
-$glemmeViktgVerdi = 0
-$haandspolVerdi = 0
 
-if ($_POST["kina"] = "on") {
-  $kinaVerdi = 25; 
-}
-if ($_POST["glemmeDrakt"] = "on") {
-  $glemmeDraktVerdi = 500;
-}
-if ($_POST["glemmeViktig"] = "on") {
-  $glemmeViktgVerdi = 50;
-}
-if ($_POST["haandspol"] = "on") {
-  $haandspolVerdi = 50;
-}
+$kinaVerdi = $_POST["kina"];
+$glemmeDraktVerdi = $_POST["glemmeDrakt"];
+$glemmeViktgVerdi = $_POST["glemmeViktig"];
+$haandspolVerdi = $_POST["haandspol"];
+
 
 $botVerdi = $kinaVerdi + $glemmeDraktVerdi + $glemmeViktgVerdi + $haandspolVerdi
 
 echo $botVerdi
-*/
+
 }
 
 ?>
