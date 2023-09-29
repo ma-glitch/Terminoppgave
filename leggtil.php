@@ -35,7 +35,7 @@
 
 <?php
 if ($_POST["kina"] = "25") {
-  $kinaVerdi = 25 ;
+  $kinaVerdi = 1000 ;
 }
 if ($_POST["glemmeDrakt"] = "500") {
   $glemmeDraktVerdi = 500 ;
@@ -46,6 +46,7 @@ if ($_POST["glemmeViktig"] = "50") {
 if ($_POST["haandspol"] = "50") {
   $haandspolVerdi = 50 ;
 }
+
 
 $botVerdi = $kinaVerdi + $glemmeDraktVerdi + $glemmeViktgVerdi + $haandspolVerdi;
 
