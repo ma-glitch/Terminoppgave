@@ -39,8 +39,13 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
         if (isset($_GET['botValue'])) {
             $botValue = $_GET['botValue'];
             echo "<div id='result'>Bot Verdi: $botValue</div>";   
-            echo($_SESSION["navn"]); 
-            $sql2 = "SELECT bruker, total, ubetalt, FROM login WHERE bruker = '".$_SESSION["bruker"]."' ";   
+            $sql2 = "SELECT bruker, total, ubetalt, FROM login WHERE bruker = '".$_SESSION["bruker"]."' ";
+            
+            $sql2->bind_result($bruker, $total, $ubetalt);
+            echo $sql2;
+            echo $bruker;
+            echo $total;
+            echo $ubetalt;
         }
         ?>
     </div>
