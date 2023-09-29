@@ -59,7 +59,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $sql = "INSERT INTO login (navn, bruker, passord, total, ubetalt) VALUES (?, ?, ?, 0, 0)";
 
         if ($stmt = $link->prepare($sql)) {
-            $stmt->bind_param("ss", $param_navn, $param_username, $param_password);
+            $stmt->bind_param("sss", $param_navn, $param_username, $param_password);
             $param_navn = $navn;
             $param_username = $username;
             $param_password = $password; // Hash the password
