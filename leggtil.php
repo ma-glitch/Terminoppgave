@@ -17,7 +17,7 @@
 
     <div class="leggtil">
         <h1>Legg til bot</h1>
-        <form action="leggtil.php" method="post">
+        <form action="leggtil.php" method="post" onsubmit="leggTilBot()">
         Kina 25Kr: <input type="checkbox" name="kina" value="25" ><br>
         Glemme drakt 500Kr <input type="checkbox" name="glemmeDrakt" value="500"><br>
         Glemme viktig utstyr 50Kr <input type="checkbox" name="glemmeViktig" value="50"><br>
@@ -26,7 +26,7 @@
 
 <input type="submit" class="leggtilbtn"> 
       </form>  
-      <button class="leggtilbtn" onclick="leggTilBot()"></button>
+      <button class="leggtilbtn" ></button>
  
 <!--        <h1 class="lagttil">Lagt til, Når du har betalt kommer den ubatalte boten din til a bli borte!</h1>-->
       </div>
