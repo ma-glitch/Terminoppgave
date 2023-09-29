@@ -39,10 +39,10 @@
 
 
 function leggTilBot() {
-  $kinaVerdi = 0
-  $glemmeDraktVerdi = 0
-  $glemmeViktgVerd = 0
-  $haandspolVerdi = 0
+  $kinaVerdi = 0;
+  $glemmeDraktVerdi = 0;
+  $glemmeViktgVerd = 0;
+  $haandspolVerdi = 0;
 
 if ($_POST["kina"] = "25") {
   $kinaVerdi = 25 ;
