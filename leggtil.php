@@ -26,7 +26,6 @@
 
 <input type="submit" class="leggtilbtn"> 
       </form>  
-      <button class="leggtilbtn" ></button>
  
 <!--        <h1 class="lagttil">Lagt til, Når du har betalt kommer den ubatalte boten din til a bli borte!</h1>-->
       </div>
@@ -39,6 +38,7 @@
 
 
 function leggTilBot() {
+  echo "adsfafnbhfghåofiadpodhp"
   $kinaVerdi = 0;
   $glemmeDraktVerdi = 0;
   $glemmeViktgVerd = 0;
