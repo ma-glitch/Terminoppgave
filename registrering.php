@@ -61,7 +61,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if ($stmt = $link->prepare($sql)) {
             $stmt->bind_param("ss", $param_username, $param_password);
             $param_username = $username;
-            $param_password = password_hash($password, PASSWORD_DEFAULT); // Hash the password
+            $param_password = $password; // Hash the password
 
             if ($stmt->execute()) {
                 // Redirect to login page after successful registration
