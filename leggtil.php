@@ -26,7 +26,7 @@
 <input type="submit" class="leggtilbtn"> 
       </form>  
  
-        <h1 class="lagttil">Lagt til, Når du har betalt kommer den ubatalte boten din til a bli borte!</h1>
+<!--        <h1 class="lagttil">Lagt til, Når du har betalt kommer den ubatalte boten din til a bli borte!</h1>-->
       </div>
       <script src="script.js"></script>
 </body>
