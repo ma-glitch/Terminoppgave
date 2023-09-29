@@ -18,10 +18,10 @@
     <div class="leggtil">
         <h1>Legg til bot</h1>
         <form action="leggtil.php" method="post">
-        Kina 25Kr: <input type="text" name="kina"><br>
+        Kina 25Kr: <input type="checkbox" name="kina"><br>
         Glemme drakt 500Kr <input type="checkbox" name="glemmeDrakt"><br>
         Glemme viktig utstyr 50Kr <input type="checkbox" name="glemmeViktig"><br>
-        En håndspol 50Kr <input type="checkbox" name="haandspol">
+        En håndspol 50Kr <input type="checkbox" name="haandspol"><br>
 
 <input type="submit" class="leggtilbtn"> 
       </form>  
@@ -37,7 +37,12 @@ Test2 <?php echo $_POST["glemmeDrakt"] ?><br>
 
 <?php
 function leggTilBot() {
-/*
+
+if ($_POST["kina"] = "on") {
+  echo "Yes"
+}
+
+  /*
 $kinaVerdi = 0
 $glemmeDraktVerdi = 0
 $glemmeViktgVerdi = 0
