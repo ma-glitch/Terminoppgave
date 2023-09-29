@@ -1,10 +1,6 @@
 <?php
  session_start()
-// Check if the user is already logged in, if yes then redirect them to the welcome page
-if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
-    header("location: Terminoppgave/index.php");
-    exit;
-}
+
 
 require_once "config.php";
 // Initialize error variables
