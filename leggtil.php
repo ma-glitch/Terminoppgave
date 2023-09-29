@@ -38,39 +38,12 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
         <?php
         if (isset($_GET['botValue'])) {
             $botValue = $_GET['botValue'];
-            echo "<div id='result'>Bot Verdi: $botValue</div>";   
-            $sql2 = "SELECT bruker, total, ubetalt FROM login WHERE bruker = '" . $_SESSION["bruker"] . "'";
+            echo "<div id='result'>Bot Verdi: $botValue</div>";
+        
+            $sql_update = "UPDATE login SET total = total + ".$botValue.", ubetalt = ".$botValue." WHERE bruker = '".$_SESSION["bruker"]."'";
 
-    
-            if ($stmt = $link->prepare($sql2)) {
-                // Bind parameter
-                $stmt->bind_param("s", $bruker);
-                
-                // Execute the prepared statement
-                if ($stmt->execute()) {
-                    // Bind the result variable
-                    $stmt->bind_result($currentTotal, $currentubetalt);
-                    
-                    // Fetch the result
-                    if ($stmt->fetch()) {
-                        return $currentTotal;
-                        return $currentTotal;
-                    }
-                }
-                
-                // Close statement
-                $stmt->close();
-            }
             
-            $newTotal = $currentTotal + $botValue;
-            $newTotal = $currentubetalt + $botValue;
-
-            $sql3 = "UPDATE login SET total = '".$newTotal."', ubetalt = '".$newubetalt."' WHERE bruker = '".$_SESSION["bruker"]"'";
-            
-            if ($stmt = $link->prepare($sql3)) {
-              $stmt->bind_param("dds", $newTotal, $newUbetalt, $_SESSION["bruker"]);
-                $stmt->bind_param("s", $bruker);
-                
+            if ($stmt = $link->prepare($sql_update)) {
                 // Execute the prepared statement
                 if ($stmt->execute()) {
                     // Bind the result variable
