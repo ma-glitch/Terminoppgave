@@ -16,12 +16,13 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
     // Check if "username" and "password" are set in the form data
     if (isset($_GET["username"]) && isset($_GET["password"])) {
         // Retrieve user input
-        $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+        
         $username = $_GET["username"];
-        $password = $_GET["password"];
-        
+        $password = trim($_GET["password"]);
+        $salt = random_bytes(16);
+        $hashed_password = password_hash($password . $salt, PASSWORD_DEFAULT);
         echo(PASSWORD_DEFAULT);
-        
+        $entered_password = "password";
         // Perform validation (you can add more validation as needed)
         if (empty($username)) {
             $username_err = "Username is required.";
@@ -55,7 +56,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
                         
                         if ($stmt->fetch()) {
                             // Verify the password
-                            if (password_verify($password, $hashed_password)) {
+                            if (password_verify($entered_password . $salt,, $hashed_password)) {
                                 // Password is correct, start a new session
                                 session_start();
                                 
