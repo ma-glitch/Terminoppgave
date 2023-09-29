@@ -13,7 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
         // Retrieve user input
         $username = $_GET["username"];
         $password = $_GET["password"];
-
+        $hashed_password = password_hash($password, PASSWORD_DEFAULT);
         // Perform basic validation
         if (empty($username)) {
             $username_err = "Username is required.";
