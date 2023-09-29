@@ -39,7 +39,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
                      $stmt->bind_result($id, $username, $password);
                      
                      if ($stmt->fetch()) {
-                         if (password_verify($password, $hashedq_password)) {
+                         if (password_verify($password, $hashed_password)) {
                              // Password is correct, start a new session
                              session_start();
                              
