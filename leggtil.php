@@ -35,16 +35,16 @@
 <?php
 
 if ($_POST["kina"] = "on") {
-  echo "Yes"
+  echo "Yes";
 }
 if ($_POST["glemmeDrakt"] = "on") {
-  echo "Yes"
+  echo "Yes";
 }
 if ($_POST["glemmeViktig"] = "on") {
-  echo "Yes"
+  echo "Yes";
 }
 if ($_POST["haandspol"] = "on") {
-  echo "Yes"
+  echo "Yes";
 }
 
 function leggTilBot() {
