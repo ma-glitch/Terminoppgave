@@ -39,9 +39,9 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
         if (isset($_GET['botValue'])) {
             $botValue = $_GET['botValue'];
             echo "<div id='result'>Bot Verdi: $botValue</div>";   
-            $sql = "SELECT total, ubetalt FROM login WHERE bruker = ?";
+            $sql2 = "SELECT total, ubetalt FROM login WHERE bruker = '".$_SESSION["bruker"]"'";
     
-            if ($stmt = $link->prepare($sql)) {
+            if ($stmt = $link->prepare($sql2)) {
                 // Bind parameter
                 $stmt->bind_param("s", $bruker);
                 
@@ -64,8 +64,9 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
             $newTotal = $currentTotal + $botValue;
             $newTotal = $currentubetalt + $botValue;
 
-            $sql = "UPDATE login SET total = '".$newTotal."', ubetalt = '".$newubetalt."' WHERE bruker = '".$_SESSION["bruker"]"' ";
-            if ($stmt = $link->prepare($sql)) {
+            $sql3 = "UPDATE login SET total = '".$newTotal."', ubetalt = '".$newubetalt."' WHERE bruker = '".$_SESSION["bruker"]"'";
+            
+            if ($stmt = $link->prepare($sql3)) {
               $stmt->bind_param("dds", $newTotal, $newUbetalt, $_SESSION["bruker"]);
                 $stmt->bind_param("s", $bruker);
                 
