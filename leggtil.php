@@ -21,17 +21,8 @@
         Kina 25Kr: <input type="text" name="kina"><br>
         Glemme drakt 500Kr <input type="checkbox" name="glemmeDrakt"><br>
         Glemme viktig utstyr 50Kr <input type="checkbox" name="glemmeViktig"><br>
-<!--
+        En håndspol 50Kr <input type="checkbox" name="haandspol">
 
-        <label class="container">Glemme viktig utstyr 50Kr
-          <input type="checkbox">
-          <span class="checkmark"></span>
-        </label>
-        <label class="container">En håndspol 50Kr
-          <input type="checkbox">
-          <span class="checkmark"></span>
-        </label> 
--->
 <input type="submit" class="leggtilbtn"> 
       </form>  
 Test <?php echo $_POST["kina"]; ?><br>
@@ -46,6 +37,12 @@ Test2 <?php echo $_POST["glemmeDrakt"] ?><br>
 
 <?php
 function leggTilBot() {
+
+$kinaVerdi = 0
+$glemmeDraktVerdi = 0
+$glemmeViktgVerdi = 0
+$haandspolVerdi = 0
+
 
 
 }
