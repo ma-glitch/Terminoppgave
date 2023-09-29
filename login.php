@@ -52,7 +52,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
 
                         if ($stmt->fetch()) {
                             // Verify the password
-                            $hashed_password_input = hash('sha256', $entered_password . $salt); // Hash the entered password with the retrieved salt
+                            $hashed_password_input = password_hash($entered_password . $salt, PASSWORD_DEFAULT); // Hash the entered password with the retrieved salt
                             
                             if ($hashed_password_input === $hashed_password) {
                                 // Password is correct, start a new session
