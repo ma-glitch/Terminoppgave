@@ -1,7 +1,5 @@
 <?php
-// Initialize the session
-session_start();
- 
+ session_start()
 // Check if the user is already logged in, if yes then redirect them to the welcome page
 if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
     header("location: Terminoppgave/index.php");
@@ -9,6 +7,7 @@ if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
 }
 
 require_once "config.php";
+// Initialize error variables
 $username_err = $password_err = "";
 
 // Check if the form is submitted
@@ -17,71 +16,57 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
     if (isset($_GET["username"]) && isset($_GET["password"])) {
         // Retrieve user input
         $username = $_GET["username"];
-        $entered_password = $_GET["password"];
-        
-        // Perform validation (you can add more validation as needed)
+        $password = $_GET["password"];
+
+        // Perform basic validation
         if (empty($username)) {
             $username_err = "Username is required.";
         }
 
-        if (empty($entered_password)) {
+        if (empty($password)) {
             $password_err = "Password is required.";
         }
 
-        // If there are no validation errors, attempt to authenticate
+        // If there are no validation errors, you can proceed with authentication
         if (empty($username_err) && empty($password_err)) {
-            // Perform the authentication using your database connection
-            $sql = "SELECT id, bruker, passord, salt FROM login WHERE bruker = ?";
-
-            if ($stmt = $link->prepare($sql)) {
-                // Bind variables to the prepared statement as parameters
-                $stmt->bind_param("s", $param_username);
-
-                // Set parameters
-                $param_username = $username;
-
-                // Attempt to execute the prepared statement
-                if ($stmt->execute()) {
-                    // Store result
-                    $stmt->store_result();
-
-                    // Check if a row exists with the given username
-                    if ($stmt->num_rows == 1) {
-                        // Bind result variables
-                        $stmt->bind_result($id, $username, $hashed_password, $salt);
-
-                        if ($stmt->fetch()) {
-                            // Verify the password
-                            $hashed_password_input = password_hash($entered_password . $salt, PASSWORD_DEFAULT); // Hash the entered password with the retrieved salt
-                            
-                            if ($hashed_password_input === $hashed_password) {
-                                // Password is correct, start a new session
-                                session_start();
-                                
-                                // Store data in session variables
-                                $_SESSION["loggedin"] = true;
-                                $_SESSION["id"] = $id;
-                                $_SESSION["username"] = $username; 
-
-                                // Redirect the user to the welcome page
-                                header("location: Terminoppgave/index.php");
-                                exit();
-                            } else {
-                                // Password is not valid
-                                $password_err = "Invalid password.";
-                            }
-                        }
-                    } else {
-                        // Username not found
-                        $username_err = "Username not found.";
-                    }
-                } else {
-                    echo "Something went wrong. Please try again later.";
-                }
-
-                // Close statement
-                $stmt->close();
-            }
+         // Attempt to retrieve the user's data from the database
+         $sql = "SELECT id, bruker, passord FROM login WHERE bruker = ?";
+            
+         if ($stmt = $link->prepare($sql)) {
+             $stmt->bind_param("s", $param_username);
+             $param_username = $username;
+             
+             if ($stmt->execute()) {
+                 $stmt->store_result();
+                 
+                 if ($stmt->num_rows == 1) {
+                     $stmt->bind_result($id, $username, $hashed_password);
+                     
+                     if ($stmt->fetch()) {
+                         if (password_verify($password, $hashed_password)) {
+                             // Password is correct, start a new session
+                             session_start();
+                             
+                             // Store data in session variables
+                             $_SESSION["loggedin"] = true;
+                             $_SESSION["id"] = $id;
+                             $_SESSION["username"] = $username; 
+                             
+                             // Redirect the user to the welcome page
+                             header("location: Terminoppgave/index.php");
+                             exit();
+                         } else {
+                             $password_err = "Invalid password.";
+                         }
+                     }
+                 } else {
+                     $username_err = "Username not found.";
+                 }
+             } else {
+                 echo "Something went wrong. Please try again later.";
+             }
+             
+             $stmt->close();
         }
     }
 }
