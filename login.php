@@ -16,26 +16,22 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
     // Check if "username" and "password" are set in the form data
     if (isset($_GET["username"]) && isset($_GET["password"])) {
         // Retrieve user input
-        
         $username = $_GET["username"];
-        $password = trim($_GET["password"]);
-        $salt = random_bytes(16);
-        $hashed_password = password_hash($password . $salt, PASSWORD_DEFAULT);
-        echo(PASSWORD_DEFAULT);
-        $entered_password = "password";
+        $entered_password = $_GET["password"];
+        
         // Perform validation (you can add more validation as needed)
         if (empty($username)) {
             $username_err = "Username is required.";
         }
 
-        if (empty($password)) {
+        if (empty($entered_password)) {
             $password_err = "Password is required.";
         }
 
         // If there are no validation errors, attempt to authenticate
         if (empty($username_err) && empty($password_err)) {
             // Perform the authentication using your database connection
-            $sql = "SELECT id, bruker, passord FROM login WHERE bruker = ?";
+            $sql = "SELECT id, bruker, passord, salt FROM login WHERE bruker = ?";
 
             if ($stmt = $link->prepare($sql)) {
                 // Bind variables to the prepared statement as parameters
@@ -52,11 +48,13 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
                     // Check if a row exists with the given username
                     if ($stmt->num_rows == 1) {
                         // Bind result variables
-                        $stmt->bind_result($id, $username, $hashed_password);
-                        
+                        $stmt->bind_result($id, $username, $hashed_password, $salt);
+
                         if ($stmt->fetch()) {
                             // Verify the password
-                            if (password_verify($entered_password . $salt, $hashed_password)) {
+                            $hashed_password_input = hash('sha256', $entered_password . $salt); // Hash the entered password with the retrieved salt
+                            
+                            if ($hashed_password_input === $hashed_password) {
                                 // Password is correct, start a new session
                                 session_start();
                                 
@@ -87,7 +85,6 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
         }
     }
 }
-
 ?>
  
 <!DOCTYPE html>
