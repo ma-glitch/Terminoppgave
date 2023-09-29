@@ -25,7 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
         // If there are no validation errors, you can proceed with authentication
         if (empty($username_err) && empty($password_err)) {
          // Attempt to retrieve the user's data from the database
-         $sql = "SELECT id, bruker, passord FROM login WHERE bruker = '".$username."' ";
+         $sql = "SELECT id, , navn, bruker, passord FROM login WHERE bruker = '".$username."' ";
 
          if ($stmt = $link->prepare($sql)) {
              
@@ -43,6 +43,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
                              // Store data in session variables
                              $_SESSION["loggedin"] = true;
                              $_SESSION["id"] = $id;
+                             $_SESSION["navn"] = $navn;
                              $_SESSION["bruker"] = $username;
                              $_SESSION["passord"] = $password;
                              
