@@ -44,9 +44,6 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 
             
             if ($stmt = $link->prepare($sql_update)) {
-              $stmt->bind_param("dds", $newTotal, $newUbetalt, $_SESSION["bruker"]);
-                $stmt->bind_param("s", $bruker);
-                
                 // Execute the prepared statement
                 if ($stmt->execute()) {
                     // Bind the result variable
