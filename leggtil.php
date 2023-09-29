@@ -63,6 +63,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
             
             $newTotal = $currentTotal + $botValue;
             $newTotal = $currentubetalt + $botValue;
+
             $sql = "UPDATE login SET total = '".$newTotal."', ubetalt = '".$newubetalt."' WHERE bruker = '".$_SESSION["bruker"]"' ";
             if ($stmt = $link->prepare($sql)) {
               $stmt->bind_param("dds", $newTotal, $newUbetalt, $_SESSION["bruker"]);
@@ -78,8 +79,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                 }
                 $stmt->close();
             }
-
-  }
+          }
         ?>
     </div>
 
