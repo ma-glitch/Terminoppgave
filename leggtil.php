@@ -37,13 +37,13 @@ Test2 <?php echo $_POST["glemmeDrakt"] ?><br>
 
 <?php
 function leggTilBot() {
-
+/*
 $kinaVerdi = 0
 $glemmeDraktVerdi = 0
 $glemmeViktgVerdi = 0
 $haandspolVerdi = 0
 
 $leggeTilVerdi = $kinaVerdi + $glemmeDraktVerdi + $glemmeViktgVerdi + $haandspolVerdi
-
+*/
 }
 ?>
