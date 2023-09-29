@@ -23,6 +23,18 @@
         Glemme viktig utstyr 50Kr <input type="checkbox" name="glemmeViktig"><br>
         En håndspol 50Kr <input type="checkbox" name="haandspol"><br>
 
+<?php if ($_POST["kina"] = "off") {
+  echo "no";
+}
+if ($_POST["glemmeDrakt"] = "on") {
+  echo "Yes";
+}
+if ($_POST["glemmeViktig"] = "on") {
+  echo "Yes";
+}
+if ($_POST["haandspol"] = "on") {
+  echo "Yes";
+}?>
 <input type="submit" class="leggtilbtn"> 
       </form>  
  
@@ -34,18 +46,6 @@
 
 <?php
 
-if ($_POST["kina"] = "off") {
-  echo "no";
-}
-if ($_POST["glemmeDrakt"] = "on") {
-  echo "Yes";
-}
-if ($_POST["glemmeViktig"] = "on") {
-  echo "Yes";
-}
-if ($_POST["haandspol"] = "on") {
-  echo "Yes";
-}
 
 function leggTilBot() {
 /*
