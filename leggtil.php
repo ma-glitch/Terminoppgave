@@ -36,18 +36,18 @@
 <?php
 echo $_POST["kina"];
 
-
-function leggTilBot() {
-
 $kinaVerdi = $_POST["kina"];
 $glemmeDraktVerdi = $_POST["glemmeDrakt"];
 $glemmeViktgVerdi = $_POST["glemmeViktig"];
 $haandspolVerdi = $_POST["haandspol"];
 
 
-$botVerdi = $kinaVerdi + $glemmeDraktVerdi + $glemmeViktgVerdi + $haandspolVerdi
+$botVerdi = $kinaVerdi + $glemmeDraktVerdi + $glemmeViktgVerdi + $haandspolVerdi;
 
-echo $botVerdi
+echo $botVerdi;
+function leggTilBot() {
+
+
 
 }
 
