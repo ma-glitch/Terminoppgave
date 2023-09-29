@@ -23,7 +23,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
       </ul>
 
       
-      <h1 class="velkommen"><?php echo($_SESSION["bruker"]); ?></h1>
+      <h1 class="velkommen"><?php echo($_SESSION["navn"]); ?></h1>
 
       <button class="betalebtn" onclick="betalbtn()">Betale Bot</button>
       <h1 id="betal">Vipps til dette Nummeret:  2134214. NB husk a skrive at du betaler bot.</h1>
