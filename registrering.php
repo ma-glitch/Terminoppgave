@@ -7,6 +7,32 @@ $navn_err = $username_err = $password_err = $confirm_password_err = "";
 
 // Processing form data when the form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+    if (empty(trim($_POST["username"]))) {
+        $username_err = "Please enter a navn.";
+    } else {
+        // Prepare a SELECT statement to check if the username already exists
+        $sql = "SELECT id FROM login WHERE navn = ?";
+
+        if ($stmt = $link->prepare($sql)) {
+            $stmt->bind_param("s", $param_navn);
+            $param_navn = trim($_POST["navn"]);
+
+            if ($stmt->execute()) {
+                $stmt->store_result();
+
+                if ($stmt->num_rows == 1) {
+                    $navn_err = "This username is already taken.";
+                } else {
+                    $navn = trim($_POST["navn"]);
+                }
+            } else {
+                echo "Something went wrong. Please try again later.";
+            }
+
+            $stmt->close();
+        }
+    }
     // Validate username
     if (empty(trim($_POST["username"]))) {
         $username_err = "Please enter a username.";
@@ -59,7 +85,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $sql = "INSERT INTO login (navn, bruker, passord, total, ubetalt) VALUES (?, ?, ?, 0, 0)";
 
         if ($stmt = $link->prepare($sql)) {
-            $stmt->bind_param("ss", $param_navn, $param_username, $param_password);
+            $stmt->bind_param("sss", $param_navn, $param_username, $param_password);
             $param_navn = $navn;
             $param_username = $username;
             $param_password = $password; // Hash the password
