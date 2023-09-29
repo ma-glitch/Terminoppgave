@@ -9,7 +9,7 @@ $navn_err = $username_err = $password_err = $confirm_password_err = "";
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if (empty(trim($_POST["username"]))) {
-        $username_err = "Please enter a navn.";
+        $username_err = "skriv in et navn.";
     } else {
         // Prepare a SELECT statement to check if the username already exists
         $sql = "SELECT id FROM login WHERE navn = ?";
@@ -22,7 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $stmt->store_result();
 
                 if ($stmt->num_rows == 1) {
-                    $navn_err = "This username is already taken.";
+                    $navn_err = "Dette navnet er alerede i bruk.";
                 } else {
                     $navn = trim($_POST["navn"]);
                 }
@@ -35,7 +35,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
     // Validate username
     if (empty(trim($_POST["username"]))) {
-        $username_err = "Please enter a username.";
+        $username_err = "skriv in et brukernavn";
     } else {
         // Prepare a SELECT statement to check if the username already exists
         $sql = "SELECT id FROM login WHERE bruker = ?";
@@ -48,7 +48,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $stmt->store_result();
 
                 if ($stmt->num_rows == 1) {
-                    $username_err = "This username is already taken.";
+                    $username_err = "Dette brukernavnet er alerede i bruk.";
                 } else {
                     $username = trim($_POST["username"]);
                 }
@@ -62,20 +62,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Validate password
     if (empty(trim($_POST["password"]))) {
-        $password_err = "Please enter a password.";
+        $password_err = "skriv in et passord.";
     } elseif (strlen(trim($_POST["password"])) < 6) {
-        $password_err = "Password must have at least 6 characters.";
+        $password_err = "Passordet må ha i hvert fall 6 tegn.";
     } else {
         $password = trim($_POST["password"]);
     }
 
     // Validate confirm password
     if (empty(trim($_POST["confirm_password"]))) {
-        $confirm_password_err = "Please confirm the password.";
+        $confirm_password_err = "skriv in passordet igjen.";
     } else {
         $confirm_password = trim($_POST["confirm_password"]);
         if ($password != $confirm_password) {
-            $confirm_password_err = "Password did not match.";
+            $confirm_password_err = "Passordet du skrev in var ikke likt";
         }
     }
 
