@@ -82,7 +82,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
 <body>
     <div class="wrapper">
         <h2>Login</h2>
-        <p>Please fill in your credentials to login.</p>
+        <p>fyll in bruker navn og passord</p>
 
         <!-- Display error messages here if needed -->
         <span class="text-danger"><?php echo $username_err; ?></span>
