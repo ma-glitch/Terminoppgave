@@ -41,16 +41,22 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
             echo "<div id='result'>Bot Verdi: $botValue</div>";   
             $sql2 = "SELECT bruker, total, ubetalt, FROM login WHERE bruker = '".$_SESSION["bruker"]."' ";
             
-            if($stmt2 = $link->prepare($sql2)) {            
+            if($stmt2 = $link->prepare($sql2)) {      
+              if ($stmt2->execute()) {
+                $stmt2->store_result();
+                
+                if ($stm2t->num_rows == 1) {
+                  if ($stmt->fetch()) {      
             $stmt2->bind_result($bruker, $total, $ubetalt);
             echo $sql2;
             echo $bruker;
             echo $total;
             echo $ubetalt;
           }
-
-
         }
+      }
+    }
+  }
         ?>
     </div>
 
