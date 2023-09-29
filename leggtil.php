@@ -33,7 +33,6 @@
 </html>
 
 <?php
-function leggTilBot() {
 
 if ($_POST["kina"] = "on") {
   echo "Yes"
@@ -47,7 +46,11 @@ if ($_POST["glemmeViktig"] = "on") {
 if ($_POST["haandspol"] = "on") {
   echo "Yes"
 }
+
+function leggTilBot() {
   /*
+
+
 $kinaVerdi = 0
 $glemmeDraktVerdi = 0
 $glemmeViktgVerdi = 0
@@ -56,4 +59,5 @@ $haandspolVerdi = 0
 $leggeTilVerdi = $kinaVerdi + $glemmeDraktVerdi + $glemmeViktgVerdi + $haandspolVerdi
 */
 }
+
 ?>
