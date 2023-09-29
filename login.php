@@ -11,8 +11,8 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
     // Check if "username" and "password" are set in the form data
     if (isset($_GET["username"]) && isset($_GET["password"])) {
         // Retrieve user input
-        $username = $_GET["username"];
-        $password = $_GET["password"];
+        $username = $_GET["bruker"];
+        $password = $_GET["passord"];
         $hashed_password = password_hash($password, PASSWORD_DEFAULT);
         // Perform basic validation
         if (empty($username)) {
@@ -46,7 +46,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
                              // Store data in session variables
                              $_SESSION["loggedin"] = true;
                              $_SESSION["id"] = $id;
-                             $_SESSION["username"] = $username; 
+                             $_SESSION["bruker"] = $username; 
                              
                              // Redirect the user to the welcome page
                              header("location: Terminoppgave/index.php");
@@ -92,11 +92,11 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="GET"> 
             <div class="form-group">
                 <label>Username</label>
-                <input type="text" name="username" class="form-control">
+                <input type="text" name="bruker" class="form-control">
             </div>    
             <div class="form-group">
                 <label>Password</label>
-                <input type="password" name="password" class="form-control" >
+                <input type="password" name="passord" class="form-control" >
             </div>
             <div class="form-group">
                 <input type="submit" class="btn btn-primary" value="Login">
