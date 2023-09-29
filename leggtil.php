@@ -41,7 +41,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
             echo "<div id='result'>Bot Verdi: $botValue</div>";   
             $sql2 = "SELECT bruker, total, ubetalt, FROM login WHERE bruker = '".$_SESSION["bruker"]."' ";
             
-            echo $sql2;
+            echo ($sql2);
   }
         ?>
     </div>
