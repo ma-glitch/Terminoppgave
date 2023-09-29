@@ -39,7 +39,7 @@
 
 
 <?php
-
+/*
 
 
 function leggTilBot() {
@@ -68,5 +68,5 @@ $botVerdi = $kinaVerdi + $glemmeDraktVerdi + $glemmeViktgVerdi + $haandspolVerdi
 echo $botVerdi;
 
 }
-
+*/
 ?>
