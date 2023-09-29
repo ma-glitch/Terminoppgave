@@ -28,6 +28,9 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
          // Attempt to retrieve the user's data from the database
          $sql = "SELECT id, bruker, passord FROM login WHERE bruker = ?";
             
+         $password = "passord";
+         $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+
          if ($stmt = $link->prepare($sql)) {
              $stmt->bind_param("s", $param_username);
              $param_username = $username;
@@ -39,7 +42,8 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
                      $stmt->bind_result($id, $username, $password);
                      
                      if ($stmt->fetch()) {
-                         if (password_verify($password)) {
+                        $entered_password = "password";
+                         if (password_verify($entered_password, $hashed_password)) {
                              // Password is correct, start a new session
                              session_start();
                              
