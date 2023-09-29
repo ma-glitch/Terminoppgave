@@ -26,13 +26,13 @@
 <?php if ($_POST["kina"] = "off") {
   echo "no";
 }
-if ($_POST["glemmeDrakt"] = "on") {
-  echo "Yes";
+if ($_GET["glemmeDrakt"] = "off") {
+  echo "no";
 }
 if ($_POST["glemmeViktig"] = "on") {
   echo "Yes";
 }
-if ($_POST["haandspol"] = "on") {
+if ($_GET["haandspol"] = "on") {
   echo "Yes";
 }?>
 <input type="submit" class="leggtilbtn"> 
