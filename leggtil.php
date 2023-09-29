@@ -38,8 +38,10 @@ $kina = $_GET["kina"]
 
 if ($kina = "on"){
   echo "on";
+  echo $kina;
 } else {
   echo "off";
+  echo $kina;
 }
 
 
@@ -56,18 +58,18 @@ if ($_POST["kina"] = "on") {
   $kinaVerdi = 25; 
 }
 if ($_POST["glemmeDrakt"] = "on") {
-  $glemmeDraktVerdi = 500
+  $glemmeDraktVerdi = 500;
 }
 if ($_POST["glemmeViktig"] = "on") {
-  $glemmeViktgVerdi = 50
+  $glemmeViktgVerdi = 50;
 }
 if ($_POST["haandspol"] = "on") {
-  $haandspolVerdi = 50
+  $haandspolVerdi = 50;
 }
 
-$leggeTilVerdi = $kinaVerdi + $glemmeDraktVerdi + $glemmeViktgVerdi + $haandspolVerdi
+$botVerdi = $kinaVerdi + $glemmeDraktVerdi + $glemmeViktgVerdi + $haandspolVerdi
 
-echo $leggeTilVerdi
+echo $botVerdi
 */
 }
 
