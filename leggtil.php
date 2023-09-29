@@ -38,7 +38,7 @@
 
 
 function leggTilBot() {
-  echo "adsfafnbhfghåofiadpodhp"
+  echo "adsfafnbhfghåofiadpodhp";
   $kinaVerdi = 0;
   $glemmeDraktVerdi = 0;
   $glemmeViktgVerd = 0;
