@@ -25,9 +25,6 @@
 
 <input type="submit" class="leggtilbtn"> 
       </form>  
-Test <?php echo $_POST["kina"]; ?><br>
-Test2 <?php echo $_POST["glemmeDrakt"] ?><br>   
-      
  
         <h1 class="lagttil">Lagt til, Når du har betalt kommer den ubatalte boten din til a bli borte!</h1>
       </div>
