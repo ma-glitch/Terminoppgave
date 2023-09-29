@@ -26,6 +26,7 @@
 
 <input type="submit" class="leggtilbtn"> 
       </form>  
+      <button class="leggtilbtn" onclick="leggTilBot()"></button>
  
 <!--        <h1 class="lagttil">Lagt til, Når du har betalt kommer den ubatalte boten din til a bli borte!</h1>-->
       </div>
@@ -34,8 +35,17 @@
 </html>
 
 <?php
+
+
+
+function leggTilBot() {
+  $kinaVerdi = 0
+  $glemmeDraktVerdi = 0
+  $glemmeViktgVerd = 0
+  $haandspolVerdi = 0
+
 if ($_POST["kina"] = "25") {
-  $kinaVerdi = 1000 ;
+  $kinaVerdi = 25 ;
 }
 if ($_POST["glemmeDrakt"] = "500") {
   $glemmeDraktVerdi = 500 ;
@@ -51,9 +61,6 @@ if ($_POST["haandspol"] = "50") {
 $botVerdi = $kinaVerdi + $glemmeDraktVerdi + $glemmeViktgVerdi + $haandspolVerdi;
 
 echo $botVerdi;
-function leggTilBot() {
-
-
 
 }
 
