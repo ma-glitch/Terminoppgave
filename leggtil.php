@@ -28,7 +28,7 @@
         <?php
         if (isset($_GET['botValue'])) {
             $botValue = $_GET['botValue'];
-            echo "<div id='result'>Bot Verdi: $botValue</div>";
+            echo "<div id='result'>Bot Verdi: $botValue</div>";          
         }
         ?>
     </div>
