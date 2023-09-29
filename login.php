@@ -27,9 +27,6 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
         if (empty($username_err) && empty($password_err)) {
          // Attempt to retrieve the user's data from the database
          $sql = "SELECT id, bruker, passord FROM login WHERE bruker = ?";
-            
-         $password = "passord";
-         $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
          if ($stmt = $link->prepare($sql)) {
              $stmt->bind_param("s", $param_username);
@@ -56,7 +53,6 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
                              header("location: Terminoppgave/index.php");
                              exit();
                          } else {
-                            echo($hashed_password);
                              $password_err = "Invalid password.";
                          }
                      }
@@ -106,6 +102,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
             <div class="form-group">
                 <input type="submit" class="btn btn-primary" value="Login">
             </div>
+            <p>har du ingen bruker? <a href="registrering.php">Login here</a>.</p>
         </form>
     </div>
 </body>
