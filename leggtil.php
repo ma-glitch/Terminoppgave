@@ -34,8 +34,8 @@
 
 <?php
 
-if ($_POST["kina"] = "on") {
-  echo "Yes";
+if ($_POST["kina"] = "off") {
+  echo "no";
 }
 if ($_POST["glemmeDrakt"] = "on") {
   echo "Yes";
