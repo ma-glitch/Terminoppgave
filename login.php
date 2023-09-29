@@ -29,8 +29,6 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
          $sql = "SELECT id, bruker, passord FROM login WHERE bruker = '".$username."' ";
 
          if ($stmt = $link->prepare($sql)) {
-             $stmt->bind_param("s", $param_username);
-             $param_username = $username;
              
              if ($stmt->execute()) {
                  $stmt->store_result();
