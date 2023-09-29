@@ -56,6 +56,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
                              header("location: Terminoppgave/index.php");
                              exit();
                          } else {
+                            echo($hashed_password);
                              $password_err = "Invalid password.";
                          }
                      }
