@@ -39,7 +39,8 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
         if (isset($_GET['botValue'])) {
             $botValue = $_GET['botValue'];
             echo "<div id='result'>Bot Verdi: $botValue</div>";   
-            $sql2 = "SELECT total, ubetalt FROM login WHERE bruker = '".$_SESSION["bruker"]"'";
+            $sql2 = "SELECT bruker, total, ubetalt FROM login WHERE bruker = '" . $_SESSION["bruker"] . "'";
+
     
             if ($stmt = $link->prepare($sql2)) {
                 // Bind parameter
