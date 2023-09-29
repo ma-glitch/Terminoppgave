@@ -18,16 +18,13 @@
     <div class="leggtil">
         <h1>Legg til bot</h1>
         <form action="leggtil.php" method="post">
-        Kina 25Kr: <input type="text" name="kina"><br>
+        Kina 25Kr: <input type="checkbox" name="kina"><br>
         Glemme drakt 500Kr <input type="checkbox" name="glemmeDrakt"><br>
         Glemme viktig utstyr 50Kr <input type="checkbox" name="glemmeViktig"><br>
-        En håndspol 50Kr <input type="checkbox" name="haandspol">
+        En håndspol 50Kr <input type="checkbox" name="haandspol"><br>
 
 <input type="submit" class="leggtilbtn"> 
       </form>  
-Test <?php echo $_POST["kina"]; ?><br>
-Test2 <?php echo $_POST["glemmeDrakt"] ?><br>   
-      
  
         <h1 class="lagttil">Lagt til, Når du har betalt kommer den ubatalte boten din til a bli borte!</h1>
       </div>
@@ -36,8 +33,24 @@ Test2 <?php echo $_POST["glemmeDrakt"] ?><br>
 </html>
 
 <?php
+
+if ($_POST["kina"] = "on") {
+  echo "Yes"
+}
+if ($_POST["glemmeDrakt"] = "on") {
+  echo "Yes"
+}
+if ($_POST["glemmeViktig"] = "on") {
+  echo "Yes"
+}
+if ($_POST["haandspol"] = "on") {
+  echo "Yes"
+}
+
 function leggTilBot() {
-/*
+  /*
+
+
 $kinaVerdi = 0
 $glemmeDraktVerdi = 0
 $glemmeViktgVerdi = 0
@@ -46,4 +59,5 @@ $haandspolVerdi = 0
 $leggeTilVerdi = $kinaVerdi + $glemmeDraktVerdi + $glemmeViktgVerdi + $haandspolVerdi
 */
 }
+
 ?>
