@@ -176,13 +176,3 @@ ul.topnav li.right {float: right;}
     color: black;
   }
 
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --clr-primary: #202302;
-      --clr-secondary: #00100d;
-  
-  
-      --background: var(--clr-dark);
-      --foreground: var(--clr-light);
-    }
-  }
