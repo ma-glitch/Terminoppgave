@@ -34,6 +34,7 @@
 </html>
 
 <?php
+/*
 $kina = $_POST["kina"];
 
 if ($kina = "on") {
@@ -43,8 +44,8 @@ if ($kina = "on") {
   echo "off";
   echo $kina;
 }
-
-
+*/
+echo $_POST["kina"];
 
 
 function leggTilBot() {
