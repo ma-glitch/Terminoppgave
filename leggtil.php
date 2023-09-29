@@ -37,9 +37,9 @@
 $kina = $_GET["kina"]
 
 if ($kina = "on"){
-  echo "on"
+  echo "on";
 } else {
-  echo "off"
+  echo "off";
 }
 
 
