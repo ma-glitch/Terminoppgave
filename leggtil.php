@@ -34,7 +34,7 @@
 </html>
 
 <?php
-$kina = $_GET["kina"]
+$kina = $_GET["kina"];
 
 if ($kina = "on") {
   echo "on";
