@@ -43,7 +43,7 @@ $glemmeDraktVerdi = 0
 $glemmeViktgVerdi = 0
 $haandspolVerdi = 0
 
-
+$leggeTilVerdi = $kinaVerdi + $glemmeDraktVerdi + $glemmeViktgVerdi + $haandspolVerdi
 
 }
 ?>
