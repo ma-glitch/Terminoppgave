@@ -24,7 +24,7 @@
             <input type="submit" class="leggtilbtn">
         </form>
 
-        <!-- Display the result here -->
+
         <?php
         if (isset($_GET['botValue'])) {
             $botValue = $_GET['botValue'];
@@ -36,37 +36,3 @@
     <script src="script.js"></script>
 </body>
 </html>
-
-
-<?php
-/*
-
-
-function leggTilBot() {
-  echo "adsfafnbhfghåofiadpodhp";
-  $kinaVerdi = 0;
-  $glemmeDraktVerdi = 0;
-  $glemmeViktgVerd = 0;
-  $haandspolVerdi = 0;
-
-if ($_POST["kina"] = "25") {
-  $kinaVerdi = 25 ;
-}
-if ($_POST["glemmeDrakt"] = "500") {
-  $glemmeDraktVerdi = 500 ;
-}
-if ($_POST["glemmeViktig"] = "50") {
-  $glemmeViktgVerdi = 50 ;
-}
-if ($_POST["haandspol"] = "50") {
-  $haandspolVerdi = 50 ;
-}
-
-
-$botVerdi = $kinaVerdi + $glemmeDraktVerdi + $glemmeViktgVerdi + $haandspolVerdi;
-
-echo $botVerdi;
-
-}
-*/
-?>
