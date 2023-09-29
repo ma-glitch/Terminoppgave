@@ -46,7 +46,8 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
             echo $sql2;
             echo $bruker;
             echo $total;
-            echo $ubetalt;}
+            echo $ubetalt;
+          }
 
 
         }
