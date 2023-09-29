@@ -56,7 +56,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
                         
                         if ($stmt->fetch()) {
                             // Verify the password
-                            if (password_verify($entered_password . $salt,, $hashed_password)) {
+                            if (password_verify($entered_password . $salt, $hashed_password)) {
                                 // Password is correct, start a new session
                                 session_start();
                                 
