@@ -9,7 +9,7 @@ $username_err = $password_err = "";
 // Check if the form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "GET") {
     // Check if "username" and "password" are set in the form data
-    if (isset($_GET["username"]) && isset($_GET["password"])) {
+    if (isset($_GET["bruker"]) && isset($_GET["passord"])) {
         // Retrieve user input
         $username = $_GET["bruker"];
         $password = $_GET["passord"];
