@@ -23,18 +23,7 @@
         Glemme viktig utstyr 50Kr <input type="checkbox" name="glemmeViktig"><br>
         En håndspol 50Kr <input type="checkbox" name="haandspol"><br>
 
-<?php if ($_POST["kina"] = "off") {
-  echo "no";
-}
-if ($_GET["glemmeDrakt"] = "off") {
-  echo "no";
-}
-if ($_POST["glemmeViktig"] = "on") {
-  echo "Yes";
-}
-if ($_GET["haandspol"] = "on") {
-  echo "Yes";
-}?>
+
 <input type="submit" class="leggtilbtn"> 
       </form>  
  
@@ -45,6 +34,15 @@ if ($_GET["haandspol"] = "on") {
 </html>
 
 <?php
+$kina = $_GET["kina"]
+
+if ($kina = "on"){
+  echo "on"
+} else {
+  echo "off"
+}
+
+
 
 
 function leggTilBot() {
