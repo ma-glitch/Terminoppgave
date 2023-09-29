@@ -48,15 +48,28 @@ if ($_POST["haandspol"] = "on") {
 }
 
 function leggTilBot() {
-  /*
-
-
+/*
 $kinaVerdi = 0
 $glemmeDraktVerdi = 0
 $glemmeViktgVerdi = 0
 $haandspolVerdi = 0
 
+if ($_POST["kina"] = "on") {
+  $kinaVerdi = 25; 
+}
+if ($_POST["glemmeDrakt"] = "on") {
+  $glemmeDraktVerdi = 500
+}
+if ($_POST["glemmeViktig"] = "on") {
+  $glemmeViktgVerdi = 50
+}
+if ($_POST["haandspol"] = "on") {
+  $haandspolVerdi = 50
+}
+
 $leggeTilVerdi = $kinaVerdi + $glemmeDraktVerdi + $glemmeViktgVerdi + $haandspolVerdi
+
+echo $leggeTilVerdi
 */
 }
 
