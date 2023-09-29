@@ -2,8 +2,8 @@
 require_once "config.php";
 
 // Define variables and initialize with empty values
-$username = $password = $confirm_password = "";
-$username_err = $password_err = $confirm_password_err = "";
+$navn = $username = $password = $confirm_password = "";
+$navn_err = $username_err = $password_err = $confirm_password_err = "";
 
 // Processing form data when the form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -56,7 +56,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Check input errors before inserting into database
     if (empty($username_err) && empty($password_err) && empty($confirm_password_err)) {
         // Prepare an INSERT statement
-        $sql = "INSERT INTO login (bruker, passord, total, ubetalt) VALUES (?, ?, 0, 0)";
+        $sql = "INSERT INTO login (navn, bruker, passord, total, ubetalt) VALUES (?, ?, ?, 0, 0)";
 
         if ($stmt = $link->prepare($sql)) {
             $stmt->bind_param("ss", $param_username, $param_password);
@@ -96,7 +96,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <p>Please fill in this form to create an account.</p>
 
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-            <div class="form-group">
+        <div class="form-group">
+                <label>Navn</label>
+                <input type="text" name="navn" class="form-control <?php echo (!empty($navn_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $navn; ?>">
+                <span class="invalid-feedback"><?php echo $navn_err; ?></span>
+            </div>    
+        <div class="form-group">
                 <label>Username</label>
                 <input type="text" name="username" class="form-control <?php echo (!empty($username_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $username; ?>">
                 <span class="invalid-feedback"><?php echo $username_err; ?></span>
