@@ -1,6 +1,6 @@
 <?php
  session_start();
- 
+
  if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     header("location: login.php");
     exit;
@@ -48,7 +48,8 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
                              // Store data in session variables
                              $_SESSION["loggedin"] = true;
                              $_SESSION["id"] = $id;
-                             $_SESSION["bruker"] = $username; 
+                             $_SESSION["bruker"] = $username;
+                             $_SESSION["passord"] = $password;
                              
                              // Redirect the user to the welcome page
                              header("location: index.php");
