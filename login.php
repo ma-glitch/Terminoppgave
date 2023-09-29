@@ -47,7 +47,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
                              $_SESSION["bruker"] = $username; 
                              
                              // Redirect the user to the welcome page
-                             header("location: Terminoppgave/index.php");
+                             header("location: index.php");
                              exit();
                          } else {
                              $password_err = "Invalid password.";
