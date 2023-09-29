@@ -27,6 +27,17 @@
 <input type="submit" class="leggtilbtn"> 
       </form>  
  
+        <!-- Display the result here -->
+        <?php
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            leggTilBot();
+        }
+        ?>
+
+        <!-- Add the result display location -->
+        <div id="result"></div>
+    </div>
+
 <!--        <h1 class="lagttil">Lagt til, Når du har betalt kommer den ubatalte boten din til a bli borte!</h1>-->
       </div>
       <script src="script.js"></script>
