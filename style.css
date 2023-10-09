@@ -179,5 +179,5 @@ ul.topnav li.right {float: right;}
 /* Login og registreringsside */
 
 .form-control {
-  background-color: #2196F3;
+ padding: 10px;
 }
