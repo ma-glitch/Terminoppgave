@@ -74,10 +74,10 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
     <meta charset="UTF-8">
     <title>Login</title>
     <link rel="stylesheet" href="style.css">
-    <style>
+    <style>/*
         body{ font: 14px sans-serif; }
         .wrapper{ width: 360px; padding: 20px; }
-    </style>
+    */</style>
 </head>
 <body>
     <div class="wrapper">
