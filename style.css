@@ -176,5 +176,8 @@ ul.topnav li.right {float: right;}
     color: black;
   }
 
-/* Login og registreringsside
+/* Login og registreringsside */
 
+.form-control {
+  background-color: #2196F3;
+}
