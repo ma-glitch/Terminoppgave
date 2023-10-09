@@ -82,7 +82,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
 <body>
     <div class="wrapper">
         <h2>Login</h2>
-        <p>fyll in bruker navn og passord</p>
+        <p>Fyll in bruker navn og passord</p>
 
         <!-- Display error messages here if needed -->
         <span class="text-danger"><?php echo $username_err; ?></span>
@@ -98,9 +98,9 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
                 <input type="password" name="passord" class="form-control" >
             </div>
             <div class="form-group">
-                <input type="submit" class="btn btn-primary" value="Login">
+                <input type="submit" class="leggtilbtn" value="Login">
             </div>
-            <p>har du ingen bruker? <a href="registrering.php">Login here</a>.</p>
+            <p>Har du ingen bruker? <a href="registrering.php">Login here</a>.</p>
         </form>
     </div>
 </body>
