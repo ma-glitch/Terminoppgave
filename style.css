@@ -177,7 +177,12 @@ ul.topnav li.right {float: right;}
   }
 
 /* Login og registreringsside */
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-.form-control {
+.form-group {
  padding: 10px;
 }
