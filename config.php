@@ -20,4 +20,6 @@ if ($link->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 echo "Connected successfully";
+
+mysqli_options($link, MYSQLI_OPT_CONNECT_TIMEOUT, 60);
 ?>
