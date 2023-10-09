@@ -36,7 +36,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
         </tr>
         <?php
         // Define the SQL query to retrieve data from your table
-        $sql = "SELECT navn, total, ubetalt FROM login";
+        $sql = "SELECT navn, total, ubetalt FROM login ORDER BY total DESC";
 
         // Execute the query
         $result = $link -> query($sql);
