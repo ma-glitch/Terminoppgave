@@ -97,7 +97,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
             <div id="LogInbtn">
                 <input type="submit" class="leggtilbtn" value="Login">
             </div>
-            <p id="logintekst">Har du ingen bruker? <a href="registrering.php">Login her</a>.</p>
+            <p id="logintekst">Har du ingen bruker? <a href="registrering.php">Registrer her</a>.</p>
         </form>
     </div>
 </body>
