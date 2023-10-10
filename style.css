@@ -178,10 +178,22 @@ ul.topnav li.right {float: right;}
 
 /* Login og registreringsside */
 .wrapper {
+  font-weight: bold;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
 }
 
 .form-group {
  padding: 10px;
+}
+
+#LogInbtn {
+  display: flex;
+ justify-content: center;
+}
+
+#logintekst {
+  margin-top: 50px;
 }

@@ -74,10 +74,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
     <meta charset="UTF-8">
     <title>Login</title>
     <link rel="stylesheet" href="style.css">
-    <style>/*
-        body{ font: 14px sans-serif; }
-        .wrapper{ width: 360px; padding: 20px; }
-    */</style>
+
 </head>
 <body>
     <div class="wrapper">
@@ -97,10 +94,10 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
                 <label>Password</label>
                 <input type="password" name="passord" class="form-control" >
             </div>
-            <div class="form-group">
+            <div class="LogInbtn">
                 <input type="submit" class="leggtilbtn" value="Login">
             </div>
-            <p>Har du ingen bruker? <a href="registrering.php">Login here</a>.</p>
+            <p id="logintekst">Har du ingen bruker? <a href="registrering.php">Login her</a>.</p>
         </form>
     </div>
 </body>
