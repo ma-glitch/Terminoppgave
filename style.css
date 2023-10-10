@@ -179,9 +179,7 @@ ul.topnav li.right {float: right;}
 /* Login og registreringsside */
 .wrapper {
   display: flex;
-  align-items: center;
   justify-content: center;
-  color: blueviolet;
 }
 
 .form-group {
