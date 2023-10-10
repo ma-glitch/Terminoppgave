@@ -8,8 +8,8 @@ if (function_exists('mysqli_connect')) {
 
 
 $servername = "10.200.1.117";
-$username = "root";
-$password = "Admin";
+$username = "Linje5";
+$password = "Enzo";
 $dbname = "BotDB";
 
 // Create connection
