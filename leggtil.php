@@ -46,10 +46,10 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                 // Execute the prepared statement
                 if ($stmt->execute()) {
                     // Bind the result variable
-               echo "Total and ubetalt values have been updated!";
+               echo "Boten har blitt lagt til";
                   
                 }else {
-                  echo "Error updating values. Please try again later.";
+                  echo "En feil har oppståt, prøv igjen senere";
                 }
                 $stmt->close();
             }
