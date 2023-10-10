@@ -3,46 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>admin</title>
+    <title>Bot system Linje-5</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="linje5.jpg">
 </head>
 <body>
     <ul class="topnav">
-        <li><a class="active" href="index.html">Hjem</a></li>
-        <li><a href="leggtil.html">Legg til</a></li>
+        <li><a class="active" href="index.php">Hjem</a></li>
+        <li><a href="leggtil.php">Legg til</a></li>
+        <li><a href="admin.php">Admin</a></li>
       </ul>
+      <table id="score">
+        <tr>
+          <th>Navn</th>
+          <th>Total</th>
+          <th>Total ubetalt</th>
+        </tr>
+        <?php
+        // Define the SQL query to retrieve data from your table
+        $sql = "SELECT navn, total, ubetalt FROM login ORDER BY total DESC";
 
-    <table id="score">
-        <tr>
-          <th class="persnavn">Navn</th>
-          <th class="totalubetalt">Bot Navn</th>
-          <th class="bot">Bot antall</th>
-        </tr>
-        <tr>
-          <td class="bot">Alfreds Futterkiste</td>
-          <td class="bot">2000 Kr</td>
-          <td class="bot">400 Kr</td>
-        </tr>
-        <tr>
-          <td class="bot">Berglunds snabbköp</td>
-          <td class="bot">1969 Kr</td>
-          <td class="bot">1000 Kr</td>
-        </tr>
-        <tr>
-          <td class="bot">Centro comercial Moctezuma</td>
-          <td class="bot">1650 Kr</td>
-          <td class="bot">100 Kr</td>
-        </tr>
-        <tr>
-          <td class="bot">Ernst Handel</td>
-          <td class="bot">1500 Kr</td>
-          <Td class="bot">0 Kr</Td>
-        </tr>
-        <tr>
-        <th>Total alle</th>
-        <td> 4000 Kr</td>
-        <td>1500 Kr</td>
-        </tr>
+        // Execute the query
+        $result = $link -> query($sql);
+        
+        // Check if there are rows in the result
+        if ($result->num_rows > 0) {
+            // Output data of each row
+            while ($row = $result->fetch_assoc()) {
+                echo "<tr>";
+                echo "<td>" . $row["navn"] . "</td>";
+                echo "<td>" . $row["total"] . "</td>";
+                echo "<td>" . $row["ubetalt"] . "</td>";
+                echo "</tr>";
+            }
+        } else {
+            echo "<tr><td colspan='3'>No records found</td></tr>";
+        }
+
+        // Close the MySQLi connectio
+        ?>
       </table>
+
+    <script src="script.js"></script>
 </body>
 </html>
