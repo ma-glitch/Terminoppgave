@@ -8,6 +8,7 @@
     <link rel="icon" type="image/x-icon" href="linje5.jpg">
 </head>
 <body>
+  <h1>Velkommen administrator</h1>
     <ul class="topnav">
         <li><a class="active" href="index.php">Hjem</a></li>
         <li><a href="leggtil.php">Legg til</a></li>
