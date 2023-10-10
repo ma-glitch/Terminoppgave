@@ -94,7 +94,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
                 <label>Password</label>
                 <input type="password" name="passord" class="form-control" >
             </div>
-            <div class="LogInbtn">
+            <div id="LogInbtn">
                 <input type="submit" class="leggtilbtn" value="Login">
             </div>
             <p id="logintekst">Har du ingen bruker? <a href="registrering.php">Login her</a>.</p>
