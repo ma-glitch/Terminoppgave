@@ -112,10 +112,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta charset="UTF-8">
     <title>Registration</title>
     <link rel="stylesheet" href="style.css">
-    <style>
-        body { font: 14px sans-serif; }
-        .wrapper { width: 360px; padding: 20px; }
-    </style>
+
 </head>
 <body>
     <div class="wrapper">
@@ -143,11 +140,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <input type="password" name="confirm_password" class="form-control <?php echo (!empty($confirm_password_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $confirm_password; ?>">
                 <span class="invalid-feedback"><?php echo $confirm_password_err; ?></span>
             </div>
-            <div class="form-group">
+            <div class="LogInbtn">
                 <input type="submit" class="leggtilbtn" value="Submit">
                 <input type="reset" class="leggtilbtn" value="Reset">
             </div>
-            <p>Har du en bruker? <a href="login.php">Login here</a>.</p>
+            <p>Har du en bruker? <a href="login.php">Login her</a>.</p>
         </form>
     </div>
 </body>
