@@ -75,10 +75,6 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="style.css">
-<<<<<<< HEAD
-=======
-
->>>>>>> 85e75aabace9c6548f309f6b3df5a4e4321346b3
 </head>
 <body>
     <div class="wrapper">
