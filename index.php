@@ -66,7 +66,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
         <tr>
           <th>Total</th>
           <?php 
-          $count = mysqli_query($link, "SELECT SUM(total) FROM login");
+          $count = "SELECT SUM(total) FROM login";
         $total = $count;
         
         echo "<td>" . $total . "</td>";
