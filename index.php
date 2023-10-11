@@ -16,7 +16,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     <link rel="stylesheet" type="text/css" href="style.css" />
     <link rel="icon" type="image/x-icon" href="linje5.jpg">
 </head>
-<body onload="close()">
+<body>
     <ul class="topnav">
         <li><a class="active" href="index.php">Hjem</a></li>
         <li><a href="leggtil.php">Legg til</a></li>
