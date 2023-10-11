@@ -6,7 +6,7 @@ $id = $row['navn'];
 $ubetalt = $row['ubetalt'];
 
 // Update the ubetalt field for the specific user
-$sql = "UPDATE login SET ubetalt='$ubetalt' WHERE id='$id'";
+$sql = "UPDATE login SET ubetalt='$ubetalt' WHERE navn='$id'";
 
 if ($link->query($sql) === TRUE) {
     echo "Record updated successfully";
