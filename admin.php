@@ -46,6 +46,26 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                 echo "<td>" . $row["navn"] . "</td>";
                 echo "<td>" . $row["total"] . "</td>";
                 echo "<td>" . $row["ubetalt"] . "</td>";
+                echo "<td>" . "<button> onclick="
+                if (isset($_GET['lfValue'])) {
+                    $botValue = $_GET['lfValue'];
+                
+                    $sql_update = "UPDATE login SET ubetalt = ubetalt + ".$botValue." WHERE bruker = '". $row["navn"]."'";
+        
+                    
+                    if ($stmt = $link->prepare($sql_update)) {
+                        // Execute the prepared statement
+                        if ($stmt->execute()) {
+                            // Bind the result variable
+                       echo "Boten har blitt endret";
+                          
+                        }else {
+                          echo "En feil har oppståt, prøv igjen senere";
+                        }
+                        $stmt->close();
+                    }
+                  }
+                  ."</button>" . "</td>"
                 echo "</tr>";
             }
         } else {
