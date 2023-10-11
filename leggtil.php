@@ -26,7 +26,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 }
     ?>
     </ul>
-
+    <h1 class="velkommen">Velkommen <?php echo($_SESSION["navn"]);?>!</h1>
     <div class="leggtil">
         <h1>Legg til bot</h1>
         <form action="process.php" method="post">
