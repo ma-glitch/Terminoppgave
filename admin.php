@@ -17,12 +17,13 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     <link rel="icon" type="image/x-icon" href="linje5.jpg">
 </head>
 <body>
-  <h1>Velkommen administrator</h1>
+  
     <ul class="topnav">
         <li><a  href="index.php">Hjem</a></li>
         <li><a href="leggtil.php">Legg til</a></li>
         <li><a class="active" href="admin.php">Admin</a></li>
       </ul>
+      <h1>Velkommen administrator</h1>
       <table id="score">
         <tr>
           <th>Navn</th>
