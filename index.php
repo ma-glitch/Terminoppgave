@@ -66,6 +66,16 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 
         // Close the MySQLi connectio
         ?>
+        <tr>
+          <th>Total</th>
+          <?php 
+          $count = mysqli_query($link, "SELECT QUANTITY FROM total");
+        $total = 0;
+        while($row = mysqli_fetch_assoc($count)) {
+         $total += $row['Quantity'];
+        }
+        echo "<td>" . $total . "</td>";
+?>
       </table>
 
     <script src="script.js"></script>
