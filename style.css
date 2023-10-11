@@ -201,7 +201,7 @@ ul.topnav li.right {float: right;}
 /* Betalings knapp */
 
 /*hide the inputs/checkmarks and submenu*/
-input, .submenu {
+input, ul.submenu {
   display: none;
 }
 
@@ -213,6 +213,6 @@ label {
 }
 
 /*show the submenu when input is checked*/
-input:checked~.submenu {
+input:checked~ul.submenu {
   display: block;
 }
