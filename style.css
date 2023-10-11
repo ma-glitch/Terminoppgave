@@ -49,6 +49,13 @@ ul.topnav li.right {float: right;}
 /*      Legge til bot        */
 /*---------------------------*/
 
+.updateform{
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.updateform button{
+  background-color: #2196F3;
+}
 
 .leggtil{
     display: flex;
