@@ -79,6 +79,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
               echo "<td>". $row['SUM(total)']. "</td>";
           }
          ?>
+         </tr>
       </table>
 
     <script src="script.js"></script>

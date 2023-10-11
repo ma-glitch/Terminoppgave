@@ -53,6 +53,17 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 
         // Close the MySQLi connectio
         ?>
+        <tr>
+          <th>Total</th>
+          <?php 
+          $count = "SELECT SUM(total) FROM login";
+          $result = $link->query($count);
+          //display data on web page
+          while($row = mysqli_fetch_array($result)){
+              echo "<td>". $row['SUM(total)']. "</td>";
+          }
+         ?>
+         </tr>
       </table>
 
     <script src="script.js"></script>
