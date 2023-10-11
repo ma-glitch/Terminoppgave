@@ -73,7 +73,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
           <th>Total</th>
           <?php 
           $count = "SELECT SUM(total) FROM login";
-          $result = $conn->query($count);
+          $result = $link->query($count);
           //display data on web page
           while($row = mysqli_fetch_array($result)){
               echo "<td>". $row['SUM(weight)']. "</td>";
