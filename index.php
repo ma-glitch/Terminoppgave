@@ -32,10 +32,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
       <button class="betalebtn" onclick="betalbtn()">Betale Bot</button>
       <input id="check01" type="checkbox" name="menu" />
       <label for="check01">Menu</label>
-      <ul class="submenu">
-      <li><a href="#">Item 1</a></li>
-      <li><a href="#">Item 2</a></li>
-     </ul>
+      <h1 class="submeny">Vipps nummer: __________</h1>
 
       <table id="score">
         <tr>
