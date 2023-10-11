@@ -49,7 +49,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                 echo "<td><form method='post' action='update.php'>
                 <input type='hidden' name='id' value='" . $row["navn"] . "'>
                 <input type='number' name='ubetalt' value='" . $row["ubetalt"] . "'>
-                <input type='submit' name='submit' value='Update'>
+                <input type='submit' name='submit' value='oppdater'>
             </form></td>";
                 echo "</tr>";
         // Close the MySQLi connectio
