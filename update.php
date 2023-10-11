@@ -10,7 +10,7 @@ $sql = "UPDATE login SET ubetalt='$ubetalt' WHERE navn='$id'";
 
 if ($link->query($sql) === TRUE) {
     echo "Record updated successfully";
-    header("location: login.php");
+    header("location: admin.php");
     exit;
 } else {
     echo "Error updating record: " . $link->error;
