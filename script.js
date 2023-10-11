@@ -1,6 +1,6 @@
 function betalbtn() {
   document.getElementById("betal").style.display = "block";
-  setTimeout(close, 30000);
+  setTimeout(close, 10000);
 }
 
 
