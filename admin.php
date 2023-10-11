@@ -44,9 +44,9 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
             while ($row = $result->fetch_assoc()) {
                 echo "<tr>";
                 echo "<td class='TABEL'>" . $row["navn"] . "</td>";
-                echo "<td>" . $row["total"] . "</td>";
-                echo "<td>" . $row["ubetalt"] . "</td>";
-                echo "<td><form method='post' action='update.php' id='updateform'>
+                echo "<td class='TABEL'>" . $row["total"] . "</td>";
+                echo "<td class='TABEL'>" . $row["ubetalt"] . "</td>";
+                echo "<td class='TABEL'><form method='post' action='update.php' id='updateform'>
                 <input type='hidden' name='id' value='" . $row["navn"] . "'>
                 <input type='number' name='ubetalt' placeholder='" . $row["ubetalt"] . "'>
                 <input type='submit' name='submit' value='Oppdater' id='' class='leggtilbtn'>
