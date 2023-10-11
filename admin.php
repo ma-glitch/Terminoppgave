@@ -46,7 +46,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                 echo "<td>" . $row["navn"] . "</td>";
                 echo "<td>" . $row["total"] . "</td>";
                 echo "<td>" . $row["ubetalt"] . "</td>";
-                echo "<td>" . "<button> onclick="
+                echo "<td>" . "<button> onclick=".
                 if (isset($_GET['lfValue'])) {
                     $botValue = $_GET['lfValue'];
                 
