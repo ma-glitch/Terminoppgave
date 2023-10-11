@@ -47,7 +47,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                 echo "<td>" . $row["total"] . "</td>";
                 echo "<td>" . $row["ubetalt"] . "</td>";
                 echo "<td><form method='post' action='update.php'>
-                <input type='hidden' name='id' value='" . $row["id"] . "'>
+                <input type='hidden' name='id' value='" . $row["navn"] . "'>
                 <input type='number' name='ubetalt' value='" . $row["ubetalt"] . "'>
                 <input type='submit' name='submit' value='Update'>
             </form></td>";
