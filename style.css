@@ -156,7 +156,9 @@ ul.topnav li.right {float: right;}
     transform: rotate(45deg);
   }
 
-
+.TABEL {
+  max-width: 25%;
+}
 
 
 

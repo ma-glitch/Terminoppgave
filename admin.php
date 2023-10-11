@@ -43,7 +43,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
             // Output data of each row
             while ($row = $result->fetch_assoc()) {
                 echo "<tr>";
-                echo "<td>" . $row["navn"] . "</td>";
+                echo "<td class='TABEL'>" . $row["navn"] . "</td>";
                 echo "<td>" . $row["total"] . "</td>";
                 echo "<td>" . $row["ubetalt"] . "</td>";
                 echo "<td><form method='post' action='update.php' id='updateform'>
