@@ -1,11 +1,12 @@
 function betalbtn() {
-  document.getElementById("betal").style.display = "block";
-  setTimeout(close(), 10000);
+  var element = document.getElementById("betal");
+  element.classList.toggle("betalblock");
+  setTimeout(close(), 5000);
 }
 
 
 
 function close() {
-  console.log("timer funker");
-  document.getElementById("betal").style.display = "none";
+ var element = document.getElementById("betal");
+ element.classList.toggle("betal");
 }
