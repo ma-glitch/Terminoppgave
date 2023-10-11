@@ -69,12 +69,10 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
         <tr>
           <th>Total</th>
           <?php 
-          $count = mysqli_query($link, "SELECT QUANTITY FROM login");
+          $count = mysqli_query($link, "SELECT SUM(total) FROM login");
         $total = 0;
-        while($row = mysqli_fetch_assoc($count)) {
-         $total += $row['Quantity'];
-        }
-        echo "<td>" . $total . "</td>";
+        
+        echo "<td>" . $count . "</td>";
 ?>
       </table>
 
