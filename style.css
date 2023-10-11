@@ -49,11 +49,11 @@ ul.topnav li.right {float: right;}
 /*      Legge til bot        */
 /*---------------------------*/
 
-.updateform{
+#updateform{
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.updateform input{
+#updateform input{
   background-color: #2196F3;
 }
 
