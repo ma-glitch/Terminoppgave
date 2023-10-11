@@ -213,6 +213,6 @@ label {
 }
 
 /*show the submenu when input is checked*/
-input:checked~ul.submenu {
+input:checked~.submenu {
   display: block;
 }
