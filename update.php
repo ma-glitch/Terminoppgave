@@ -2,7 +2,7 @@
 session_start();
 require_once "config.php"; 
 
-$id = $row['navn'];
+$id = $_POST['id'];
 $ubetalt = $_POST['ubetalt'];
 
 // Update the ubetalt field for the specific user
