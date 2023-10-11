@@ -67,7 +67,6 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
           <th>Total</th>
           <?php 
           $count = "SELECT SUM(total) FROM login";
-          
         
         echo "<td>" . $count . "</td>";
 ?>
