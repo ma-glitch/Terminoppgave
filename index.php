@@ -30,11 +30,15 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
       <h1 class="velkommen">Velkommen <?php echo($_SESSION["navn"]);?>!</h1>
 
       <button class="betalebtn" onclick="betalbtn()">Betale Bot</button>
-      <input id="check01" type="checkbox" name="menu" />
-      <label for="check01">Menu</label>
-      <ul class="submenu">
-      <li><h1>Vipps: ________</h1></li>
-      </ul>
+
+      <div class="dropdown">
+  <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+  <div id="myDropdown" class="dropdown-content">
+    <a href="#">Link 1</a>
+    <a href="#">Link 2</a>
+    <a href="#">Link 3</a>
+  </div>
+</div>
 
       <table id="score">
         <tr>
