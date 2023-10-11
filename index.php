@@ -31,11 +31,12 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 
       <button class="betalebtn" onclick="betalbtn()">Betale Bot</button>
 
-      <div class="dropdown">
-  <button onclick="myFunction()" class="dropbtn">Dropdown</button>
-  <div id="myDropdown" class="dropdown-content">
-    <h1>Vipps : ___</h1>
-  </div>
+      <input id="check01" type="checkbox" name="menu" />
+<label for="check01">Menu</label>
+<ul class="submenu">
+  <li><a href="#">Item 1</a></li>
+  <li><a href="#">Item 2</a></li>
+</ul>
 </div>
 
       <table id="score">
