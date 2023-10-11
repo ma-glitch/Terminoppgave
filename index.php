@@ -20,6 +20,10 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     <ul class="topnav">
         <li><a class="active" href="index.php">Hjem</a></li>
         <li><a href="leggtil.php">Legg til</a></li>
+<?php if(!isset($_SESSION["admin"] !== "yes") || $_SESSION["admin"] !== "no"){
+    echo "<li><a href='admin.php'>Admin</a></li>";
+}
+    ?>
       </ul>
 
       
