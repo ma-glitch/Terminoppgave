@@ -33,8 +33,6 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
       <h1 id="betal">Vipps</h1>
 
 
-</div>
-
       <table id="score">
         <tr>
           <th>Navn</th>
