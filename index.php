@@ -30,7 +30,12 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
       <h1 class="velkommen">Velkommen <?php echo($_SESSION["navn"]);?>!</h1>
 
       <button class="betalebtn" onclick="betalbtn()">Betale Bot</button>
-      <h1 id="betal">Vipps til dette Nummeret:  2134214. NB husk a skrive at du betaler bot.</h1>
+      <input id="check01" type="checkbox" name="menu" />
+      <label for="check01">Menu</label>
+      <ul class="submenu">
+      <li><a href="#">Item 1</a></li>
+      <li><a href="#">Item 2</a></li>
+     </ul>
 
       <table id="score">
         <tr>
