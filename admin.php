@@ -29,6 +29,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
           <th>Navn</th>
           <th>Total</th>
           <th>Total ubetalt</th>
+          <th>Leggtil/Fjerne bot</td>
         </tr>
         <?php
         // Define the SQL query to retrieve data from your table
