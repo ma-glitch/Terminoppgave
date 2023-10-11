@@ -7,6 +7,7 @@ function betalbtn() {
 
 
 function close() {
+  console.log("asdfafaa");
  var element = document.getElementById("betal");
  element.classList.toggle("betal");
 }
