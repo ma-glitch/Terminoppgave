@@ -29,6 +29,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
           <th>Navn</th>
           <th>Total</th>
           <th>Total ubetalt</th>
+          <th>Leggtil/Fjerne bot</td>
         </tr>
         <?php
         // Define the SQL query to retrieve data from your table
@@ -45,6 +46,26 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                 echo "<td>" . $row["navn"] . "</td>";
                 echo "<td>" . $row["total"] . "</td>";
                 echo "<td>" . $row["ubetalt"] . "</td>";
+                echo "<td>" . "<button> onclick=".
+                if (isset($_GET['lfValue'])) {
+                    $botValue = $_GET['lfValue'];
+                
+                    $sql_update = "UPDATE login SET ubetalt = ubetalt + ".$botValue." WHERE bruker = '". $row["navn"]."'";
+        
+                    
+                    if ($stmt = $link->prepare($sql_update)) {
+                        // Execute the prepared statement
+                        if ($stmt->execute()) {
+                            // Bind the result variable
+                       echo "Boten har blitt endret";
+                          
+                        }else {
+                          echo "En feil har oppståt, prøv igjen senere";
+                        }
+                        $stmt->close();
+                    }
+                  }
+                  ."</button>" . "</td>"
                 echo "</tr>";
             }
         } else {
@@ -53,6 +74,17 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 
         // Close the MySQLi connectio
         ?>
+        <tr>
+          <th>Total</th>
+          <?php 
+          $count = "SELECT SUM(total) FROM login";
+          $result = $link->query($count);
+          //display data on web page
+          while($row = mysqli_fetch_array($result)){
+              echo "<td>". $row['SUM(total)']. "</td>";
+          }
+         ?>
+         </tr>
       </table>
 
     <script src="script.js"></script>
