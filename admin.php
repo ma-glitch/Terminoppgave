@@ -26,10 +26,10 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
       <h1 class="velkommen">Velkommen administrator <?php echo($_SESSION["navn"]);?>!</h1>
       <table id="score">
         <tr>
-          <th>Navn</th>
-          <th>Total</th>
-          <th>Total ubetalt</th>
-          <th>Leggtil/Fjerne bot</td>
+          <th class="TABLE">Navn</th>
+          <th class="TABLE">Total</th>
+          <th class="TABLE">Total ubetalt</th>
+          <th class="TABLE">Leggtil/Fjerne bot</td>
         </tr>
         <?php
         // Define the SQL query to retrieve data from your table
