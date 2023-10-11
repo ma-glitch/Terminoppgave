@@ -29,7 +29,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
       
       <h1 class="velkommen">Velkommen <?php echo($_SESSION["navn"]);?>!</h1>
 
-      <button class="betalebtn" onclick="betalbtn()">Betale Bot</button>
+      <button class="betalebtn" onclick="betalbtn()">BETAL BOT NÅ</button>
       <h1 id="betal">Vipps</h1>
 
 
