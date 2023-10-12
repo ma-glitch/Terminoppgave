@@ -23,13 +23,13 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
         <li><a href="leggtil.php">Legg til</a></li>
         <li><a class="active" href="admin.php">Admin</a></li>
       </ul>
-      <h1>Velkommen administrator</h1>
+      <h1 class="velkommen">Velkommen administrator <?php echo($_SESSION["navn"]);?>!</h1>
       <table id="score">
         <tr>
-          <th>Navn</th>
-          <th>Total</th>
-          <th>Total ubetalt</th>
-          <th>Leggtil/Fjerne bot</td>
+          <th class="TABLE">Navn</th>
+          <th class="TABLE">Total</th>
+          <th class="TABLE">Total ubetalt</th>
+          <th class="TABLE">Leggtil/Fjerne bot</td>
         </tr>
         <?php
         // Define the SQL query to retrieve data from your table
@@ -43,13 +43,13 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
             // Output data of each row
             while ($row = $result->fetch_assoc()) {
                 echo "<tr>";
-                echo "<td>" . $row["navn"] . "</td>";
-                echo "<td>" . $row["total"] . "</td>";
-                echo "<td>" . $row["ubetalt"] . "</td>";
-                echo "<td><form method='post' action='update.php' id='updateform'>
+                echo "<td class='TABEL'>" . $row["navn"] . "</td>";
+                echo "<td class='TABEL'>" . $row["total"] . "</td>";
+                echo "<td class='TABEL'>" . $row["ubetalt"] . "</td>";
+                echo "<td class='TABEL'><form method='post' action='update.php' id='updateform'>
                 <input type='hidden' name='id' value='" . $row["navn"] . "'>
                 <input type='number' name='ubetalt' placeholder='" . $row["ubetalt"] . "'>
-                <input type='submit' name='submit' value='oppdater' id='formbutton'>
+                <input type='submit' name='submit' value='Oppdater' id='' class='oppdaterbtn'>
                 </form></td>";
                 echo "</tr>";
         // Close the MySQLi connectio

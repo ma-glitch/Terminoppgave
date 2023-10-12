@@ -80,7 +80,7 @@ ul.topnav li.right {float: right;}
 
 
 .betalebtn{
-    background-color: greenyellow;
+    background-color: red;
     border: 2px solid black;
     padding: 10px 16px;
     margin: 10px;
@@ -158,9 +158,18 @@ ul.topnav li.right {float: right;}
     transform: rotate(45deg);
   }
 
+.TABEL {
+  max-width: 25%;
+}
 
-
-
+.oppdaterbtn {
+  font-size: 15px;
+  background-color: transparent;
+  background-color:  rgba(78,166,182,255);
+  border: 2px black solid;
+  border-radius: 8px;
+  cursor: pointer;
+}
 
   #score {
     margin-top: 100px;
