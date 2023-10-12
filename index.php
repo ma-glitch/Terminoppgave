@@ -19,7 +19,7 @@
     <body onload="close()">
         <ul class="topnav">
             <li><a class="active" href="index.php">Hjem</a></li>
-            <li><a href="leggtil.php">Legg til</a></li>
+            <li><a href="leggtil.php">Legg til bot</a></li>
     <?php if(($_SESSION["admin"] == "yes")){
         echo "<li><a href='admin.php'>Admin</a></li>";
     }

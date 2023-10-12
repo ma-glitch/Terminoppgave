@@ -25,7 +25,7 @@ if(!isset($_SESSION["admin"]) || $_SESSION["admin"] !== "yes"){
 
     <ul class="topnav">
         <li><a  href="index.php">Hjem</a></li>
-        <li><a href="leggtil.php">Legg til</a></li>
+        <li><a href="leggtil.php">Legg til bot</a></li>
         <li><a class="active" href="admin.php">Admin</a></li>
       </ul>
       <h1 class="velkommen">Velkommen administrator <?php echo($_SESSION["navn"]);?>!</h1>
@@ -41,7 +41,7 @@ if(!isset($_SESSION["admin"]) || $_SESSION["admin"] !== "yes"){
           <th class="TABLE">Navn</th>
           <th class="TABLE">Total</th>
           <th class="TABLE">Total ubetalt</th>
-          <th class="TABLE">Leggtil/Fjerne bot</td>
+          <th class="TABLE">Oppdatere tabel</td>
         </tr>
         <?php
         // Define the SQL query to retrieve data from your table
@@ -94,7 +94,20 @@ if(!isset($_SESSION["admin"]) || $_SESSION["admin"] !== "yes"){
 <script>
 
 function opptnavn(){
+  document.querySelectorAll(".updateform").forEach(a=>a.style.display = "none");
+  document.querySelectorAll(".updateform3").forEach(a=>a.style.display = "block");
+  document.querySelectorAll(".updateform2").forEach(a=>a.style.display = "none");
+}
+
+function oppttotal(){
+  document.querySelectorAll(".updateform").forEach(a=>a.style.display = "none");
+  document.querySelectorAll(".updateform2").forEach(a=>a.style.display = "block");
+  document.querySelectorAll(".updateform3").forEach(a=>a.style.display = "none");
+}
+function opptubetalt(){
   document.querySelectorAll(".updateform").forEach(a=>a.style.display = "block");
+  document.querySelectorAll(".updateform2").forEach(a=>a.style.display = "none");
+  document.querySelectorAll(".updateform3").forEach(a=>a.style.display = "none");
 }
 
 </script>
