@@ -31,7 +31,7 @@ if(!isset($_SESSION["admin"]) || $_SESSION["admin"] !== "yes"){
       <h1 class="velkommen">Velkommen administrator <?php echo($_SESSION["navn"]);?>!</h1>
       
       <div>
-        <button id="opptnavn">Oppdater navn</button>
+        <button onclick="opptnavn()">Oppdater navn</button>
         <button onclick="oppttotal()">Oppdater total</button>
         <button onclick="opptubetalt()">Oppdater ubetalt</button>
       </div>
@@ -81,12 +81,9 @@ if(!isset($_SESSION["admin"]) || $_SESSION["admin"] !== "yes"){
         <tr>
           <th>Total</th>
           <?php 
-          $count = "SELECT SUM(total) FROM login";
-          $result = $link->query($count);
-          //display data on web page
-          while($row = mysqli_fetch_array($result)){
-              echo "<td>". $row['SUM(total)']. "</td>";
-          }
+           function opptnavn{
+            document.querySelectorAll(".updateform").forEach(a=>a.style.display = "block");
+           }
          ?>
          </tr>
       </table>
