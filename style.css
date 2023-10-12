@@ -106,6 +106,13 @@ form{
   height: 12%;
 }
 
+.updatebuttons{
+  display: flex;
+  justify-content: space-evenly;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
 
 /* The container */
 .container {
