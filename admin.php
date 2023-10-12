@@ -61,7 +61,7 @@ if(!isset($_SESSION["admin"]) || $_SESSION["admin"] !== "yes"){
                 echo "<td class='TABEL'><form method='post' action='update.php' class='updateform'>
                 <input type='hidden' name='id' value='" . $row["navn"] . "'>
                 <input type='number' name='ubetalt' placeholder='" . $row["ubetalt"] . "'>
-                <input type='submit' name='submit' value='Oppdater' id='' class='oppdaterbtn'>
+                <input type='submit' name='submit' value='Oppdater' id='sumbit' class='oppdaterbtn'>
                 </form>
                 <form method='post' action='updatetotal.php' class='updateform2'>
                 <input type='hidden' name='id2' value='" . $row["navn"] . "'>
@@ -92,29 +92,21 @@ if(!isset($_SESSION["admin"]) || $_SESSION["admin"] !== "yes"){
       </table>
 
 <script>
-function nodisplayupdate(){
-  document.getElementsByClassname("updateform3").style.display = "none";
-  document.getElementsByClassname("updateform2").style.display = "none";
-  document.getElementsByClassname("updateform").style.display = "none";
-}
 
-function opptnavn(){
-  document.getElementsByClassname("updateform3").style.display = "block";
-  document.getElementsByClassname("updateform2").style.display = "none";
-  document.getElementsByClassname("updateform").style.display = "none";
-}
 
-function oppttotal(){
-  document.getElementsByClassname("updateform3").style.display = "none";
-  document.getElementsByClassname("updateform2").style.display = "block";
-  document.getElementsByClassname("updateform").style.display = "none";
-}
+const changeDisplayButton = document.getElementById("sumbit");
 
-function opptubetalt(){
-  document.getElementById("updateform3").style.display = "none";
-  document.getElementById("updateform2").style.display = "none";
-  document.getElementById("updateform").style.display = "block";
-}
+// Add a click event listener to the button
+changeDisplayButton.addEventListener("click", () => {
+  // Select all elements with the class "myClass"
+  const elements = document.querySelectorAll("updateform");
+
+  // Iterate through the selected elements and change their display property
+  elements.forEach((element) => {
+    element.style.display = "block"; // Change "block" to the desired display value
+  });
+});
+
 </script>
 </body>
 </html>
