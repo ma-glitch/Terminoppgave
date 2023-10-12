@@ -82,7 +82,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Check input errors before inserting into database
     if (empty($username_err) && empty($password_err) && empty($confirm_password_err)) {
         // Prepare an INSERT statement
-        $sql = "INSERT INTO login (navn, bruker, passord, total, ubetalt) VALUES (?, ?, ?, 0, 0)";
+        $sql = "INSERT INTO login (navn, bruker, passord, total, ubetalt, admin) VALUES (?, ?, ?, 0, 0, 'no')";
 
         if ($stmt = $link->prepare($sql)) {
             $stmt->bind_param("sss", $param_navn, $param_username, $param_password);
