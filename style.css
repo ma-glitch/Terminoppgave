@@ -12,9 +12,11 @@ body {margin: 0; font-family: Arial, Helvetica, sans-serif;}
 .betal{
   display: none;
 }
+
 .betalblock {
   display: block;
 }
+
 ul.topnav {
   font-family: Arial, Helvetica, sans-serif;
   list-style-type: none;

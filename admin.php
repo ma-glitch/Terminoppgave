@@ -6,6 +6,11 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     header("location: login.php");
     exit;
 }
+if(!isset($_SESSION["admin"]) || $_SESSION["admin"] !== "no"){
+  header("location: index.php");
+  echo("du er ikke admin");
+  exit;
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -16,14 +21,21 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     <link rel="stylesheet" type="text/css" href="style.css" />
     <link rel="icon" type="image/x-icon" href="linje5.jpg">
 </head>
-<body>
-  
+<body onload="nodisplayupdate()">
+
     <ul class="topnav">
         <li><a  href="index.php">Hjem</a></li>
         <li><a href="leggtil.php">Legg til</a></li>
         <li><a class="active" href="admin.php">Admin</a></li>
       </ul>
       <h1 class="velkommen">Velkommen administrator <?php echo($_SESSION["navn"]);?>!</h1>
+      
+      <div>
+        <button onclick="opptnavn()">Oppdater navn</button>
+        <button onclick="oppttotal()">Oppdater total</button>
+        <button onclick="opptubetalt()">Oppdater ubetalt</button>
+      </div>
+
       <table id="score">
         <tr>
           <th class="TABLE">Navn</th>
@@ -33,7 +45,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
         </tr>
         <?php
         // Define the SQL query to retrieve data from your table
-        $sql = "SELECT navn, total, ubetalt FROM login ORDER BY total DESC";
+        $sql = "SELECT navn, total, ubetalt FROM login ORDER BY CONVERT(total,INTEGER) DESC";
 
         // Execute the query
         $result = $link -> query($sql);
@@ -50,6 +62,16 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                 <input type='hidden' name='id' value='" . $row["navn"] . "'>
                 <input type='number' name='ubetalt' placeholder='" . $row["ubetalt"] . "'>
                 <input type='submit' name='submit' value='Oppdater' id='' class='oppdaterbtn'>
+                </form>
+                <form method='post' action='updatetotal.php' id='updateform2'>
+                <input type='hidden' name='id2' value='" . $row["navn"] . "'>
+                <input type='number' name='total' placeholder='" . $row["total"] . "'>
+                <input type='submit' name='submit2' value='Oppdater' id='' class='oppdaterbtn'>
+                </form>
+                <form method='post' action='updatenavn.php' id='updateform3'>
+                <input type='hidden' name='id3' value='" . $row["navn"] . "'>
+                <input type='text' name='navn' placeholder='" . $row["navn"] . "'>
+                <input type='submit' name='submit3' value='Oppdater' id='' class='oppdaterbtn'>
                 </form></td>";
                 echo "</tr>";
         // Close the MySQLi connectio
@@ -69,6 +91,6 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
          </tr>
       </table>
 
-    <script src="script.js"></script>
+      <script src="script.js"></script>
 </body>
 </html>
