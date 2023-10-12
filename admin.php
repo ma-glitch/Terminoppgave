@@ -16,7 +16,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     <link rel="stylesheet" type="text/css" href="style.css" />
     <link rel="icon" type="image/x-icon" href="linje5.jpg">
 </head>
-<body>
+<body onload="nodisplayupdate()">
   
     <ul class="topnav">
         <li><a  href="index.php">Hjem</a></li>
@@ -24,6 +24,13 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
         <li><a class="active" href="admin.php">Admin</a></li>
       </ul>
       <h1 class="velkommen">Velkommen administrator <?php echo($_SESSION["navn"]);?>!</h1>
+      
+      <div>
+        <button onclick="opptnavn()">Oppdater navn</button>
+        <button onclick="oppttotal()">Oppdater total</button>
+        <button onclick="opptubetalt()">Oppdater ubetalt</button>
+      </div>
+
       <table id="score">
         <tr>
           <th class="TABLE">Navn</th>
@@ -55,6 +62,11 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                 <input type='hidden' name='id2' value='" . $row["navn"] . "'>
                 <input type='number' name='total' placeholder='" . $row["total"] . "'>
                 <input type='submit' name='submit2' value='Oppdater' id='' class='oppdaterbtn'>
+                </form>
+                <form method='post' action='updatetotal.php' id='updateform3'>
+                <input type='hidden' name='id3' value='" . $row["navn"] . "'>
+                <input type='number' name='navn' placeholder='" . $row["navn"] . "'>
+                <input type='submit' name='submit3' value='Oppdater' id='' class='oppdaterbtn'>
                 </form></td>";
                 echo "</tr>";
         // Close the MySQLi connectio
