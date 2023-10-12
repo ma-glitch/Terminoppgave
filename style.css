@@ -95,13 +95,16 @@ form{
 
 
 .betalebtn{
-    background-color: red;
-    border: 2px solid black;
-    padding: 10px 16px;
-    margin: 10px;
-    border-radius: 8px;
-    font-size: 20px;
-    cursor: pointer;
+  color:white;
+  font-size: 25px;
+  font-weight: bold;  
+  background-color: #27535B;
+  border-color: #a7d3d8;
+  border-radius: 25px;
+  border-width: 10px;
+  width: 10%;
+  height: 50px;
+  
 }
 
 .updatebuttons{
