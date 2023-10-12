@@ -93,7 +93,7 @@ if(!isset($_SESSION["admin"]) || $_SESSION["admin"] !== "yes"){
 
 <script>
 
-function opptnavn{
+function opptnavn(){
   document.querySelectorAll(".login").forEach(a=>a.style.display = "none");
 }
 
