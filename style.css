@@ -104,6 +104,8 @@ form{
   border-width: 10px;
   width: 300px;
   height: 12%;
+  display: flex;
+  justify-content: center;
 }
 
 .updatebuttons{
