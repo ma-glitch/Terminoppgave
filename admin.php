@@ -31,7 +31,7 @@ if(!isset($_SESSION["admin"]) || $_SESSION["admin"] !== "yes"){
       <h1 class="velkommen">Velkommen administrator <?php echo($_SESSION["navn"]);?>!</h1>
       
       <div>
-        <button onclick="opptnavn()">Oppdater navn</button>
+        <button class="opptnavn">Oppdater navn</button>
         <button onclick="oppttotal()">Oppdater total</button>
         <button onclick="opptubetalt()">Oppdater ubetalt</button>
       </div>
@@ -94,7 +94,7 @@ if(!isset($_SESSION["admin"]) || $_SESSION["admin"] !== "yes"){
 <script>
 
 
-const changeDisplayButton = document.getElementById("sumbit");
+const changeDisplayButton = document.getElementById("opptnavn");
 
 // Add a click event listener to the button
 changeDisplayButton.addEventListener("click", () => {
