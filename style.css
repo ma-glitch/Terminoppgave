@@ -59,7 +59,13 @@ form{
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.updateform .updateform2 .updateform3{
+.updateform{
+  display: none;
+}
+.updateform2{
+  display: none;
+}
+.updateform3{
   display: none;
 }
 

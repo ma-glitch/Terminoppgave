@@ -31,7 +31,7 @@ if(!isset($_SESSION["admin"]) || $_SESSION["admin"] !== "yes"){
       <h1 class="velkommen">Velkommen administrator <?php echo($_SESSION["navn"]);?>!</h1>
       
       <div>
-        <button class="opptnavn">Oppdater navn</button>
+        <button id="opptnavn">Oppdater navn</button>
         <button onclick="oppttotal()">Oppdater total</button>
         <button onclick="opptubetalt()">Oppdater ubetalt</button>
       </div>
