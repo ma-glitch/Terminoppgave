@@ -21,7 +21,7 @@ if(!isset($_SESSION["admin"]) || $_SESSION["admin"] !== "yes"){
     <link rel="stylesheet" type="text/css" href="style.css" />
     <link rel="icon" type="image/x-icon" href="linje5.jpg">
 </head>
-<body onload="nodisplayupdate()">
+<body>
 
     <ul class="topnav">
         <li><a  href="index.php">Hjem</a></li>
@@ -99,7 +99,7 @@ const changeDisplayButton = document.getElementById("opptnavn");
 // Add a click event listener to the button
 changeDisplayButton.addEventListener("click", () => {
   // Select all elements with the class "myClass"
-  const elements = document.querySelectorAll("updateform");
+  const elements = document.getElementsByClassname("updateform");
 
   // Iterate through the selected elements and change their display property
   elements.forEach((element) => {
