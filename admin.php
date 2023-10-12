@@ -81,28 +81,21 @@ if(!isset($_SESSION["admin"]) || $_SESSION["admin"] !== "yes"){
         <tr>
           <th>Total</th>
           <?php 
-           function opptnavn{
-            document.querySelectorAll(".updateform").forEach(a=>a.style.display = "block");
-           }
+          $count = "SELECT SUM(total) FROM login";
+          $result = $link->query($count);
+          //display data on web page
+          while($row = mysqli_fetch_array($result)){
+              echo "<td>". $row['SUM(total)']. "</td>";
+          }
          ?>
          </tr>
       </table>
 
 <script>
 
-
-const changeDisplayButton = document.getElementById("opptnavn");
-
-// Add a click event listener to the button
-changeDisplayButton.addEventListener("click", () => {
-  // Select all elements with the class "myClass"
-  const elements = document.getElementsByClassname("updateform");
-
-  // Iterate through the selected elements and change their display property
-  elements.forEach((element) => {
-    element.style.display = "block"; // Change "block" to the desired display value
-  });
-});
+function opptnavn{
+  document.querySelectorAll(".login").forEach(a=>a.style.display = "none");
+}
 
 </script>
 </body>
