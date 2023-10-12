@@ -94,7 +94,7 @@ if(!isset($_SESSION["admin"]) || $_SESSION["admin"] !== "yes"){
 <script>
 
 function opptnavn(){
-  document.querySelectorAll(".login").forEach(a=>a.style.display = "none");
+  document.querySelectorAll(".updateform").forEach(a=>a.style.display = "block");
 }
 
 </script>
