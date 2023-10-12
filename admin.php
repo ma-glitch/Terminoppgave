@@ -50,7 +50,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                 <input type='hidden' name='id' value='" . $row["navn"] . "'>
                 <input type='number' name='ubetalt' placeholder='" . $row["ubetalt"] . "'>
                 <input type='submit' name='submit' value='Oppdater' id='' class='oppdaterbtn'>
-                <form method='post' action='updatetotal.php' id='updateform'>
+                <form method='post' action='updatetotal.php' id='updateform2'>
                 <input type='hidden' name='id2' value='" . $row["navn"] . "'>
                 <input type='number' name='total' placeholder='" . $row["total"] . "'>
                 <input type='submit' name='submit2' value='Oppdater' id='' class='oppdaterbtn'>
