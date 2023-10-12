@@ -58,17 +58,17 @@ if(!isset($_SESSION["admin"]) || $_SESSION["admin"] !== "yes"){
                 echo "<td class='TABEL'>" . $row["navn"] . "</td>";
                 echo "<td class='TABEL'>" . $row["total"] . "</td>";
                 echo "<td class='TABEL'>" . $row["ubetalt"] . "</td>";
-                echo "<td class='TABEL'><form method='post' action='update.php' id='updateform'>
+                echo "<td class='TABEL'><form method='post' action='update.php' class='updateform'>
                 <input type='hidden' name='id' value='" . $row["navn"] . "'>
                 <input type='number' name='ubetalt' placeholder='" . $row["ubetalt"] . "'>
                 <input type='submit' name='submit' value='Oppdater' id='' class='oppdaterbtn'>
                 </form>
-                <form method='post' action='updatetotal.php' id='updateform2'>
+                <form method='post' action='updatetotal.php' class='updateform2'>
                 <input type='hidden' name='id2' value='" . $row["navn"] . "'>
                 <input type='number' name='total' placeholder='" . $row["total"] . "'>
                 <input type='submit' name='submit2' value='Oppdater' id='' class='oppdaterbtn'>
                 </form>
-                <form method='post' action='updatenavn.php' id='updateform3'>
+                <form method='post' action='updatenavn.php' class='updateform3'>
                 <input type='hidden' name='id3' value='" . $row["navn"] . "'>
                 <input type='text' name='navn' placeholder='" . $row["navn"] . "'>
                 <input type='submit' name='submit3' value='Oppdater' id='' class='oppdaterbtn'>
@@ -93,21 +93,21 @@ if(!isset($_SESSION["admin"]) || $_SESSION["admin"] !== "yes"){
 
 <script>
 function nodisplayupdate(){
-  document.getElementById("updateform3").style.display = "none";
-  document.getElementById("updateform2").style.display = "none";
-  document.getElementById("updateform").style.display = "none";
+  document.getElementsByClassname("updateform3").style.display = "none";
+  document.getElementsByClassname("updateform2").style.display = "none";
+  document.getElementsByClassname("updateform").style.display = "none";
 }
 
 function opptnavn(){
-  document.getElementById("updateform3").style.display = "block";
-  document.getElementById("updateform2").style.display = "none";
-  document.getElementById("updateform").style.display = "none";
+  document.getElementsByClassname("updateform3").style.display = "block";
+  document.getElementsByClassname("updateform2").style.display = "none";
+  document.getElementsByClassname("updateform").style.display = "none";
 }
 
 function oppttotal(){
-  document.getElementById("updateform3").style.display = "none";
-  document.getElementById("updateform2").style.display = "block";
-  document.getElementById("updateform").style.display = "none";
+  document.getElementsByClassname("updateform3").style.display = "none";
+  document.getElementsByClassname("updateform2").style.display = "block";
+  document.getElementsByClassname("updateform").style.display = "none";
 }
 
 function opptubetalt(){
