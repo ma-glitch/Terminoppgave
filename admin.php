@@ -17,7 +17,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     <link rel="icon" type="image/x-icon" href="linje5.jpg">
 </head>
 <body onload="nodisplayupdate()">
-<script src="script.js"></script>
+
     <ul class="topnav">
         <li><a  href="index.php">Hjem</a></li>
         <li><a href="leggtil.php">Legg til</a></li>
@@ -86,6 +86,6 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
          </tr>
       </table>
 
-
+      <script src="script.js"></script>
 </body>
 </html>
