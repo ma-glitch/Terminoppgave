@@ -41,7 +41,7 @@
             </tr>
             <?php
             // Define the SQL query to retrieve data from your table
-            $sql = "SELECT navn, total, ubetalt FROM login ORDER BY total DESC";
+            $sql = "SELECT navn, total, ubetalt FROM login ORDER BY CONVERT(total,INTEGER) DESC";
 
             // Execute the query
             $result = $link -> query($sql);
