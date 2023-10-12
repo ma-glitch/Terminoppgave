@@ -10,7 +10,7 @@ function close() {
  element2.classList.toggle("betal");
 }
 
-function nodisplayupdate(){
+/*function nodisplayupdate(){
   document.getElementById("updateform3").style.display("none");
   document.getElementById("updateform2").style.display("none");
   document.getElementById("updateform").style.display("none");
@@ -32,4 +32,4 @@ function opptubetalt(){
   document.getElementById("updateform3").style.display("none");
   document.getElementById("updateform2").style.display("none");
   document.getElementById("updateform").style.display("block");
-}
+}*/
