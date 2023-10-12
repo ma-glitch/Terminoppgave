@@ -4,6 +4,8 @@ body {margin: 0; font-family: Arial, Helvetica, sans-serif;}
     color: black;
     font-size: 30px;
     font-weight: 600;
+    display: flex;
+    justify-content: center;
 }
 
 
@@ -16,13 +18,15 @@ body {margin: 0; font-family: Arial, Helvetica, sans-serif;}
 }
 
 ul.topnav {
-    font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
   font-weight: 550;
   background-color: #333;
+  display: flex;
+  justify-content: center;
 }
 
 ul.topnav li {float: left;}
@@ -171,13 +175,28 @@ ul.topnav li.right {float: right;}
   cursor: pointer;
 }
 
-  #score {
-    margin-top: 100px;
-    font-family: Arial, Helvetica, sans-serif;
-    border-collapse: collapse;
-    width: 100%;
-    margin-bottom: 100px;
-  }
+#BotOversikt {
+  font-weight: bold;
+  font-size: 25px;
+}
+
+#BotOversikt input {
+  margin-bottom: 15px;
+}
+
+.Check{
+  transform: scale(1.9);
+}
+
+#score {   
+  font-family: Arial, Helvetica, sans-serif;
+  width: 95%;
+  height: fit-content;
+  margin-left: 2.5%;
+  border-collapse: collapse;
+  margin-bottom: 100px;  
+  margin-top: 100px;
+}
   
   #score td, #score th {
     border: 1px solid #ddd;
@@ -207,6 +226,8 @@ ul.topnav li.right {float: right;}
 
 .form-group {
  padding: 10px;
+ font-weight: bold;
+ font-size: 20px;
 }
 
 #LogInbtn {
@@ -217,5 +238,3 @@ ul.topnav li.right {float: right;}
 #logintekst {
   margin-top: 50px;
 }
-
-
