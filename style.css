@@ -104,6 +104,11 @@ form{
     cursor: pointer;
 }
 
+.updatebuttons{
+  display: flex;
+  justify-content: space-evenly;
+}
+
 
 /* The container */
 .container {
