@@ -103,7 +103,9 @@ form{
   border-radius: 25px;
   border-width: 10px;
   width: 300px;
-  height: 12%;
+  height: 50px;
+}
+.betal {
   display: flex;
   justify-content: center;
 }
