@@ -6,6 +6,11 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     header("location: login.php");
     exit;
 }
+if(!isset($_SESSION["admin"]) || $_SESSION["admin"] !== "no"){
+  header("location: index.php");
+  echo("du er ikke admin");
+  exit;
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
