@@ -29,11 +29,11 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     <h1 class="velkommen">Velkommen <?php echo($_SESSION["navn"]);?>!</h1>
     <div class="leggtil">
         <h1>Legg til bot</h1>
-        <form action="process.php" method="post">
-            Kina 25Kr: <input type="checkbox" name="kina" value="25"><br>
-            Glemme drakt 500Kr <input type="checkbox" name="glemmeDrakt" value="500"><br>
-            Glemme viktig utstyr 50Kr <input type="checkbox" name="glemmeViktig" value="50"><br>
-            En håndspol 50Kr <input type="checkbox" name="haandspol" value="50"><br>
+        <form action="process.php" method="post" id="BotOversikt">
+            Kina 25Kr   <input class="Check" type="checkbox" name="kina" value="25"><br>
+            Glemme drakt 500Kr   <input class="Check" type="checkbox" name="glemmeDrakt" value="500"><br>
+            Glemme viktig utstyr 50Kr   <input class="Check" type="checkbox" name="glemmeViktig" value="50"><br>
+            En håndspol 50Kr   <input class="Check" type="checkbox" name="haandspol" value="50"><br>
 
             <input type="submit" class="leggtilbtn">
         </form>
