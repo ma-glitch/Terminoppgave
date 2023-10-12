@@ -91,29 +91,30 @@ if(!isset($_SESSION["admin"]) || $_SESSION["admin"] !== "yes"){
          </tr>
       </table>
 
-      <script>
-      function nodisplayupdate(){
-  document.getElementById("updateform3").style.display("none");
-  document.getElementById("updateform2").style.display("none");
-  document.getElementById("updateform").style.display("none");
+<script>
+function nodisplayupdate(){
+  document.getElementById("updateform3").style.display = "none";
+  document.getElementById("updateform2").style.display = "none";
+  document.getElementById("updateform").style.display = "none";
 }
 
 function opptnavn(){
-  document.getElementById("updateform3").style.display("block");
-  document.getElementById("updateform2").style.display("none");
-  document.getElementById("updateform").style.display("none");
+  document.getElementById("updateform3").style.display = "block";
+  document.getElementById("updateform2").style.display = "none";
+  document.getElementById("updateform").style.display = "none";
 }
 
 function oppttotal(){
-  document.getElementById("updateform3").style.display("none");
-  document.getElementById("updateform2").style.display("block");
-  document.getElementById("updateform").style.display("none");
+  document.getElementById("updateform3").style.display = "none";
+  document.getElementById("updateform2").style.display = "block";
+  document.getElementById("updateform").style.display = "none";
 }
 
 function opptubetalt(){
-  document.getElementById("updateform3").style.display("none");
-  document.getElementById("updateform2").style.display("none");
-  document.getElementById("updateform").style.display("block");
-}</script>
+  document.getElementById("updateform3").style.display = "none";
+  document.getElementById("updateform2").style.display = "none";
+  document.getElementById("updateform").style.display = "block";
+}
+</script>
 </body>
 </html>
