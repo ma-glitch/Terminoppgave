@@ -63,9 +63,9 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                 <input type='number' name='total' placeholder='" . $row["total"] . "'>
                 <input type='submit' name='submit2' value='Oppdater' id='' class='oppdaterbtn'>
                 </form>
-                <form method='post' action='updatetotal.php' id='updateform3'>
+                <form method='post' action='updatenavn.php' id='updateform3'>
                 <input type='hidden' name='id3' value='" . $row["navn"] . "'>
-                <input type='number' name='navn' placeholder='" . $row["navn"] . "'>
+                <input type='text' name='navn' placeholder='" . $row["navn"] . "'>
                 <input type='submit' name='submit3' value='Oppdater' id='' class='oppdaterbtn'>
                 </form></td>";
                 echo "</tr>";
