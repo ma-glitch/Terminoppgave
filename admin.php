@@ -35,9 +35,9 @@ if (!isset($_SESSION["admin"]) || $_SESSION["admin"] !== "yes") {
   </h1>
 
   <div class="updatebuttons">
-    <button onclick="opptnavn()">Oppdater navn</button>
-    <button onclick="oppttotal()">Oppdater total</button>
-    <button onclick="opptubetalt()">Oppdater ubetalt</button>
+    <button onclick="opptnavn()" class="betalebtn">Oppdater navn</button>
+    <button onclick="oppttotal()" class="betalebtn">Oppdater total</button>
+    <button onclick="opptubetalt()" class="betalebtn">Oppdater ubetalt</button>
   </div>
 
   <table id="score">
