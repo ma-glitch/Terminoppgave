@@ -34,7 +34,19 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
             Glemme drakt 500Kr   <input class="Check" type="checkbox" name="glemmeDrakt" value="500"><br>
             Glemme viktig utstyr 50Kr   <input class="Check" type="checkbox" name="glemmeViktig" value="50"><br>
             En håndspol 50Kr   <input class="Check" type="checkbox" name="haandspol" value="50"><br>
-               <input class="Check" type="checkbox" name="" value=""><br>
+            <input class="Check" type="checkbox" name="" value=""><br>
+            <input class="Check" type="checkbox" name="" value=""><br>
+            <input class="Check" type="checkbox" name="" value=""><br>
+            <input class="Check" type="checkbox" name="" value=""><br>
+            <input class="Check" type="checkbox" name="" value=""><br>
+            <input class="Check" type="checkbox" name="" value=""><br>
+            <input class="Check" type="checkbox" name="" value=""><br>
+            <input class="Check" type="checkbox" name="" value=""><br>
+            <input class="Check" type="checkbox" name="" value=""><br>
+            <input class="Check" type="checkbox" name="" value=""><br>
+            <input class="Check" type="checkbox" name="" value=""><br>
+            <input class="Check" type="checkbox" name="" value=""><br>
+            
 
             <input type="submit" class="leggtilbtn">
         </form>

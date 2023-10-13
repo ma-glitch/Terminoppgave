@@ -21,6 +21,28 @@ function calculateBotValue() {
     if (isset($_POST[""]) && $_POST[""] === "") {
         $ = ;
     }
+    if (isset($_POST[""]) && $_POST[""] === "") {
+        $ = ;
+    }
+    if (isset($_POST[""]) && $_POST[""] === "") {
+        $ = ;
+    }
+    if (isset($_POST[""]) && $_POST[""] === "") {
+        $ = ;
+    }
+    if (isset($_POST[""]) && $_POST[""] === "") {
+        $ = ;
+    }
+    if (isset($_POST[""]) && $_POST[""] === "") {
+        $ = ;
+    }
+    if (isset($_POST[""]) && $_POST[""] === "") {
+        $ = ;
+    }
+    if (isset($_POST[""]) && $_POST[""] === "") {
+        $ = ;
+    }
+    
 
     $botVerdi = $kinaVerdi + $glemmeDraktVerdi + $glemmeViktigVerdi + $haandspolVerdi;
     return $botVerdi;
