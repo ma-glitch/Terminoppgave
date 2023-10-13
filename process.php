@@ -18,6 +18,9 @@ function calculateBotValue() {
     if (isset($_POST["haandspol"]) && $_POST["haandspol"] === "50") {
         $haandspolVerdi = 50;
     }
+    if (isset($_POST[""]) && $_POST[""] === "") {
+        $ = ;
+    }
 
     $botVerdi = $kinaVerdi + $glemmeDraktVerdi + $glemmeViktigVerdi + $haandspolVerdi;
     return $botVerdi;
