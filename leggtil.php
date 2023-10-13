@@ -46,6 +46,24 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
             <input class="Check" type="checkbox" name="" value=""><br>
             <input class="Check" type="checkbox" name="" value=""><br>
             <input class="Check" type="checkbox" name="" value=""><br>
+            <input class="Check" type="checkbox" name="" value=""><br>
+            <input class="Check" type="checkbox" name="" value=""><br>
+            <input class="Check" type="checkbox" name="" value=""><br>
+            <input class="Check" type="checkbox" name="" value=""><br>
+            <input class="Check" type="checkbox" name="" value=""><br>
+            <input class="Check" type="checkbox" name="" value=""><br>
+            <input class="Check" type="checkbox" name="" value=""><br>
+            <input class="Check" type="checkbox" name="" value=""><br>
+            <input class="Check" type="checkbox" name="" value=""><br>
+            <input class="Check" type="checkbox" name="" value=""><br>
+            <input class="Check" type="checkbox" name="" value=""><br>
+            <input class="Check" type="checkbox" name="" value=""><br>
+            <input class="Check" type="checkbox" name="" value=""><br>
+            <input class="Check" type="checkbox" name="" value=""><br>
+            <input class="Check" type="checkbox" name="" value=""><br>
+            <input class="Check" type="checkbox" name="" value=""><br>
+            <input class="Check" type="checkbox" name="" value=""><br>
+            <input class="Check" type="checkbox" name="" value=""><br>
             
 
             <input type="submit" class="leggtilbtn">
