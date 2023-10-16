@@ -1,18 +1,19 @@
 <?php
-function sendEpost() {
-        $to      = 'vikja001@outlook.com';
-    $subject = 'the subject';
-    $message = 'hello';
-    $headers = 'From: webmaster@example.com'       . "\r\n" .
-                 'Reply-To: webmaster@example.com' . "\r\n" .
-                 'X-Mailer: PHP/' . phpversion();
+if (isset($_POST['submit'])) {
+    $to = $_POST['to'];
+    $subject = $_POST['subject'];
+    $message = $_POST['message'];
+    $headers = 'From: webmaster@example.com' . "\r\n" .
+        'Reply-To: webmaster@example.com' . "\r\n" .
+        'X-Mailer: PHP/' . phpversion();
 
-    mail($to, $subject, $message, $headers);
-    echo "epost sendt";
+    if (mail($to, $subject, $message, $headers)) {
+        echo "Email sent successfully";
+    } else {
+        echo "Email sending failed";
+    }
 }
-
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,7 +23,10 @@ function sendEpost() {
 </head>
 <body>
     <form action="e-post.php" method="post">
-    <input type="submit" class="leggtilbtn">
+        <input type="text" name="to" placeholder="Recipient Email">
+        <input type="text" name="subject" placeholder="Subject">
+        <textarea name="message" placeholder="Message"></textarea>
+        <input type="submit" class="leggtilbtn" name="submit">
     </form>
 </body>
 </html>
