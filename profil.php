@@ -29,7 +29,6 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 
     <div class="Profil-wrapper">
         <div class="Endreprofil">
-            <div class="Profilinfo">
                 <table> 
                     <tr>
                         <td class="headerinfo">Navn:</td>
@@ -50,7 +49,6 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                         ?>
                     </tr>
                 </table>
-            </div>
         </div>
     </div>
 </body>
