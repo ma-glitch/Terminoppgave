@@ -21,12 +21,17 @@ body {margin: 0; font-family: Arial, Helvetica, sans-serif;}
 ul.topnav {
   font-family: Arial, Helvetica, sans-serif;
   list-style-type: none;
+   border-top-style: none;
+  border-right-style: none;
+  border-bottom-style: dotted;
+  border-left-style: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
   font-weight: 550;
   display: flex;
   justify-content: center;
+ 
 }
 
 ul.topnav li {float: left;}
