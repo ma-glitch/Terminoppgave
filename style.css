@@ -290,6 +290,10 @@ form{
   justify-content: space-evenly;
 }
 
+.Profilinfo tr{
+  border-bottom: 2px solid blakc;
+}
+
 .headerinfo{
   font-size: 21px;
   font-weight: bold;
