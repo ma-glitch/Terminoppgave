@@ -114,7 +114,9 @@ form{
   display: flex;
   justify-content: center;
 }
-
+#betal {
+  display: none;
+}
 .updatebuttons{
   display: flex;
   justify-content: space-evenly;
