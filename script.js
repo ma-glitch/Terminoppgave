@@ -1,10 +1,10 @@
 function betalbtn() {
+  document.getElementById("betal").style.display = "block";
+}
+/*
   var element = document.getElementById("betal");
   element.classList.toggle("betalblock");
-}
-
-
-
+*/
 function close() {
  var element2 = document.getElementById("betal");
  element2.classList.toggle("betal");
