@@ -27,7 +27,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     </ul>
 
     <div class="Profil-wrapper">
-        
+        <div class="Endreprofil"></div>
     </div>
 </body>
 </html>
