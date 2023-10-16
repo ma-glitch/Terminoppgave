@@ -31,19 +31,19 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
             <div class="Profilinfo">
                 <h5 class="headerinfo">Navn:</h5>
             <?php
-            echo "<p>". $_SESSION["navn"] ."</p>";
+            echo "<p class='subinfo'>". $_SESSION["navn"] ."</p>";
             ?>
             </div>
             <div class="Profilinfo">
                 <h5 class="headerinfo">Brukernavn:</h5>
             <?php
-            echo "<p>". $_SESSION["bruker"] ."</p>";
+            echo "<p class='subinfo'>". $_SESSION["bruker"] ."</p>";
             ?>
             </div>
             <div class="Profilinfo">
                 <h5 class="headerinfo">Passord:</h5>
             <?php
-            echo "<p>". $_SESSION["passord"] ."</p>";
+            echo "<p class='subinfo'>". $_SESSION["passord"] ."</p>";
             ?>
             </div>
         </div>
