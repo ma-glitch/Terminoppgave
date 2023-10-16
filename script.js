@@ -1,4 +1,5 @@
 function betalbtn() {
+  console.log("test");
   document.getElementById("betal").style.display = "block";
 }
 /*
