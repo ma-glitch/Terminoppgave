@@ -40,13 +40,15 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                     <tr>
                         <td class="headerinfo">Brukernavn:</td>
                         <?php
-                        echo "<td class='subinfo'>". $_SESSION["bruker"] ."</td>";
+                        echo "<td><input type='text' name='' placeholder='" . $_SESSION["bruker"] . "'></td>";
+                        echo "<td><input type='submit' name='submit' value='' id='sumbit' class='oppdaterbtn'></td>";
                         ?>
                     </tr>
                     <tr>
                         <td class="headerinfo">Passord:</td>
                         <?php
-                        echo "<td class='subinfo'>". $_SESSION["passord"] ."</td>";
+                        echo "<td><input type='text' name='' placeholder='" . $_SESSION["passord"] . "'></td>";
+                        echo "<td><input type='submit' name='submit' value='' id='sumbit' class='oppdaterbtn'></td>";
                         ?>
                     </tr>
                 </table>
