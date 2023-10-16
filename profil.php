@@ -28,9 +28,12 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 
     <div class="Profil-wrapper">
         <div class="Endreprofil">
-            <?php 
+            <div class="Profilinfo">
+                <h5>Navn:</h5>
+            <?php
             echo "<p>". $_SESSION["navn"] ."</p>";
             ?>
+            </div>
         </div>
     </div>
 </body>
