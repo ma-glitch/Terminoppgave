@@ -23,7 +23,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         <li><a href="index.php">Hjem</a></li>
         <li><a href="leggtil.php"><img src="file-add-svgrepo-com.svg"></a></li> 
         <?php if (($_SESSION["admin"] == "yes")) {
-            echo "<li><a href='admin.php'><img src="file-edit-svgrepo-com.svg"></a></li>";
+            echo "<li><a href='admin.php'><img src='file-edit-svgrepo-com.svg'></a></li>";
         }
         ?>
     </ul>
