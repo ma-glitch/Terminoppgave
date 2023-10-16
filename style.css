@@ -278,9 +278,19 @@ form{
   border-radius: 10px;
   width: 50%;
   padding: 20px;
+  margin: 20px;
 }
 
 .Profilinfo{
   display: flex;
   justify-content: space-evenly;
+}
+
+.headerinfo{
+  font-size: 21px;
+  font-weight: bold;
+}
+
+.subinfo{
+  font-size: 16px;
 }
