@@ -30,22 +30,26 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     <div class="Profil-wrapper">
         <div class="Endreprofil">
             <div class="Profilinfo">
-                <p class="headerinfo">Navn:</p>
-            <?php
-            echo "<p class='subinfo'>". $_SESSION["navn"] ."</p>";
-            ?>
-            </div>
-            <div class="Profilinfo">
-                <p class="headerinfo">Brukernavn:</p>
-            <?php
-            echo "<p class='subinfo'>". $_SESSION["bruker"] ."</p>";
-            ?>
-            </div>
-            <div class="Profilinfo">
-                <p class="headerinfo">Passord:</p>
-            <?php
-            echo "<p class='subinfo'>". $_SESSION["passord"] ."</p>";
-            ?>
+                <table> 
+                    <tr>
+                        <td>Navn:</td>
+                        <?php
+                        echo "<td class='subinfo'>". $_SESSION["navn"] ."</td>";
+                        ?>
+                    </tr>
+                    <tr>
+                        <td>Brukernavn:</td>
+                        <?php
+                        echo "<td class='subinfo'>". $_SESSION["bruker"] ."</td>";
+                        ?>
+                    </tr>
+                    <tr>
+                        <td>Passord:</td>
+                        <?php
+                        echo "<td class='subinfo'>". $_SESSION["passord"] ."</td>";
+                        ?>
+                    </tr>
+                </table>
             </div>
         </div>
     </div>
