@@ -111,6 +111,7 @@ form{
   height: 50px;
 }
 .betal {
+  cursor: pointer;
   display: flex;
   justify-content: center;
 }
