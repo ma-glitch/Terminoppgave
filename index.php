@@ -20,9 +20,8 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 
 <body onload="close()">
     <ul class="topnav">
-        <li><a class="active" href="index.php">Hjem</a></li>
-        <li><a href="leggtil.php">Legg til bot</a></li>
-        <li><a href="profil.php"></a><img src="home-svgrepo-com.svg"></li>
+        <li><a href="index.php"></a><img src="home-svgrepo-com.svg"></li>
+        <li><a href="leggtil.php">Legg til bot</a></li> 
         <?php if (($_SESSION["admin"] == "yes")) {
             echo "<li><a href='admin.php'>Admin</a></li>";
         }
