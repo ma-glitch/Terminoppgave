@@ -32,19 +32,19 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
             <div class="Profilinfo">
                 <table> 
                     <tr>
-                        <td>Navn:</td>
+                        <td class="headerinfo">Navn:</td>
                         <?php
                         echo "<td class='subinfo'>". $_SESSION["navn"] ."</td>";
                         ?>
                     </tr>
                     <tr>
-                        <td>Brukernavn:</td>
+                        <td class="headerinfo">Brukernavn:</td>
                         <?php
                         echo "<td class='subinfo'>". $_SESSION["bruker"] ."</td>";
                         ?>
                     </tr>
                     <tr>
-                        <td>Passord:</td>
+                        <td class="headerinfo">Passord:</td>
                         <?php
                         echo "<td class='subinfo'>". $_SESSION["passord"] ."</td>";
                         ?>
