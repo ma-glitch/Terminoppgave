@@ -25,11 +25,15 @@ if (!isset($_SESSION["admin"]) || $_SESSION["admin"] !== "yes") {
 
 <body>
 
-  <ul class="topnav">
-    <li><a href="index.php">Hjem</a></li>
-    <li><a href="leggtil.php">Legg til bot</a></li>
-    <li><a class="active" href="admin.php">Admin</a></li>
-  </ul>
+<ul class="topnav">
+        <li><a href="index.php"><img src="house-03-svgrepo-com.svg" height="40px" width="auto"></a></li>
+        <li><a href="leggtil.php"><img src="file-add-svgrepo-com.svg" height="40px" width="auto"></a></li>
+        <li><a href="profil.php"><img src="user-01-svgrepo-com.svg" height="40px" width="auto"></a></li> 
+        <?php if (($_SESSION["admin"] == "yes")) {
+            echo "<li><a href='admin.php'><img src='file-edit-svgrepo-com.svg' height='40px' width='auto'></a></li>";
+        }
+        ?>
+    </ul>
   <h1 class="velkommen">Velkommen administrator
     <?php echo ($_SESSION["navn"]); ?>!
   </h1>
