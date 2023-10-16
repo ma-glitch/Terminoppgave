@@ -287,11 +287,6 @@ form{
   margin: 20px;
 }
 
-.Profilinfo{
-  display: flex;
-  justify-content: space-evenly;
-}
-
 .Profilinfo tr{
   border-bottom: 2px solid blakc;
 }
