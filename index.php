@@ -33,7 +33,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     <h1 class="velkommen">Velkommen
         <?php echo ($_SESSION["navn"]); ?>!
     </h1>
-    <div class="betal"> <img onclick="betalbtn()" src="vipps-rgb-orange-pos.svg"></img></div>
+    <div class="betal"> <img onclick="betalbtn()" src="vipps-rgb-orange-pos.svg" height="100px" width="auto"></img></div>
     <h1 id="betal">Vipps</h1>
 
 
