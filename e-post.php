@@ -8,6 +8,7 @@ function sendEpost() {
                  'X-Mailer: PHP/' . phpversion();
 
     mail($to, $subject, $message, $headers);
+    echo "epost sendt"
 }
 
 ?>
