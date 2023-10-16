@@ -37,12 +37,6 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         <img src="vipps-rgb-orange-pos.svg" height="100px" width="auto" onclick="betalbtn()">
     </div>
     <h1 id="betal">Vipps</h1>
-    <script>
-    function betalbtn() {
-        console.log("test");
-        document.getElementById("betal").style.display = "block";
-        }
-</script>
 
     <table id="score">
         <tr>
