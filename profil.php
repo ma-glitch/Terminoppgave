@@ -73,7 +73,7 @@ if(isset($_POST['Endrepassord'])) {
                         <?php
                          echo "<form action='' method='post'>";
                          echo "<td><input type='text' name='navn' placeholder='" . $_SESSION["navn"] . "'></td>";
-                         echo "<td><input type='submit' name='Endrenavn' value='Endrenavn' id='sumbit' class='oppdaterbtn'></td>";
+                         echo "<td><input type='submit' name='Endrenavn' value='Endre navn' id='sumbit' class='oppdaterbtn'></td>";
                          echo "</form>";
                         ?>
                     </tr>
@@ -82,7 +82,7 @@ if(isset($_POST['Endrepassord'])) {
                         <?php
                          echo "<form action='' method='post'>";
                          echo "<td><input type='text' name='bruker' placeholder='" . $_SESSION["bruker"] . "'></td>";
-                         echo "<td><input type='submit' name='Endrebruker' value='Endrenavn' id='sumbit' class='oppdaterbtn'></td>";
+                         echo "<td><input type='submit' name='Endrebruker' value='Endre Brukernavn' id='sumbit' class='oppdaterbtn'></td>";
                          echo "</form>";
                         ?>
                     </tr>
@@ -91,7 +91,7 @@ if(isset($_POST['Endrepassord'])) {
                         <?php
                         echo "<form action='' method='post'>";
                         echo "<td><input type='text' name='passord' placeholder='" . $_SESSION["passord"] . "'></td>";
-                        echo "<td><input type='submit' name='submit' value='Endrepassord' id='sumbit' class='oppdaterbtn'></td>";
+                        echo "<td><input type='submit' name='Endrepassord' value='Endre passord' id='sumbit' class='oppdaterbtn'></td>";
                         echo "</form>";
                         ?>                        
                     </tr>
