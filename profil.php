@@ -36,7 +36,9 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         $sql = "UPDATE login SET navn='$navn' WHERE navn='$id'";
         
         if ($link->query($sql) === TRUE) {
+            $_SESSION['navn'] = $navn;
             echo "bukernavn endret";
+            header("refresh: 1;");
     }
 } 
   ?> 
