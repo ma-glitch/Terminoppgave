@@ -67,15 +67,10 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
              } else {
                  echo "Something went wrong. Please try again later.";
              }
-             
              $stmt->close();
         }
-            echo "Record updated successfully";
-            exit;
-        } else {
-            echo "Error updating record: " . $link->error;
-        }
-      } 
+    }
+} 
   ?> 
     <div class="Profil-wrapper">
         <div class="Endreprofil">
