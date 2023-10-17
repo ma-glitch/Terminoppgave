@@ -33,6 +33,7 @@ body {margin: 0; font-family: Arial, Helvetica, sans-serif;}
     font-weight: 550;
     display: flex;
     justify-content: space-evenly;
+    position: fixed;
     bottom: 0;
     width: 100%;
     z-index: 1;
@@ -251,7 +252,7 @@ form{
   border-collapse: collapse;
   margin-bottom: 100px;  
   margin-top: 100px;
-  border-radius: 10px;
+  border-radius: 8px;
 }
   
   #score td, #score th {
