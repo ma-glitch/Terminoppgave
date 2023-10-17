@@ -37,9 +37,32 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         
         if ($link->query($sql) === TRUE) {
             $_SESSION['navn'] = $navn;
-            echo "bukernavn endret";
             header("refresh: 1;");
     }
+} 
+if(isset($_POST['Endrebruker'])) { 
+    $id = $_SESSION['bruker'];
+    $bruker = $_POST['bruker'];
+    
+    // Update the ubetalt field for the specific user
+    $sql = "UPDATE login SET bruker='$bruker' WHERE bruker='$id'";
+    
+    if ($link->query($sql) === TRUE) {
+        $_SESSION['bruker'] = $bruker;
+        header("refresh: 1;");
+}
+} 
+if(isset($_POST['Endrepassord'])) { 
+    $id = $_SESSION['passord'];
+    $passord = $_POST['passord'];
+    
+    // Update the ubetalt field for the specific user
+    $sql = "UPDATE login SET passord='$passord' WHERE passord='$id'";
+    
+    if ($link->query($sql) === TRUE) {
+        $_SESSION['passord'] = $passord;
+        header("refresh: 1;");
+}
 } 
   ?> 
     <div class="Profil-wrapper">
@@ -57,16 +80,18 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                     <tr>
                         <td class="headerinfo">Brukernavn:</td>
                         <?php
-                        echo "<td><input type='text' name='' placeholder='" . $_SESSION["bruker"] . "'></td>";
-                        echo "<td><input type='submit' name='submit' value='' id='sumbit' class='oppdaterbtn'></td>";
+                         echo "<form action='' method='post'>";
+                         echo "<td><input type='text' name='bruker' placeholder='" . $_SESSION["bruker"] . "'></td>";
+                         echo "<td><input type='submit' name='Endrebruker' value='Endrenavn' id='sumbit' class='oppdaterbtn'></td>";
+                         echo "</form>";
                         ?>
                     </tr>
                     <tr>
                         <td class="headerinfo">Passord:</td>
                         <?php
-                        echo "<form action='updatenavn.php' method='post'>";
-                        echo "<td><input type='text' name='id3' placeholder='" . $_SESSION["passord"] . "'></td>";
-                        echo "<td><input type='submit' name='submit' value='Endre navn' id='sumbit' class='oppdaterbtn'></td>";
+                        echo "<form action='' method='post'>";
+                        echo "<td><input type='text' name='passord' placeholder='" . $_SESSION["passord"] . "'></td>";
+                        echo "<td><input type='submit' name='submit' value='Endrepassord' id='sumbit' class='oppdaterbtn'></td>";
                         echo "</form>";
                         ?>                        
                     </tr>
