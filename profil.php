@@ -6,6 +6,21 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     header("location: login.php");
     exit;
 }
+
+$id = $_SESSION['navn'];
+$navn = $_POST['navn'];
+
+// Update the ubetalt field for the specific user
+$sql = "UPDATE login SET navn='$navn' WHERE navn='$id'";
+
+if ($link->query($sql) === TRUE) {
+    echo "Record updated successfully";
+    exit;
+} else {
+    echo "Error updating record: " . $link->error;
+}
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -49,32 +64,14 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                     <tr>
                         <td class="headerinfo">Passord:</td>
                         <?php
-                        echo "<form action='updatenavn()' method='post'>";
-                        echo "<td><input type='text' name='' placeholder='" . $_SESSION["passord"] . "'></td>";
-                        echo "<td><input type='submit' onclick='updatenavn()' name='submit' value='Endre navn' id='sumbit' class='oppdaterbtn'></td>";
+                        echo "<form action='" . htmlspecialchars($_SERVER['PHP_SELF']);  "' method='post'>";
+                        echo "<td><input type='text' name='navn' placeholder='" . $_SESSION["passord"] . "'></td>";
+                        echo "<td><input type='submit' name='submit' value='Endre navn' id='sumbit' class='oppdaterbtn'></td>";
                         echo "</form>";
                         ?>                        
                     </tr>
                 </table>
         </div>
     </div>
-<?php
-function updatenavn(){
-require_once "config.php"; 
-
-$id = $_SESSION['navn'];
-$navn = $_POST['navn'];
-
-// Update the ubetalt field for the specific user
-$sql = "UPDATE login SET navn='$navn' WHERE navn='$id'";
-
-if ($link->query($sql) === TRUE) {
-    echo "Record updated successfully";
-    exit;
-} else {
-    echo "Error updating record: " . $link->error;
-}
-}
-?>
 </body>
 </html>
