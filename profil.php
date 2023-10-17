@@ -37,7 +37,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         
         if ($link->query($sql) === TRUE) {
 
-            $sql = "SELECT id, navn, bruker, passord, admin FROM login WHERE bruker = '".$id."' ";
+            $sql = "SELECT id, navn, bruker, passord, admin FROM login WHERE bruker = '".$navn."' ";
 
          if ($stmt = $link->prepare($sql)) {
              
