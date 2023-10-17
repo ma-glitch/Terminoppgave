@@ -18,8 +18,8 @@ body {margin: 0; font-family: Arial, Helvetica, sans-serif;}
   display: block;
 }
 
-@media only screen and(max-width: 600px) {
-  ul.topnav {
+/*@media only screen and(max-width: 600px) {*/
+  .topnav {
     font-family: Arial, Helvetica, sans-serif;
     list-style-type: none;
      border-top-style: solid;
@@ -36,7 +36,7 @@ body {margin: 0; font-family: Arial, Helvetica, sans-serif;}
     bottom: 0;
   
   }
-}
+/*}
 
 ul.topnav {
   font-family: Arial, Helvetica, sans-serif;
@@ -51,7 +51,7 @@ ul.topnav {
   font-weight: 550;
   display: flex;
   justify-content: center;
-}
+}*/
 .menyicon {
   height: 40px; width: auto;
 }
