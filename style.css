@@ -18,21 +18,23 @@ body {margin: 0; font-family: Arial, Helvetica, sans-serif;}
   display: block;
 }
 
-@media screen and (max-width: 600px) {
+@media only screen and(max-width: 600px) {
   ul.topnav {
     font-family: Arial, Helvetica, sans-serif;
     list-style-type: none;
-     border-top-style: none;
+     border-top-style: solid;
     border-right-style: none;
-    border-bottom-style: solid;
+    border-bottom-style: none;
     border-left-style: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
     font-weight: 550;
     display: flex;
-    justify-content: center;
-    align-items: first baseline;
+    justify-content: space-evenly;
+    position: fixed;
+    bottom: 0;
+  
   }
 }
 
