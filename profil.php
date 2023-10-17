@@ -38,7 +38,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                     <tr>
                         <td class="headerinfo">Navn:</td>
                         <?php
-                         echo "<form action='updatenavn.php' method='post'>";
+                         echo "<form action='' method='post'>";
                          echo "<td><input type='text' name='id3' placeholder='" . $_SESSION["navn"] . "'></td>";
                          echo "<td><input type='submit' name='Endrenavn' value='Endrenavn' id='sumbit' class='oppdaterbtn'></td>";
                          echo "</form>";
