@@ -33,10 +33,10 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                     <tr>
                         <td class="headerinfo">Navn:</td>
                         <?php
-                        echo "<form action='updatenavn.php' method='post'>"
+                        echo "<form action='updatenavn.php' method='post'>";
                         echo "<td><input type='text' name='navn' placeholder='" . $row["navn"] . "'></td>";
                         echo "<td><input type='submit' name='submit' value='' id='sumbit' class='oppdaterbtn'></td>";
-                        </form>
+                        echo "</form>";
                         ?>
                     </tr>
                     <tr>
