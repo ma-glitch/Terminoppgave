@@ -29,7 +29,18 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     <?php
       
       if(isset($_POST['Endrenavn'])) { 
-          echo "This is Button1 that is selected"; 
+        $id = $_SESSION['navn'];
+        $navn = $_POST['navn'];
+        
+        // Update the ubetalt field for the specific user
+        $sql = "UPDATE login SET navn='$navn' WHERE navn='$id'";
+        
+        if ($link->query($sql) === TRUE) {
+            echo "Record updated successfully";
+            exit;
+        } else {
+            echo "Error updating record: " . $link->error;
+        }
       } 
   ?> 
     <div class="Profil-wrapper">
@@ -39,7 +50,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                         <td class="headerinfo">Navn:</td>
                         <?php
                          echo "<form action='' method='post'>";
-                         echo "<td><input type='text' name='id3' placeholder='" . $_SESSION["navn"] . "'></td>";
+                         echo "<td><input type='text' name='navn' placeholder='" . $_SESSION["navn"] . "'></td>";
                          echo "<td><input type='submit' name='Endrenavn' value='Endrenavn' id='sumbit' class='oppdaterbtn'></td>";
                          echo "</form>";
                         ?>
