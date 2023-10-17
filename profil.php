@@ -36,6 +36,40 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         $sql = "UPDATE login SET navn='$navn' WHERE navn='$id'";
         
         if ($link->query($sql) === TRUE) {
+
+            $sql = "SELECT id, navn, bruker, passord, admin FROM login WHERE bruker = '".$id."' ";
+
+         if ($stmt = $link->prepare($sql)) {
+             
+             if ($stmt->execute()) {
+                 $stmt->store_result();
+                 
+                 if ($stmt->num_rows == 1) {
+                     $stmt->bind_result($navn, $username, $password, $admin);
+                     
+                     if ($stmt->fetch()) {
+                         if (password_verify($password, $hashed_password)) {
+                             // Password is correct, start a new session
+                             session_start();
+                             
+                             // Store data in session variables
+                             $_SESSION["loggedin"] = true;
+                             $_SESSION["navn"] = $navn;
+                             $_SESSION["bruker"] = $username;
+                             $_SESSION["passord"] = $password;
+                             $_SESSION["admin"] = $admin;
+                             
+                             // Redirect the user to the welcome page
+                             exit();
+                         }
+                     }
+                 }
+             } else {
+                 echo "Something went wrong. Please try again later.";
+             }
+             
+             $stmt->close();
+        }
             echo "Record updated successfully";
             exit;
         } else {
