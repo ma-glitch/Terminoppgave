@@ -37,7 +37,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         
         if ($link->query($sql) === TRUE) {
 
-            $sql = "SELECT id, navn, bruker, passord, admin FROM login WHERE bruker = '".$id."' ";
+            $sql = "SELECT navn, bruker, passord, admin FROM login WHERE bruker = '".$navn."' ";
 
          if ($stmt = $link->prepare($sql)) {
              
@@ -67,15 +67,10 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
              } else {
                  echo "Something went wrong. Please try again later.";
              }
-             
              $stmt->close();
         }
-            echo "Record updated successfully";
-            exit;
-        } else {
-            echo "Error updating record: " . $link->error;
-        }
-      } 
+    }
+} 
   ?> 
     <div class="Profil-wrapper">
         <div class="Endreprofil">
