@@ -22,7 +22,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         <li><a href="leggtil.php"><img src="file-add-svgrepo-com.svg" height="40px" width="auto"></a></li>
         <li><a href="profil.php"><img src="user-01-svgrepo-com.svg" height="40px" width="auto"></a></li> 
         <?php if (($_SESSION["admin"] == "yes")) {
-            echo "<li><a href='admin.php'><img src='file-edit-svgrepo-com.svg' height='40px' width='auto'></a></li>";
+            echo "<li><a href='admin.php'><img src='file-edit-svgrepo-com.svg' class='menyicon' height='40px' width='auto'></a></li>";
         }
         ?>
     </ul>
