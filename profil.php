@@ -26,7 +26,12 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         }
         ?>
     </ul>
-
+    <?php
+      
+      if(isset($_POST['Endrenavn'])) { 
+          echo "This is Button1 that is selected"; 
+      } 
+  ?> 
     <div class="Profil-wrapper">
         <div class="Endreprofil">
                 <table class="endretable"> 
@@ -35,7 +40,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                         <?php
                          echo "<form action='updatenavn.php' method='post'>";
                          echo "<td><input type='text' name='id3' placeholder='" . $_SESSION["navn"] . "'></td>";
-                         echo "<td><input type='submit' name='submit' value='Endre navn' id='sumbit' class='oppdaterbtn'></td>";
+                         echo "<td><input type='submit' name='Endrenavn' value='Endrenavn' id='sumbit' class='oppdaterbtn'></td>";
                          echo "</form>";
                         ?>
                     </tr>
