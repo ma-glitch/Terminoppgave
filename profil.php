@@ -39,7 +39,6 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
             echo "Record updated successfully";
             exit;
         } else {
-            header("location: profil.php");
             echo "Error updating record: " . $link->error;
         }
       } 
