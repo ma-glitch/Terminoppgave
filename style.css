@@ -251,7 +251,7 @@ form{
   border-collapse: collapse;
   margin-bottom: 100px;  
   margin-top: 100px;
-  border-radius: 8px;
+  border-radius: 10px;
 }
   
   #score td, #score th {
