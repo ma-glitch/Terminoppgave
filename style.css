@@ -51,8 +51,7 @@ ul.topnav {
   justify-content: center;
 }
 .menyicon {
-  height: 40px;
-  width: auto;
+  height: 40px; width: auto;
 }
 ul.topnav li {float: left;}
 
