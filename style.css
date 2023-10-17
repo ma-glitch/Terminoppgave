@@ -31,9 +31,11 @@ ul.topnav {
   font-weight: 550;
   display: flex;
   justify-content: center;
- 
 }
-
+.menyicon {
+  height: 40px;
+  width: auto;
+}
 ul.topnav li {float: left;}
 
 ul.topnav li a {
