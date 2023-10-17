@@ -51,7 +51,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                         <?php
                         echo "<form method='post'>";
                         echo "<td><input type='text' name='' placeholder='" . $_SESSION["passord"] . "'></td>";
-                        echo "<td><input type='submit' name='submit' value='' id='sumbit' class='oppdaterbtn'></td>";
+                        echo "<td><input type='submit' onclick='updatenavn()' name='submit' value='Endre navn' id='sumbit' class='oppdaterbtn'></td>";
                         echo "</form>";
                         ?>                        
                     </tr>
