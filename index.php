@@ -7,37 +7,48 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     exit;
 }
 
-if (isset($_COOKIE['username']) && isset($_COOKIE['password'])) {
-    $username = $_COOKIE['username'];
-    $password = $_COOKIE['password'];
+if (!isset($_COOKIE[$username])) {
 
-    // Retrieve user data from the database using the stored username
-    $sql = "SELECT id, navn, bruker, passord, admin FROM login WHERE bruker = ?";
-    
+    $sql = "SELECT id, navn, bruker, passord, admin FROM login WHERE bruker = '" . $_COOKIE[$username] . "' ";
+
     if ($stmt = $link->prepare($sql)) {
-        $stmt->bind_param("s", $username);
 
         if ($stmt->execute()) {
             $stmt->store_result();
 
             if ($stmt->num_rows == 1) {
-                $stmt->bind_result($id, $navn, $username, $dbPassword, $admin);
+                $stmt->bind_result($id, $navn, $username, $password, $admin);
 
-                if ($stmt->fetch() && password_verify($password, $dbPassword)) {
-                    // Password is correct
-                    $_SESSION["loggedin"] = true;
-                    $_SESSION["id"] = $id;
-                    $_SESSION["navn"] = $navn;
-                    $_SESSION["bruker"] = $username;
-                    $_SESSION["admin"] = $admin;
-                    header("location: index.php"); // Redirect to the welcome page
-                    exit(); // Redirect to the welcome page
+                if ($stmt->fetch()) {
+                    if (password_verify($password, $hashed_password)) {
+                        // Password is correct, start a new session
+                        session_start();
+
+                        // Store data in session variables
+                        $_SESSION["loggedin"] = true;
+                        $_SESSION["id"] = $id;
+                        $_SESSION["navn"] = $navn;
+                        $_SESSION["bruker"] = $username;
+                        $_SESSION["passord"] = $password;
+                        $_SESSION["admin"] = $admin;
+
+                        // Redirect the user to the welcome page
+                        header("location: index.php");
+                        exit();
+                    } else {
+                        echo "Invalid password.";
+                    }
                 }
+            } else {
+                echo "Username not found.";
             }
+        } else {
+            echo "Something went wrong. Please try again later.";
         }
 
         $stmt->close();
     }
+
 }
 ?>
 <!DOCTYPE html>
