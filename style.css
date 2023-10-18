@@ -346,6 +346,7 @@ form{
 
 @media only screen and (max-width: 600px) {
   .Endreprofil {
+    color: blueviolet;
     width: 100%;
   }
 }
