@@ -25,6 +25,7 @@ if (isset($_POST['submit'])) {
 }
 
 if (isset($_POST['submit3'])) {
+    echo "button 3 pressed";
     $id = $_POST['id3'];
     $navn = $_POST['navn'];
 
