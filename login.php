@@ -8,10 +8,9 @@ if (isset($_COOKIE['username']) && isset($_COOKIE['password'])) {
     $password = $_COOKIE['password'];
 
     // Authenticate the user using the stored credentials (similar to your existing code)
-    $sql = "SELECT id, navn, bruker, passord, admin FROM login WHERE bruker = ?";
+    $sql = "SELECT id, navn, bruker, passord, admin FROM login WHERE bruker = '$username'";
 
     if ($stmt = $link->prepare($sql)) {
-        $stmt->bind_param("s", $username);
 
         if ($stmt->execute()) {
             $stmt->store_result();
