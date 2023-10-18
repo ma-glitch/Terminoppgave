@@ -310,7 +310,6 @@ form{
     Profil side
 ---------------------*/
 .Profil-wrapper{
-  position: relative;
   display: flex;
   justify-content: center;
   width: 80%;
