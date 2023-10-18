@@ -11,10 +11,4 @@ $link = new mysqli($servername, $username, $password, $dbname);
 if ($link->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
-
-if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
-  header("location: login.php");
-  exit;
-}
-
 ?>
