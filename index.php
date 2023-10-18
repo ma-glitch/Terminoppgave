@@ -30,7 +30,6 @@ if (!isset($_COOKIE['bruker'])) {
                         $_SESSION["admin"] = $admin;
 
                         // Redirect the user to the welcome page
-                        header("location: index.php");
                         exit();
                     } else {
                         echo "Invalid password.";
