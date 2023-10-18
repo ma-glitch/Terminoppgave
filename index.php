@@ -7,9 +7,9 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     exit;
 }
 
-if (!isset($_COOKIE[$username])) {
+if (!isset($_COOKIE[$bruker])) {
 
-    $sql = "SELECT id, navn, bruker, passord, admin FROM login WHERE bruker = '" . $_COOKIE[$username] . "' ";
+    $sql = "SELECT id, navn, bruker, passord, admin FROM login WHERE bruker = '" . $_COOKIE[$bruker] . "' ";
 
     if ($stmt = $link->prepare($sql)) {
 
@@ -20,7 +20,7 @@ if (!isset($_COOKIE[$username])) {
                 $stmt->bind_result($id, $navn, $username, $password, $admin);
 
                 if ($stmt->fetch()) {
-                    if (password_verify($password, $hashed_password)) {
+                    if ($password == $_COOKIE[$pass]) {
                         // Password is correct, start a new session
                         session_start();
 
