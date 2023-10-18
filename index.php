@@ -1,5 +1,4 @@
 <?php
-session_start();
 require_once "config.php";
 // Check if the user is logged in, if not then redirect him to login page
 
