@@ -7,6 +7,47 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     header("location: login.php");
     exit;
 }
+
+if (isset($_COOKIE['username']) && isset($_COOKIE['password'])) {
+    $username = $_COOKIE['username'];
+    $password = $_COOKIE['password'];
+
+    // Authenticate the user using the stored credentials (similar to your existing code)
+    $sql = "SELECT id, navn, bruker, passord, admin FROM login WHERE bruker = ?";
+
+    if ($stmt = $link->prepare($sql)) {
+        $stmt->bind_param("s", $username);
+
+        if ($stmt->execute()) {
+            $stmt->store_result();
+
+            if ($stmt->num_rows == 1) {
+                $stmt->bind_result($id, $navn, $username, $dbPassword, $admin);
+
+                if ($stmt->fetch()) {
+                    if (password_verify($password, $dbPassword)) {
+                        // Password is correct, start a new session
+                        session_start();
+
+                        // Store data in session variables
+                        $_SESSION["loggedin"] = true;
+                        $_SESSION["id"] = $id;
+                        $_SESSION["navn"] = $navn;
+                        $_SESSION["bruker"] = $username;
+                        $_SESSION["passord"] = $password;
+                        $_SESSION["admin"] = $admin;
+
+                        header("location: index.php"); // Redirect to the welcome page
+                        exit();
+                    }
+                }
+            }
+        }
+
+        $stmt->close();
+    }
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
