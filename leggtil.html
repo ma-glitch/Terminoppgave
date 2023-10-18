@@ -12,13 +12,13 @@
         <li><a href="index.php"><img src="Bilder/house-03-svgrepo-com.svg" class="menyicon" height="40px" width="auto"></a></li>
         <li><a href="leggtil.php"><img src="Bilder/file-add-svgrepo-com.svg"class="menyicon" height="40px" width="auto"></a></li>
         <li><a href="profil.php"><img src="Bilder/user-01-svgrepo-com.svg" class="menyicon" height="40px" width="auto" ></a></li> 
-        <?php include('menu.php.php'); ?>
+        <?php include('menu.php'); ?>
     </ul>
 
     <h1 class="velkommen">Velkommen </h1>
     <div class="leggtil">
         <h1>Legg til bot</h1>
-        <form action="process.php" method="post" id="BotOversikt">
+        <form action="leggtil.php" method="post" id="BotOversikt">
             Kina 25Kr   <input class="Check" type="checkbox" name="kina" value="25"><br>
             Glemme drakt 500Kr   <input class="Check" type="checkbox" name="glemmeDrakt" value="500"><br>
             Glemme viktig utstyr 50Kr   <input class="Check" type="checkbox" name="glemmeViktig" value="50"><br>
@@ -57,28 +57,6 @@
 
             <input type="submit" class="leggtilbtn">
         </form>
-
-
-        <?php
-        if (isset($_GET['botValue'])) {
-            $botValue = $_GET['botValue'];
-        
-            $sql_update = "UPDATE login SET total = total + ".$botValue.", ubetalt = ubetalt + ".$botValue." WHERE bruker = '".$_SESSION["bruker"]."'";
-
-            
-            if ($stmt = $link->prepare($sql_update)) {
-                // Execute the prepared statement
-                if ($stmt->execute()) {
-                    // Bind the result variable
-               echo "Boten har blitt lagt til";
-                  
-                }else {
-                  echo "En feil har oppståt, prøv igjen senere";
-                }
-                $stmt->close();
-            }
-          }
-        ?>
     </div>
 
     <script src="script.js"></script>

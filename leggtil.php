@@ -44,7 +44,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         echo "No valid bot value found in the POST data.";
     }
 }
-?>
+
 
 
 /*function calculateBotValue() {
@@ -89,3 +89,4 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         }
       }
 }*/
+?>
