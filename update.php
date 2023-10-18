@@ -29,7 +29,7 @@ if (isset($_POST['submit3'])) {
     $navn = $_POST['navn'];
 
     // Use prepared statements to prevent SQL injection
-    $sql = "UPDATE login SET navn=? WHERE navn=?";
+    $sql = "UPDATE login SET navn='?' WHERE navn=?";
 
     if ($stmt = $link->prepare($sql)) {
         $stmt->bind_param("ss", $navn, $id);
@@ -51,7 +51,7 @@ if (isset($_POST['submit2'])) {
     $total = $_POST['total'];
 
     // Use prepared statements to prevent SQL injection
-    $sql = "UPDATE login SET navn=? WHERE navn=?";
+    $sql = "UPDATE login SET total=? WHERE navn=?";
 
     if ($stmt = $link->prepare($sql)) {
         $stmt->bind_param("ss", $total, $id);
