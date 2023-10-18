@@ -1,7 +1,4 @@
 <?php
-
-
-
 $servername = "10.200.1.117";
 $username = "Linje5";
 $password = "Enzo";
@@ -14,8 +11,6 @@ $link = new mysqli($servername, $username, $password, $dbname);
 if ($link->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
-
-session_start();
 
 if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
   header("location: login.php");
