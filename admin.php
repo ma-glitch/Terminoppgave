@@ -80,6 +80,7 @@ if (!isset($_SESSION["admin"]) || $_SESSION["admin"] !== "yes") {
                 <input type='submit' name='submit2' value='Oppdater' id='' class='oppdaterbtn'>
                 </form>
                 <form method='post' action='update.php' class='updateform3'>
+                <input type='hidden' name='submit3' value='submit3'>
                 <input type='hidden' name='id3' value='" . $row["navn"] . "'>
                 <input type='text' name='navn' placeholder='" . $row["navn"] . "'>
                 <input type='image' src='Bilder/check-svgrepo-com.svg'  alt='Submit' name='submit3' value='Oppdater' id='' class='oppdaterbtn' style='width: auto; height: 20px'/>
