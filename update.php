@@ -24,7 +24,7 @@ if (isset($_POST['submit'])) {
     }
 }
 
-if (isset($_POST['submit2'])) {
+if (isset($_POST['submit3'])) {
     $id = $_POST['id3'];
     $navn = $_POST['navn'];
 
@@ -46,7 +46,7 @@ if (isset($_POST['submit2'])) {
     }
 }
 
-if (isset($_POST['submit3'])) {
+if (isset($_POST['submit2'])) {
     $id = $_POST['id2'];
     $total = $_POST['total'];
 
