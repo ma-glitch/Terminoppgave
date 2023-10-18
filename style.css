@@ -355,6 +355,7 @@ form{
     width: 100%;
   }
   .headerinfo {
-    width: 100%;
+    max-width: 100%;
+    overflow: auto;
   }
 }
