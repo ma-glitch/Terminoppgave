@@ -31,8 +31,7 @@ if (!isset($_COOKIE['bruker'])) {
                         $_SESSION["bruker"] = $username;
                         $_SESSION["passord"] = $password;
                         $_SESSION["admin"] = $admin;
-
-                        // Redirect the user to the welcome page
+                        header("location: index.php");
                         exit();
                     } else {
                         echo "Invalid password.";
