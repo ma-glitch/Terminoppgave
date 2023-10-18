@@ -71,15 +71,14 @@ if (!isset($_SESSION["admin"]) || $_SESSION["admin"] !== "yes") {
                 <input type='number' name='ubetalt' placeholder='" . $row["ubetalt"] . "'>
                 <input type='submit' name='submit' value='Oppdater' id='sumbit' class='oppdaterbtn'>
                 </form>
-                <form method='post' action='updatetotal.php' class='updateform2'>
+                <form method='post' action='update.php' class='updateform2'>
                 <input type='hidden' name='id2' value='" . $row["navn"] . "'>
                 <input type='number' name='total' placeholder='" . $row["total"] . "'>
                 <input type='submit' name='submit2' value='Oppdater' id='' class='oppdaterbtn'>
                 </form>
-                <form method='post' action='updatenavn.php' class='updateform3'>
+                <form method='post' action='update.php' class='updateform3'>
                 <input type='hidden' name='id3' value='" . $row["navn"] . "'>
                 <input type='text' name='navn' placeholder='" . $row["navn"] . "'>
-          
                 <input type='image' src='Bilder/check-svgrepo-com.svg'  alt='Submit' name='submit3' value= id='' class='oppdaterbtn' />
                 </form></td>";
         echo "</tr>";
