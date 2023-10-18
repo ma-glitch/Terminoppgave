@@ -20,11 +20,11 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 
 <body onload="close()">
     <ul class="topnav">
-        <li><a href="index.php"><img src="house-03-svgrepo-com.svg" class="menyicon" height="40px" width="auto"></a></li>
-        <li><a href="leggtil.php"><img src="file-add-svgrepo-com.svg"class="menyicon" height="40px" width="auto"></a></li>
-        <li><a href="profil.php"><img src="user-01-svgrepo-com.svg" class="menyicon" height="40px" width="auto" ></a></li> 
+        <li><a href="index.php"><img src="Bilder/house-03-svgrepo-com.svg" class="menyicon" height="40px" width="auto"></a></li>
+        <li><a href="leggtil.php"><img src="Bilder/file-add-svgrepo-com.svg"class="menyicon" height="40px" width="auto"></a></li>
+        <li><a href="profil.php"><img src="Bilder/user-01-svgrepo-com.svg" class="menyicon" height="40px" width="auto" ></a></li> 
         <?php if (($_SESSION["admin"] == "yes")) {
-            echo "<li><a href='admin.php'><img src='file-edit-svgrepo-com.svg' class='menyicon' height='40px' width='auto'></a></li>";
+            echo "<li><a href='admin.php'><img src='Bilder/file-edit-svgrepo-com.svg' class='menyicon' height='40px' width='auto'></a></li>";
         }
         ?>
     </ul>
@@ -34,7 +34,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         <?php echo ($_SESSION["navn"]); ?>!
     </h1>
     <div class="betal"> 
-        <img src="vipps-rgb-orange-pos.svg" height="100px" width="auto" onclick="betalbtn()">
+        <img src="Bilder/vipps-rgb-orange-pos.svg" height="100px" width="auto" onclick="betalbtn()">
     </div>
     <h1 id="betal">Vipps</h1>
     <script>
