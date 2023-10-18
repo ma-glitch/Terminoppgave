@@ -155,6 +155,7 @@ form{
     flex-direction: column;
     margin-left: 5%;
     margin-right: 5%;
+    margin-top: 2%;
   }
 }
 
@@ -336,7 +337,7 @@ form{
   font-size: 21px;
   font-weight: bold;
   padding: 20px;
-  width: 33%;
+  max-width: 33%;
 }
 
 .subinfo{
@@ -348,5 +349,8 @@ form{
   .Endreprofil {
     color: blueviolet;
     width: 100%;
+  }
+  .endretable {
+    color: yellow;
   }
 }
