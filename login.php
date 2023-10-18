@@ -2,45 +2,8 @@
 session_start();
 
 require_once "config.php";
-
-if (isset($_COOKIE['username']) && isset($_COOKIE['password'])) {
-    $username = $_COOKIE['username'];
-    $password = $_COOKIE['password'];
-
     // Authenticate the user using the stored credentials (similar to your existing code)
-    $sql = "SELECT id, navn, bruker, passord, admin FROM login WHERE bruker = '$username'";
 
-    if ($stmt = $link->prepare($sql)) {
-
-        if ($stmt->execute()) {
-            $stmt->store_result();
-
-            if ($stmt->num_rows == 1) {
-                $stmt->bind_result($id, $navn, $username, $dbPassword, $admin);
-
-                if ($stmt->fetch()) {
-                    if (password_verify($password, $dbPassword)) {
-                        // Password is correct, start a new session
-                        session_start();
-
-                        // Store data in session variables
-                        $_SESSION["loggedin"] = true;
-                        $_SESSION["id"] = $id;
-                        $_SESSION["navn"] = $navn;
-                        $_SESSION["bruker"] = $username;
-                        $_SESSION["passord"] = $password;
-                        $_SESSION["admin"] = $admin;
-
-                        header("location: index.php"); // Redirect to the welcome page
-                        exit();
-                    }
-                }
-            }
-        }
-
-        $stmt->close();
-    }
-}
 // Initialize error variables
 $username_err = $password_err = "";
 
