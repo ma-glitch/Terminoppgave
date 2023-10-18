@@ -223,9 +223,9 @@ form{
 }
 
 .oppdaterbtn {
-  border-style: solid;
-  border-width: 10px;
-  border: black;
+  border-color: black;
+  border-radius: 10px;
+  border-width: 5px;
   border-radius: 8px;
   cursor: pointer;
 }
