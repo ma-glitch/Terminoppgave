@@ -23,7 +23,7 @@ if (isset($_COOKIE['username']) && isset($_COOKIE['password'])) {
             if ($stmt->num_rows == 1) {
                 $stmt->bind_result($id, $navn, $username, $dbPassword, $admin);
 
-                if ($stmt->fetch() && password_verify($password, $dbPassword)) {
+                if ($stmt->fetch() == 1) {
                     // Password is correct
                     $_SESSION["loggedin"] = true;
                     $_SESSION["id"] = $id;
