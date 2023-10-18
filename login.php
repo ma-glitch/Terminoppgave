@@ -68,39 +68,3 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
    }
 }
 ?>
- 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bot system Linje-5</title>
-    <link rel="stylesheet" type="text/css" href="style.css" />
-    <link rel="icon" type="image/x-icon" href="linje5.jpg">
-</head>
-<body>
-    <div class="wrapper">
-        <h2>Login</h2>
-        <p>Fyll in bruker navn og passord</p>
-
-        <!-- Display error messages here if needed -->
-        <span class="text-danger"><?php echo $username_err; ?></span>
-        <span class="text-danger"><?php echo $password_err; ?></span>
-
-        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="GET"> 
-            <div class="form-group">
-                <label>Username</label>
-                <input type="text" name="bruker" class="form-control">
-            </div>    
-            <div class="form-group">
-                <label>Password</label>
-                <input type="password" name="passord" class="form-control" >
-            </div>
-            <div id="LogInbtn">
-                <input type="submit" class="leggtilbtn" value="Login">
-            </div>
-            <p id="logintekst">Har du ingen bruker? <a href="registrering.php">Registrer her</a>.</p>
-        </form>
-    </div>
-</body>
-</html>
