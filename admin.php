@@ -80,7 +80,7 @@ if (!isset($_SESSION["admin"]) || $_SESSION["admin"] !== "yes") {
                 <form method='post' action='updatenavn.php' class='updateform3'>
                 <input type='hidden' name='id3' value='" . $row["navn"] . "'>
                 <input type='text' name='navn' placeholder='" . $row["navn"] . "'>
-                <input type='submit' name='submit3' value='Oppdater' id='' class='oppdaterbtn'>
+                <input type='submit' name='submit3' value='Bilder/check-svgrepo-com.svg' id='' class='oppdaterbtn'>
                 </form></td>";
         echo "</tr>";
         // Close the MySQLi connectio
