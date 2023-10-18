@@ -25,7 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $botValue = calculateBotValue();
 
     if ($botValue > 0) {
-        $sql_update = "UPDATE login SET total = total + ?, ubetalt = ubetalt + ? WHERE bruker = ?";
+        $sql_update = "UPDATE login SET total = total + ". $botValue .", ubetalt = ubetalt + ". $botValue ." WHERE bruker = " . $_SESSION["bruker"]."";
         
         if ($stmt = $link->prepare($sql_update)) {
             $stmt->bind_param("iis", $botValue, $botValue, $_SESSION["bruker"]);
