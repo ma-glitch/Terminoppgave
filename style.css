@@ -317,7 +317,7 @@ form{
 .Endreprofil{
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   border-radius: 10px;
-  width: 60%;
+  width: 80%;
   margin: 20px;
 }
 
@@ -336,9 +336,16 @@ form{
   font-size: 21px;
   font-weight: bold;
   padding: 20px;
+  width: 33%;
 }
 
 .subinfo{
   font-size: 21px;
   padding: 20px;
 } 
+
+@media only screen and (max-width: 600px) {
+  .Endreprofil {
+    width: 100%;
+  }
+}

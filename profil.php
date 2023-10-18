@@ -76,8 +76,8 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                     <td class="headerinfo">Navn:</td>
                     <?php
                     echo "<form action='' method='post'>";
-                    echo "<td><input type='text' name='navn' placeholder='" . $_SESSION["navn"] . "'></td>";
-                    echo "<td><input type='submit' name='Endrenavn' value='Endre navn' id='sumbit' class='oppdaterbtn'></td>";
+                    echo "<td class='headerinfo'><input type='text' name='navn' placeholder='" . $_SESSION["navn"] . "'></td>";
+                    echo "<td class='headerinfo'><input type='submit' name='Endrenavn' value='Endre navn' id='sumbit' class='oppdaterbtn'></td>";
                     echo "</form>";
                     ?>
                 </tr>
