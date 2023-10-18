@@ -27,7 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $botValue = calculateBotValue();
 
     if ($botValue > 0) {
-        $sql_update = "UPDATE login SET total = total + ". $botValue .", ubetalt = ubetalt + ". $botValue ." WHERE bruker = " . $_SESSION["bruker"]."";
+        $sql_update = "UPDATE login SET total = total + ?, ubetalt = ubetalt + ? WHERE bruker = ?";
         
         if ($stmt = $link->prepare($sql_update)) {
             $stmt->bind_param("iis", $botValue, $botValue, $_SESSION["bruker"]);
@@ -40,7 +40,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             }
             $stmt->close();
         } else {
-            echo "Prepared statement failed.";
+            echo "Prepared statement failed: " . $link->error;
         }
     } else {
         echo "No valid bot value found in the POST data.";
