@@ -7,7 +7,7 @@ if (isset($_POST['submit'])) {
     $ubetalt = $_POST['ubetalt'];
 
     // Use prepared statements to prevent SQL injection
-    $sql = "UPDATE login SET ubetalt=". $ubetalt ." WHERE navn='". $id."'";
+    $sql = "UPDATE login SET ubetalt='". $ubetalt ."' WHERE navn='". $id ."'";
     
     if ($stmt = $link->prepare($sql)) {
         $stmt->bind_param("ss", $ubetalt, $id);
