@@ -321,6 +321,8 @@ form{
   border-radius: 10px;
   width: 80%;
   margin: 20px;
+  display: flex;
+  justify-content: center;
 }
 
 .endretable{
