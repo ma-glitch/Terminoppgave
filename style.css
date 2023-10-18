@@ -337,7 +337,7 @@ form{
   font-size: 21px;
   font-weight: bold;
   padding: 20px;
-  max-width: 33%;
+  max-width: fit-content;
 }
 
 .subinfo{
