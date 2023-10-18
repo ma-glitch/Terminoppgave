@@ -20,6 +20,12 @@ body {margin: 0; font-family: Arial, Helvetica, sans-serif;}
 
 @media only screen and (max-width: 600px) {
   .topnav {
+    display: flex;
+    justify-content: space-evenly;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 1;
     background-color: white;
     font-family: Arial, Helvetica, sans-serif;
     list-style-type: none;
@@ -31,12 +37,7 @@ body {margin: 0; font-family: Arial, Helvetica, sans-serif;}
     padding: 0;
     overflow: hidden;
     font-weight: 550;
-    display: flex;
-    justify-content: space-evenly;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    z-index: 1;
+
   }
 }
 
