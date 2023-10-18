@@ -4,9 +4,9 @@ require_once "config.php";
 // Check if the user is logged in, if not then redirect him to login page
 
 
-if (!isset($_COOKIE[$bruker])) {
+if (!isset($_COOKIE['bruker'])) {
 
-    $sql = "SELECT id, navn, bruker, passord, admin FROM login WHERE bruker = '" . $_COOKIE[$bruker] . "' ";
+    $sql = "SELECT id, navn, bruker, passord, admin FROM login WHERE bruker = '" . $_COOKIE['bruker'] . "' ";
 
     if ($stmt = $link->prepare($sql)) {
 
@@ -17,7 +17,7 @@ if (!isset($_COOKIE[$bruker])) {
                 $stmt->bind_result($id, $navn, $username, $password, $admin);
 
                 if ($stmt->fetch()) {
-                    if ($password == $_COOKIE[$pass]) {
+                    if ($password == $_COOKIE['pass']) {
                         // Password is correct, start a new session
                         session_start();
 
