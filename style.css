@@ -18,7 +18,7 @@ body {margin: 0; font-family: Arial, Helvetica, sans-serif;}
   display: block;
 }
 
-/*@media only screen and(max-width: 600px) {*/
+@media only screen and(max-width: 600px) {
   .topnav {
     background-color: white;
     font-family: Arial, Helvetica, sans-serif;
@@ -39,7 +39,7 @@ body {margin: 0; font-family: Arial, Helvetica, sans-serif;}
     z-index: 1;
   
   }
-/*}
+}
 
 ul.topnav {
   font-family: Arial, Helvetica, sans-serif;
@@ -54,7 +54,7 @@ ul.topnav {
   font-weight: 550;
   display: flex;
   justify-content: center;
-}*/
+}
 .menyicon {
   height: 40px; width: auto;
 }
