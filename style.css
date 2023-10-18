@@ -222,6 +222,8 @@ form{
 }
 
 .oppdaterbtn {
+  height: 20px;
+  width: auto;
   border-style: none;
   font-size: 15px;
   background-color: rgba(78,166,182,255);
