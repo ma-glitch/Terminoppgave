@@ -70,16 +70,19 @@ if (!isset($_SESSION["admin"]) || $_SESSION["admin"] !== "yes") {
         echo "<td class='TABEL'>" . $row["total"] . "</td>";
         echo "<td class='TABEL'>" . $row["ubetalt"] . "</td>";
         echo "<td class='TABEL'><form method='post' action='update.php' class='updateform'>
+                <input type='hidden' name='submit' value='submit'>        
                 <input type='hidden' name='id' value='" . $row["navn"] . "'>
                 <input type='number' name='ubetalt' placeholder='" . $row["ubetalt"] . "'>
                 <input type='submit' name='submit' value='Oppdater' id='sumbit' class='oppdaterbtn'>
                 </form>
                 <form method='post' action='update.php' class='updateform2'>
+                <input type='hidden' name='submit2' value='submit2'>
                 <input type='hidden' name='id2' value='" . $row["navn"] . "'>
                 <input type='number' name='total' placeholder='" . $row["total"] . "'>
                 <input type='submit' name='submit2' value='Oppdater' id='' class='oppdaterbtn'>
                 </form>
                 <form method='post' action='update.php' class='updateform3'>
+                <input type='hidden' name='submit3' value='submit3'>
                 <input type='hidden' name='id3' value='" . $row["navn"] . "'>
                 <input type='text' name='navn' placeholder='" . $row["navn"] . "'>
                 <input type='image' src='Bilder/check-svgrepo-com.svg'  alt='Submit' name='submit3' value='Oppdater' id='' class='oppdaterbtn' style='width: auto; height: 20px'/>
