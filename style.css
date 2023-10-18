@@ -347,11 +347,9 @@ form{
 
 @media only screen and (max-width: 600px) {
   .Endreprofil {
-    color: blueviolet;
     width: 100%;
   }
   .endretable {
     width: 100%;
-    background-color: yellow;
   }
 }
