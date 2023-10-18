@@ -25,14 +25,17 @@ if (!isset($_SESSION["admin"]) || $_SESSION["admin"] !== "yes") {
 
 <body>
 
-<ul class="topnav">
-        <li><a href="index.php"><img src="Bilder/house-03-svgrepo-com.svg" class="menyicon" height="40px" width="auto"></a></li>
-        <li><a href="leggtil.php"><img src="Bilder/file-add-svgrepo-com.svg"class="menyicon" height="40px" width="auto"></a></li>
-        <li><a href="profil.php"><img src="Bilder/user-01-svgrepo-com.svg" class="menyicon" height="40px" width="auto" ></a></li> 
-        <?php 
-        include "menu.php"; 
-        ?>
-    </ul>
+  <ul class="topnav">
+    <li><a href="index.php"><img src="Bilder/house-03-svgrepo-com.svg" class="menyicon" height="40px" width="auto"></a>
+    </li>
+    <li><a href="leggtil.php"><img src="Bilder/file-add-svgrepo-com.svg" class="menyicon" height="40px"
+          width="auto"></a></li>
+    <li><a href="profil.php"><img src="Bilder/user-01-svgrepo-com.svg" class="menyicon" height="40px" width="auto"></a>
+    </li>
+    <?php
+    include "menu.php";
+    ?>
+  </ul>
 
   <h1 class="velkommen">Velkommen administrator
     <?php echo ($_SESSION["navn"]); ?>!

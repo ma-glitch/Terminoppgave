@@ -1,5 +1,5 @@
 <?php
- session_start();
+session_start();
 
 require_once "config.php";
 // Initialize error variables
@@ -24,47 +24,47 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
 
         // If there are no validation errors, you can proceed with authentication
         if (empty($username_err) && empty($password_err)) {
-         // Attempt to retrieve the user's data from the database
-         $sql = "SELECT id, navn, bruker, passord, admin FROM login WHERE bruker = '".$username."' ";
+            // Attempt to retrieve the user's data from the database
+            $sql = "SELECT id, navn, bruker, passord, admin FROM login WHERE bruker = '" . $username . "' ";
 
-         if ($stmt = $link->prepare($sql)) {
-             
-             if ($stmt->execute()) {
-                 $stmt->store_result();
-                 
-                 if ($stmt->num_rows == 1) {
-                     $stmt->bind_result($id, $navn, $username, $password, $admin);
-                     
-                     if ($stmt->fetch()) {
-                         if (password_verify($password, $hashed_password)) {
-                             // Password is correct, start a new session
-                             session_start();
-                             
-                             // Store data in session variables
-                             $_SESSION["loggedin"] = true;
-                             $_SESSION["id"] = $id;
-                             $_SESSION["navn"] = $navn;
-                             $_SESSION["bruker"] = $username;
-                             $_SESSION["passord"] = $password;
-                             $_SESSION["admin"] = $admin;
-                             
-                             // Redirect the user to the welcome page
-                             header("location: index.php");
-                             exit();
-                         } else {
-                             $password_err = "Invalid password.";
-                         }
-                     }
-                 } else {
-                     $username_err = "Username not found.";
-                 }
-             } else {
-                 echo "Something went wrong. Please try again later.";
-             }
-             
-             $stmt->close();
+            if ($stmt = $link->prepare($sql)) {
+
+                if ($stmt->execute()) {
+                    $stmt->store_result();
+
+                    if ($stmt->num_rows == 1) {
+                        $stmt->bind_result($id, $navn, $username, $password, $admin);
+
+                        if ($stmt->fetch()) {
+                            if (password_verify($password, $hashed_password)) {
+                                // Password is correct, start a new session
+                                session_start();
+
+                                // Store data in session variables
+                                $_SESSION["loggedin"] = true;
+                                $_SESSION["id"] = $id;
+                                $_SESSION["navn"] = $navn;
+                                $_SESSION["bruker"] = $username;
+                                $_SESSION["passord"] = $password;
+                                $_SESSION["admin"] = $admin;
+
+                                // Redirect the user to the welcome page
+                                header("location: index.php");
+                                exit();
+                            } else {
+                                $password_err = "Invalid password.";
+                            }
+                        }
+                    } else {
+                        $username_err = "Username not found.";
+                    }
+                } else {
+                    echo "Something went wrong. Please try again later.";
+                }
+
+                $stmt->close();
+            }
         }
-      }
-   }
+    }
 }
 ?>

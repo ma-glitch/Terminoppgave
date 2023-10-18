@@ -21,11 +21,14 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 
 <body onload="close()">
     <ul class="topnav">
-        <li><a href="index.php"><img src="Bilder/house-03-svgrepo-com.svg" class="menyicon" height="40px" width="auto"></a></li>
-        <li><a href="leggtil.php"><img src="Bilder/file-add-svgrepo-com.svg"class="menyicon" height="40px" width="auto"></a></li>
-        <li><a href="profil.php"><img src="Bilder/user-01-svgrepo-com.svg" class="menyicon" height="40px" width="auto" ></a></li> 
-        <?php 
-        include "menu.php"; 
+        <li><a href="index.php"><img src="Bilder/house-03-svgrepo-com.svg" class="menyicon" height="40px"
+                    width="auto"></a></li>
+        <li><a href="leggtil.php"><img src="Bilder/file-add-svgrepo-com.svg" class="menyicon" height="40px"
+                    width="auto"></a></li>
+        <li><a href="profil.php"><img src="Bilder/user-01-svgrepo-com.svg" class="menyicon" height="40px"
+                    width="auto"></a></li>
+        <?php
+        include "menu.php";
         ?>
     </ul>
 
@@ -33,16 +36,16 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     <h1 class="velkommen">Velkommen
         <?php echo ($_SESSION["navn"]); ?>!
     </h1>
-    <div class="betal"> 
+    <div class="betal">
         <img src="Bilder/vipps-rgb-orange-pos.svg" height="100px" width="auto" onclick="betalbtn()">
     </div>
     <h1 id="betal">Vipps</h1>
     <script>
-    function betalbtn() {
-        console.log("test");
-        document.getElementById("betal").style.display = "block";
+        function betalbtn() {
+            console.log("test");
+            document.getElementById("betal").style.display = "block";
         }
-</script>
+    </script>
 
     <table id="score">
         <tr>

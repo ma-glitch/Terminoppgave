@@ -3,7 +3,8 @@ session_start();
 
 require_once "config.php";
 
-function calculateBotValue() {
+function calculateBotValue()
+{
     $values = [
         "kina" => 25,
         "glemmeDrakt" => 500,
@@ -28,7 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     if ($botValue > 0) {
         $sql_update = "UPDATE login SET total = total + ?, ubetalt = ubetalt + ? WHERE bruker = ?";
-        
+
         if ($stmt = $link->prepare($sql_update)) {
             $stmt->bind_param("iis", $botValue, $botValue, $_SESSION["bruker"]);
             if ($stmt->execute()) {
