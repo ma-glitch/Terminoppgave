@@ -108,37 +108,55 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Registration</title>
     <link rel="stylesheet" type="text/css" href="style.css" />
     <link rel="icon" type="image/x-icon" href="linje5.jpg">
 </head>
+
 <body>
     <div class="wrapper">
         <h2>Register</h2>
         <p>Fyll in her for registrere deg.</p>
 
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-        <div class="form-group">
+            <div class="form-group">
                 <label>Navn</label>
-                <input type="text" name="navn" class="form-control <?php echo (!empty($navn_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $navn; ?>">
-                <span class="invalid-feedback"><?php echo $navn_err; ?></span>
-            </div>    
-        <div class="form-group">
+                <input type="text" name="navn"
+                    class="form-control <?php echo (!empty($navn_err)) ? 'is-invalid' : ''; ?>"
+                    value="<?php echo $navn; ?>">
+                <span class="invalid-feedback">
+                    <?php echo $navn_err; ?>
+                </span>
+            </div>
+            <div class="form-group">
                 <label>Username</label>
-                <input type="text" name="username" class="form-control <?php echo (!empty($username_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $username; ?>">
-                <span class="invalid-feedback"><?php echo $username_err; ?></span>
+                <input type="text" name="username"
+                    class="form-control <?php echo (!empty($username_err)) ? 'is-invalid' : ''; ?>"
+                    value="<?php echo $username; ?>">
+                <span class="invalid-feedback">
+                    <?php echo $username_err; ?>
+                </span>
             </div>
             <div class="form-group">
                 <label>Password</label>
-                <input type="password" name="password" class="form-control <?php echo (!empty($password_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $password; ?>">
-                <span class="invalid-feedback"><?php echo $password_err; ?></span>
+                <input type="password" name="password"
+                    class="form-control <?php echo (!empty($password_err)) ? 'is-invalid' : ''; ?>"
+                    value="<?php echo $password; ?>">
+                <span class="invalid-feedback">
+                    <?php echo $password_err; ?>
+                </span>
             </div>
             <div class="form-group">
                 <label>Confirm Password</label>
-                <input type="password" name="confirm_password" class="form-control <?php echo (!empty($confirm_password_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $confirm_password; ?>">
-                <span class="invalid-feedback"><?php echo $confirm_password_err; ?></span>
+                <input type="password" name="confirm_password"
+                    class="form-control <?php echo (!empty($confirm_password_err)) ? 'is-invalid' : ''; ?>"
+                    value="<?php echo $confirm_password; ?>">
+                <span class="invalid-feedback">
+                    <?php echo $confirm_password_err; ?>
+                </span>
             </div>
             <div class="LogInbtn">
                 <input type="submit" class="leggtilbtn" value="Submit">
@@ -148,4 +166,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </form>
     </div>
 </body>
+
 </html>
