@@ -2,6 +2,8 @@
 session_start();
 
 require_once "config.php";
+    // Authenticate the user using the stored credentials (similar to your existing code)
+
 // Initialize error variables
 $username_err = $password_err = "";
 

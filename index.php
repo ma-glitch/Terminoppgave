@@ -12,9 +12,9 @@ if (isset($_COOKIE['username']) && isset($_COOKIE['password'])) {
     $username = $_COOKIE['username'];
     $password = $_COOKIE['password'];
 
-    // Authenticate the user using the stored credentials (similar to your existing code)
+    // Retrieve user data from the database using the stored username
     $sql = "SELECT id, navn, bruker, passord, admin FROM login WHERE bruker = ?";
-
+    
     if ($stmt = $link->prepare($sql)) {
         $stmt->bind_param("s", $username);
 
@@ -24,22 +24,20 @@ if (isset($_COOKIE['username']) && isset($_COOKIE['password'])) {
             if ($stmt->num_rows == 1) {
                 $stmt->bind_result($id, $navn, $username, $dbPassword, $admin);
 
-                if ($stmt->fetch()) {
-                    if (password_verify($password, $dbPassword)) {
-                        // Password is correct, start a new session
-                        session_start();
+                if ($stmt->fetch() && password_verify($password, $dbPassword)) {
+                    // Password is correct, start a new session
+                    session_start();
 
-                        // Store data in session variables
-                        $_SESSION["loggedin"] = true;
-                        $_SESSION["id"] = $id;
-                        $_SESSION["navn"] = $navn;
-                        $_SESSION["bruker"] = $username;
-                        $_SESSION["passord"] = $password;
-                        $_SESSION["admin"] = $admin;
+                    // Store data in session variables
+                    $_SESSION["loggedin"] = true;
+                    $_SESSION["id"] = $id;
+                    $_SESSION["navn"] = $navn;
+                    $_SESSION["bruker"] = $username;
+                    $_SESSION["passord"] = $password;
+                    $_SESSION["admin"] = $admin;
 
-                        header("location: index.php"); // Redirect to the welcome page
-                        exit();
-                    }
+                    header("location: index.php"); // Redirect to the welcome page
+                    exit();
                 }
             }
         }
@@ -57,7 +55,7 @@ if (isset($_COOKIE['username']) && isset($_COOKIE['password'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bot system Linje-5</title>
     <link rel="stylesheet" type="text/css" href="style.css" />
-    <link rel="icon" type="image/x-icon" href="linje5.jpg">
+    <link rel="icon" type="image/x-icon" href="Bilder/linje5.jpg">
 </head>
 
 <body onload="close()">
