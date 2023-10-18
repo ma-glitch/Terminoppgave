@@ -23,13 +23,15 @@ if (isset($_COOKIE['username']) && isset($_COOKIE['password'])) {
             if ($stmt->num_rows == 1) {
                 $stmt->bind_result($id, $navn, $username, $dbPassword, $admin);
 
-                if ($stmt->fetch() == 1) {
+                if ($stmt->fetch() && password_verify($password, $dbPassword)) {
                     // Password is correct
                     $_SESSION["loggedin"] = true;
                     $_SESSION["id"] = $id;
                     $_SESSION["navn"] = $navn;
                     $_SESSION["bruker"] = $username;
-                    $_SESSION["admin"] = $admin; // Redirect to the welcome page
+                    $_SESSION["admin"] = $admin;
+                    header("location: index.php"); // Redirect to the welcome page
+                    exit(); // Redirect to the welcome page
                 }
             }
         }
