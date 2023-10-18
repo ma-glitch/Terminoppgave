@@ -19,7 +19,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 </head>
 
 <body>
-    <ul class="topnav">
+<ul class="topnav">
         <li><a href="index.php"><img src="Bilder/house-03-svgrepo-com.svg" class="menyicon" height="40px"
                     width="auto"></a></li>
         <li><a href="leggtil.php"><img src="Bilder/file-add-svgrepo-com.svg" class="menyicon" height="40px"
@@ -30,6 +30,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         include "menu.php";
         ?>
     </ul>
+
     <?php
 
     if (isset($_POST['Endrenavn'])) {
