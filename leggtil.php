@@ -1,92 +1,66 @@
-<?php
-require_once "config.php";
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>leggtil</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="icon" type="image/x-icon" href="linje5.jpg">
+</head>
+<body>
+<ul class="topnav">
+        <li><a href="index.php"><img src="Bilder/house-03-svgrepo-com.svg" class="menyicon" height="40px" width="auto"></a></li>
+        <li><a href="leggtil.php"><img src="Bilder/file-add-svgrepo-com.svg"class="menyicon" height="40px" width="auto"></a></li>
+        <li><a href="profil.php"><img src="Bilder/user-01-svgrepo-com.svg" class="menyicon" height="40px" width="auto" ></a></li> 
+        <?php 
+        include "menu.php"; 
+        ?>
+    </ul>
 
-function calculateBotValue() {
-    $values = [
-        "kina" => 25,
-        "glemmeDrakt" => 500,
-        "glemmeViktig" => 50,
-        "haandspol" => 50,
-        // Add more values here if needed
-    ];
+    <h1 class="velkommen">Velkommen </h1>
+    <div class="leggtil">
+        <h1>Legg til bot</h1>
+        <form action="leggtil.php" method="post" id="BotOversikt">
+            Kina 25Kr   <input class="Check" type="checkbox" name="kina" value="25"><br>
+            Glemme drakt 500Kr   <input class="Check" type="checkbox" name="glemmeDrakt" value="500"><br>
+            Glemme viktig utstyr 50Kr   <input class="Check" type="checkbox" name="glemmeViktig" value="50"><br>
+            En håndspol 50Kr   <input class="Check" type="checkbox" name="haandspol" value="50"><br>
+            <input class="Check" type="checkbox" name="" value=""><br>
+            <input class="Check" type="checkbox" name="" value=""><br>
+            <input class="Check" type="checkbox" name="" value=""><br>
+            <input class="Check" type="checkbox" name="" value=""><br>
+            <input class="Check" type="checkbox" name="" value=""><br>
+            <input class="Check" type="checkbox" name="" value=""><br>
+            <input class="Check" type="checkbox" name="" value=""><br>
+            <input class="Check" type="checkbox" name="" value=""><br>
+            <input class="Check" type="checkbox" name="" value=""><br>
+            <input class="Check" type="checkbox" name="" value=""><br>
+            <input class="Check" type="checkbox" name="" value=""><br>
+            <input class="Check" type="checkbox" name="" value=""><br>
+            <input class="Check" type="checkbox" name="" value=""><br>
+            <input class="Check" type="checkbox" name="" value=""><br>
+            <input class="Check" type="checkbox" name="" value=""><br>
+            <input class="Check" type="checkbox" name="" value=""><br>
+            <input class="Check" type="checkbox" name="" value=""><br>
+            <input class="Check" type="checkbox" name="" value=""><br>
+            <input class="Check" type="checkbox" name="" value=""><br>
+            <input class="Check" type="checkbox" name="" value=""><br>
+            <input class="Check" type="checkbox" name="" value=""><br>
+            <input class="Check" type="checkbox" name="" value=""><br>
+            <input class="Check" type="checkbox" name="" value=""><br>
+            <input class="Check" type="checkbox" name="" value=""><br>
+            <input class="Check" type="checkbox" name="" value=""><br>
+            <input class="Check" type="checkbox" name="" value=""><br>
+            <input class="Check" type="checkbox" name="" value=""><br>
+            <input class="Check" type="checkbox" name="" value=""><br>
+            <input class="Check" type="checkbox" name="" value=""><br>
+            <input class="Check" type="checkbox" name="" value=""><br>
+            
 
-    $botVerdi = 0;
+            <input type="submit" class="leggtilbtn">
+        </form>
+    </div>
 
-    foreach ($values as $key => $value) {
-        if (isset($_POST[$key]) && $_POST[$key] === (string) $value) {
-            $botVerdi += $value;
-        }
-    }
-
-    return $botVerdi;
-}
-
-if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    $botValue = calculateBotValue();
-
-    if ($botValue > 0) {
-        $sql_update = "UPDATE login SET total = total + ?, ubetalt = ubetalt + ? WHERE bruker = ?";
-        
-        if ($stmt = $link->prepare($sql_update)) {
-            $stmt->bind_param("iis", $botValue, $botValue, $_SESSION["bruker"]);
-            if ($stmt->execute()) {
-                echo "Boten har blitt lagt til";
-                header("Location: leggtil.html");
-                exit;
-            } else {
-                echo "En feil har oppstått, prøv igjen senere";
-            }
-            $stmt->close();
-        } else {
-            echo "Prepared statement failed.";
-        }
-    } else {
-        echo "No valid bot value found in the POST data.";
-    }
-}
-
-
-
-/*function calculateBotValue() {
-    $values = [
-        "kina" => 25,
-        "glemmeDrakt" => 500,
-        "glemmeViktig" => 50,
-        "haandspol" => 50,
-        // Add more values here if needed
-    ];
-
-    $botVerdi = 0;
-
-    foreach ($values as $key => $value) {
-        if (isset($_POST[$key]) && $_POST[$key] === (string) $value) {
-            $botVerdi += $value;
-        }
-    }
-
-    return $botVerdi;
-}
-
-if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    $botValue = calculateBotValue();
-
-    if (isset($_GET[$botValue])) {
-        $botValue = $_GET[$botValue];
-    
-        $sql_update = "UPDATE login SET total = total + ".$botValue.", ubetalt = ubetalt + ".$botValue." WHERE bruker = '".$_SESSION["bruker"]."'";
-
-        
-        if ($stmt = $link->prepare($sql_update)) {
-            // Execute the prepared statement
-            if ($stmt->execute()) {
-           echo "Boten har blitt lagt til";
-           header ("Location: leggtil.html");
-           exit;
-            }else {
-              echo "En feil har oppståt, prøv igjen senere";
-            }
-            $stmt->close();
-        }
-      }
-}*/
-?>
+    <script src="script.js"></script>
+</body>
+</html>
