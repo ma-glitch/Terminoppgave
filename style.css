@@ -220,7 +220,7 @@ form{
 .TABEL {
   max-width: 25%;
 }
-
+/*
 .oppdaterbtn {
   height: 20px;
   width: auto;
@@ -231,7 +231,7 @@ form{
   border-radius: 8px;
   cursor: pointer;
 }
-
+*/
 #BotOversikt {
   margin-bottom: 70px;
   font-weight: bold;
