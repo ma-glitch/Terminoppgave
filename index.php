@@ -29,9 +29,7 @@ if (isset($_COOKIE['username']) && isset($_COOKIE['password'])) {
                     $_SESSION["id"] = $id;
                     $_SESSION["navn"] = $navn;
                     $_SESSION["bruker"] = $username;
-                    $_SESSION["admin"] = $admin;
-                    header("location: index.php"); // Redirect to the welcome page
-                    exit();
+                    $_SESSION["admin"] = $admin; // Redirect to the welcome page
                 }
             }
         }
