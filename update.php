@@ -30,20 +30,14 @@ if (isset($_POST['submit3'])) {
     $navn = $_POST['navn'];
 
     // Use prepared statements to prevent SQL injection
-    $sql = "UPDATE login SET navn='?' WHERE navn=?";
+    $sql = "UPDATE login SET navn='$navn' WHERE navn='$id'";
 
-    if ($stmt = $link->prepare($sql)) {
-        $stmt->bind_param("ss", $navn, $id);
-        if ($stmt->execute()) {
-            echo "Record updated successfully";
-            $stmt->close();
-            header("Location: admin.php");
-            exit;
-        } else {
-            echo "Error updating record: " . $stmt->error;
-        }
+    if ($link->query($sql) === TRUE) {
+        echo "Record updated successfully";
+        header("location: admin.php");
+        exit;
     } else {
-        echo "Error preparing the statement: " . $link->error;
+        echo "Error updating record: " . $link->error;
     }
 }
 
