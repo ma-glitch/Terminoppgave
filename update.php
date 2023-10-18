@@ -6,41 +6,65 @@ if (isset($_POST['submit'])) {
     $id = $_POST['id'];
     $ubetalt = $_POST['ubetalt'];
 
-    // Update the ubetalt field for the specific user
-    $sql = "UPDATE login SET ubetalt='$ubetalt' WHERE navn='$id'";
-
-    if ($link->query($sql) === TRUE) {
-        echo "Record updated successfully";
-        header("location: admin.php");
-        exit;
+    // Use prepared statements to prevent SQL injection
+    $sql = "UPDATE login SET ubetalt=? WHERE navn=?";
+    
+    if ($stmt = $link->prepare($sql)) {
+        $stmt->bind_param("ss", $ubetalt, $id);
+        if ($stmt->execute()) {
+            echo "Record updated successfully";
+            $stmt->close();
+            header("Location: admin.php");
+            exit;
+        } else {
+            echo "Error updating record: " . $stmt->error;
+        }
+    } else {
+        echo "Error preparing the statement: " . $link->error;
     }
 }
+
 if (isset($_POST['submit2'])) {
     $id = $_POST['id3'];
     $navn = $_POST['navn'];
 
-    // Update the ubetalt field for the specific user
-    $sql = "UPDATE login SET navn='$navn' WHERE navn='$id'";
+    // Use prepared statements to prevent SQL injection
+    $sql = "UPDATE login SET navn=? WHERE navn=?";
 
-    if ($link->query($sql) === TRUE) {
-        echo "Record updated successfully";
-        header("location: admin.php");
-        exit;
+    if ($stmt = $link->prepare($sql)) {
+        $stmt->bind_param("ss", $navn, $id);
+        if ($stmt->execute()) {
+            echo "Record updated successfully";
+            $stmt->close();
+            header("Location: admin.php");
+            exit;
+        } else {
+            echo "Error updating record: " . $stmt->error;
+        }
+    } else {
+        echo "Error preparing the statement: " . $link->error;
     }
 }
-if (isset($_POST['sumbit3'])) {
+
+if (isset($_POST['submit3'])) {
     $id = $_POST['id2'];
     $total = $_POST['total'];
 
-    // Update the ubetalt field for the specific user
-    $sql = "UPDATE login SET total='$total' WHERE navn='$id'";
+    // Use prepared statements to prevent SQL injection
+    $sql = "UPDATE login SET total=? WHERE navn=?";
 
-    if ($link->query($sql) === TRUE) {
-        echo "Record updated successfully";
-        header("location: admin.php");
-        exit;
+    if ($stmt = $link->prepare($sql)) {
+        $stmt->bind_param("ss", $total, $id);
+        if ($stmt->execute()) {
+            echo "Record updated successfully";
+            $stmt->close();
+            header("Location: admin.php");
+            exit;
+        } else {
+            echo "Error updating record: " . $stmt->error;
+        }
     } else {
-        echo "Error updating record: " . $link->error;
+        echo "Error preparing the statement: " . $link->error;
     }
 }
 ?>
