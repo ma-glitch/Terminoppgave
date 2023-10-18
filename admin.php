@@ -79,6 +79,7 @@ if (!isset($_SESSION["admin"]) || $_SESSION["admin"] !== "yes") {
                 <form method='post' action='update.php' class='updateform3'>
                 <input type='hidden' name='id3' value='" . $row["navn"] . "'>
                 <input type='text' name='navn' placeholder='" . $row["navn"] . "'>
+          
                 <input type='image' src='Bilder/check-svgrepo-com.svg'  alt='Submit' name='submit3' value= id='' class='oppdaterbtn' />
                 </form></td>";
         echo "</tr>";
