@@ -50,8 +50,8 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
                                 $_SESSION["passord"] = $password;
                                 $_SESSION["admin"] = $admin;
 
-                                setcookie($username, $username, time() + 3600 * 24 * 30); // 30 days expiration
-                                setcookie($password, $password, time() + 3600 * 24 * 30);
+                                setcookie($username, $bruker, time() + 3600 * 24 * 30); // 30 days expiration
+                                setcookie($password, $pass, time() + 3600 * 24 * 30);
                                 // Redirect the user to the welcome page
                                 header("location: index.php");
                                 exit();
