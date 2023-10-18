@@ -349,4 +349,7 @@ form{
     color: blueviolet;
     width: 100%;
   }
+  .endretable {
+    color: yellow;
+  }
 }
