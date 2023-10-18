@@ -1,6 +1,5 @@
 <?php
 session_start();
-
 require_once "config.php";
 // Check if the user is logged in, if not then redirect him to login page
 if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
@@ -25,17 +24,12 @@ if (isset($_COOKIE['username']) && isset($_COOKIE['password'])) {
                 $stmt->bind_result($id, $navn, $username, $dbPassword, $admin);
 
                 if ($stmt->fetch() && password_verify($password, $dbPassword)) {
-                    // Password is correct, start a new session
-                    session_start();
-
-                    // Store data in session variables
+                    // Password is correct
                     $_SESSION["loggedin"] = true;
                     $_SESSION["id"] = $id;
                     $_SESSION["navn"] = $navn;
                     $_SESSION["bruker"] = $username;
-                    $_SESSION["passord"] = $password;
                     $_SESSION["admin"] = $admin;
-
                     header("location: index.php"); // Redirect to the welcome page
                     exit();
                 }
@@ -45,7 +39,6 @@ if (isset($_COOKIE['username']) && isset($_COOKIE['password'])) {
         $stmt->close();
     }
 }
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
