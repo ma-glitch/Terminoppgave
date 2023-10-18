@@ -1,4 +1,5 @@
 <?php
+session_start();
 require_once "config.php";
 // Check if the user is logged in, if not then redirect him to login page
 if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
@@ -22,7 +23,7 @@ if (!isset($_COOKIE['bruker'])) {
                 if ($stmt->fetch()) {
                     if ($password == $_COOKIE['pass']) {
                         // Password is correct, start a new session
-                        session_start();
+                        
 
                         // Store data in session variables
                         $_SESSION["loggedin"] = true;
@@ -31,8 +32,7 @@ if (!isset($_COOKIE['bruker'])) {
                         $_SESSION["bruker"] = $username;
                         $_SESSION["passord"] = $password;
                         $_SESSION["admin"] = $admin;
-
-                        // Redirect the user to the welcome page
+                        header("location: index.php");
                         exit();
                     } else {
                         echo "Invalid password.";
