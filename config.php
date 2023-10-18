@@ -1,9 +1,4 @@
 <?php
-if (function_exists('mysqli_connect')) {
-  echo "MySQLi is enabled.";
-} else {
-  echo "MySQLi is not enabled.";
-}
 
 
 
@@ -19,8 +14,6 @@ $link = new mysqli($servername, $username, $password, $dbname);
 if ($link->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
-echo "Connected successfully";
-
 
 session_start();
 

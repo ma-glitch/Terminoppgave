@@ -1,5 +1,4 @@
-<?php 
-session_start();
+<?php
 require_once "config.php";
 
 if (($_SESSION["admin"] == "yes")) {
