@@ -8,7 +8,8 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 }
 
 if (!isset($_COOKIE['bruker'])) {
-
+    echo "cookie is not set";
+} else {
     $sql = "SELECT id, navn, bruker, passord, admin FROM login WHERE bruker = '" . $_COOKIE['bruker'] . "' ";
 
     if ($stmt = $link->prepare($sql)) {
@@ -48,7 +49,6 @@ if (!isset($_COOKIE['bruker'])) {
 
         $stmt->close();
     }
-
 }
 ?>
 <!DOCTYPE html>
