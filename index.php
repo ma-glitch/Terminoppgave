@@ -1,14 +1,16 @@
 <?php
+
 session_start();
 require_once "config.php";
+
 // Check if the user is logged in, if not then redirect him to login page
 if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     header("location: login.php");
-    exit;
+    exit();
 }
 
 if (!isset($_COOKIE['bruker'])) {
-    echo "cookie is not set";
+    echo "Cookie is not set";
 } else {
     $sql = "SELECT id, navn, bruker, passord, admin FROM login WHERE bruker = '" . $_COOKIE['bruker'] . "' ";
 
@@ -23,8 +25,6 @@ if (!isset($_COOKIE['bruker'])) {
                 if ($stmt->fetch()) {
                     if ($password == $_COOKIE['pass']) {
                         // Password is correct, start a new session
-                        
-
                         // Store data in session variables
                         $_SESSION["loggedin"] = true;
                         $_SESSION["id"] = $id;
@@ -32,8 +32,7 @@ if (!isset($_COOKIE['bruker'])) {
                         $_SESSION["bruker"] = $username;
                         $_SESSION["passord"] = $password;
                         $_SESSION["admin"] = $admin;
-                        header("location: index.php");
-                        exit();
+                        // No need to redirect here, as the user is already on the correct page
                     } else {
                         echo "Invalid password.";
                     }
