@@ -49,10 +49,12 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
                                 $_SESSION["bruker"] = $username;
                                 $_SESSION["passord"] = $password;
                                 $_SESSION["admin"] = $admin;
-
-                                setcookie("bruker", $username, time() + 3600 * 24 * 30, "/"); // 30 days expiration
-                                setcookie("pass", $password, time() + 3600 * 24 * 30, "/");
                                 
+                                if (isset($_GET["remember_me"]) && $_GET["remember_me"] == "on") {
+                                    
+                                    setcookie("bruker", $username, time() + 3600 * 24 * 30, "/"); 
+                                    setcookie("pass", $password, time() + 3600 * 24 * 30, "/");
+                                }
                                 header("location: index.php");
                                 exit();
                             } else {
