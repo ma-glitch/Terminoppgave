@@ -27,7 +27,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                     if ($stmt->num_rows == 1) {
                         $stmt->bind_result($id, $navn, $username, $password, $admin);
 
-                        if ($stmt2->fetch()) {
+                        if ($stmt->fetch()) {
                             // You should remove this line:
                             // session_start();
 
