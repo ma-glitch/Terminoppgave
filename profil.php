@@ -71,7 +71,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     }
     ?>
     <div class="Profil-wrapper">
-        <div class="">
+        <div class="Endreprofil">
             <table class="endretable">
                 <tr>
                     <td class="headerinfo">Navn:</td>

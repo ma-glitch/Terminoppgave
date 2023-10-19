@@ -338,18 +338,18 @@ form{
 .headerinfo{
   font-size: 21px;
   font-weight: bold;
-  padding: 20px;
+  padding: 15px;
 }
 
 .subinfo{
   font-size: 21px;
-  padding: 20px;
+  padding: 15px;
 } 
 
 @media only screen and (max-width: 600px) {
   .Endreprofil {
     width: 100%;
-    margin: 0;
+    margin: 0px;
   }
   .endretable {
     width: 98%;
