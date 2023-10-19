@@ -312,7 +312,7 @@ form{
 .Profil-wrapper{
   display: flex;
   justify-content: center;
-  width: 80%;
+  width: 100%;
 }
 
 .Endreprofil{
@@ -320,8 +320,6 @@ form{
   border-radius: 10px;
   width: 80%;
   margin-left: 10%;
-  display: flex;
-  justify-content: center;
 }
 
 .endretable{
