@@ -86,8 +86,8 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                     <td class="headerinfo">Brukernavn:</td>
                     <?php
                     echo "<form action='' method='post'>";
-                    echo "<td><input type='text' name='bruker' placeholder='" . $_SESSION["bruker"] . "'></td>";
-                    echo "<td><input type='submit' name='Endrebruker' value='Endre Brukernavn' id='sumbit' class='oppdaterbtn'></td>";
+                    echo "<td class='headerinfo'><input type='text' name='bruker' placeholder='" . $_SESSION["bruker"] . "'></td>";
+                    echo "<td class='headerinfo'><input type='submit' name='Endrebruker' value='Endre Brukernavn' id='sumbit' class='oppdaterbtn'></td>";
                     echo "</form>";
                     ?>
                 </tr>
@@ -95,8 +95,8 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                     <td class="headerinfo">Passord:</td>
                     <?php
                     echo "<form action='' method='post'>";
-                    echo "<td><input type='text' name='passord' placeholder='" . $_SESSION["passord"] . "'></td>";
-                    echo "<td><input type='submit' name='Endrepassord' value='Endre passord' id='sumbit' class='oppdaterbtn'></td>";
+                    echo "<td class='headerinfo' ><input type='text' name='passord' placeholder='" . $_SESSION["passord"] . "'></td>";
+                    echo "<td class='headerinfo' ><input type='submit' name='Endrepassord' value='Endre passord' id='sumbit' class='oppdaterbtn'></td>";
                     echo "</form>";
                     ?>
                 </tr>
