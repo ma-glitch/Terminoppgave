@@ -2,20 +2,20 @@
 session_start();
 
 require_once "config.php";
-    // Authenticate the user using the stored credentials (similar to your existing code)
+   
 
-// Initialize error variables
+
 $username_err = $password_err = "";
 
-// Check if the form is submitted
+
 if ($_SERVER["REQUEST_METHOD"] == "GET") {
-    // Check if "username" and "password" are set in the form data
+    
     if (isset($_GET["bruker"]) && isset($_GET["passord"])) {
-        // Retrieve user input
+        
         $username = $_GET["bruker"];
         $password = $_GET["passord"];
         $hashed_password = password_hash($password, PASSWORD_DEFAULT);
-        // Perform basic validation
+       
         if (empty($username)) {
             $username_err = "Username is required.";
         }
@@ -24,9 +24,9 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
             $password_err = "Password is required.";
         }
 
-        // If there are no validation errors, you can proceed with authentication
+       
         if (empty($username_err) && empty($password_err)) {
-            // Attempt to retrieve the user's data from the database
+           
             $sql = "SELECT id, navn, bruker, passord, admin FROM login WHERE bruker = '" . $username . "' ";
 
             if ($stmt = $link->prepare($sql)) {
@@ -39,10 +39,10 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
 
                         if ($stmt->fetch()) {
                             if (password_verify($password, $hashed_password)) {
-                                // Password is correct, start a new session
+                                
                                 session_start();
 
-                                // Store data in session variables
+                               
                                 $_SESSION["loggedin"] = true;
                                 $_SESSION["id"] = $id;
                                 $_SESSION["navn"] = $navn;
@@ -52,7 +52,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
 
                                 setcookie("bruker", $username, time() + 3600 * 24 * 30, "/"); // 30 days expiration
                                 setcookie("pass", $password, time() + 3600 * 24 * 30, "/");
-                                // Redirect the user to the welcome page
+                                
                                 header("location: index.php");
                                 exit();
                             } else {
@@ -95,6 +95,8 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
                 <label>Password</label>
                 <input type="password" name="passord" class="form-control" >
             </div>
+            
+            Remember me <input type="checkbox" name="remember_me" id="remember_me">
             <div id="LogInbtn">
                 <input type="submit" class="leggtilbtn" value="Login">
             </div>
