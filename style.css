@@ -309,53 +309,7 @@ form{
 /*---------------------
     Profil side
 ---------------------*/
-.Profil-wrapper{
-  display: flex;
-  justify-content: center;
-  width: 100%;
-}
-
-.Endreprofil{
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  border-radius: 10px;
-  width: 80%;
-  margin-left: 10%;
-}
-
-.endretable{
-  text-align: center;
-  height: fit-content;
-  width: 80%;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-.Profilinfo tr{
-  border-bottom: 2px solid black;
-}
-
-.headerinfo{
-  font-size: 21px;
-  font-weight: bold;
-}
-
-.subinfo{
-  font-size: 21px;
-  padding: 15px;
-} 
 
 @media only screen and (max-width: 600px) {
-  .Endreprofil {
-    width: 100%;
-    margin: 0px;
-  }
-  .endretable {
-    width: 98%;
-  }
-  .Profil-wrapper {
-    width: 100%;
-  }
-  .headerinfo {
-    max-width: 25%;
-    width: 25%;
-  }
+
 }
