@@ -101,7 +101,9 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                     ?>
                 </tr>
             </table>
-            <a href="logut.php">Log ut</a>
+        </div>
+        <div id="logutDIV">
+            <a href="logut.php" ><button id="logutbtn">Log ut</button></a>
         </div>
     </div>
 </body>
