@@ -18,14 +18,14 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 
         // If a user with matching credentials is found, set the session
         if ($result->num_rows === 1) {
-            $sql2 = "SELECT id, navn, bruker, passord, admin FROM login WHERE bruker = ?";
+            $sql2 = "SELECT id, navn, bruker, passord, admin FROM login WHERE bruker ='".$bruker."'";
             
-            if ($stmt2 = $link->prepare($sql2)) {
-                if ($stmt2->execute()) {
-                    $stmt2->store_result();
+            if ($stmt = $link->prepare($sql2)) {
+                if ($stmt->execute()) {
+                    $stmt->store_result();
 
-                    if ($stmt2->num_rows == 1) {
-                        $stmt2->bind_result($id, $navn, $username, $password, $admin);
+                    if ($stmt->num_rows == 1) {
+                        $stmt->bind_result($id, $navn, $username, $password, $admin);
 
                         if ($stmt2->fetch()) {
                             // You should remove this line:
