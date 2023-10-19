@@ -9,7 +9,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         // Assuming your "bruker" cookie contains the user's credentials or identifier
         // You may need to adjust this based on your specific cookie structure
         $bruker = $_COOKIE["bruker"];
-        var_dump($bruker);
+        echo($bruker);
         // Query your database to check if the user with "bruker" exists and get their information
         $sql = "SELECT * FROM login WHERE bruker = ?";
         $stmt = $link->prepare($sql);
