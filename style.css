@@ -338,12 +338,12 @@ form{
 .headerinfo{
   font-size: 21px;
   font-weight: bold;
-  padding: 20px;
+  padding: 15px;
 }
 
 .subinfo{
   font-size: 21px;
-  padding: 20px;
+  padding: 15px;
 } 
 
 @media only screen and (max-width: 600px) {
