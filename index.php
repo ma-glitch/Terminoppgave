@@ -1,5 +1,4 @@
 <?php
-
 session_start();
 require_once "config.php";
 
@@ -9,7 +8,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         // Assuming your "bruker" cookie contains the user's credentials or identifier
         // You may need to adjust this based on your specific cookie structure
         $bruker = $_COOKIE["bruker"];
-        echo($bruker);
+        
         // Query your database to check if the user with "bruker" exists and get their information
         $sql = "SELECT * FROM login WHERE bruker = ?";
         $stmt = $link->prepare($sql);
@@ -19,10 +18,9 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 
         // If a user with matching credentials is found, set the session
         if ($result->num_rows === 1) {
-            $sql2 = "SELECT id, navn, bruker, passord, admin FROM login WHERE bruker = '" . $username . "' ";
-
+            $sql2 = "SELECT id, navn, bruker, passord, admin FROM login WHERE bruker = ?";
+            
             if ($stmt2 = $link->prepare($sql2)) {
-
                 if ($stmt2->execute()) {
                     $stmt2->store_result();
 
@@ -30,26 +28,20 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                         $stmt2->bind_result($id, $navn, $username, $password, $admin);
 
                         if ($stmt2->fetch()) {
-                            if (password_verify($password, $hashed_password)) {
-                                // Password is correct, start a new session
-                                session_start();
+                            // You should remove this line:
+                            // session_start();
 
-                                // Store data in session variables
-                                $_SESSION["loggedin"] = true;
-                                $_SESSION["id"] = $id;
-                                $_SESSION["navn"] = $navn;
-                                $_SESSION["bruker"] = $username;
-                                $_SESSION["passord"] = $password;
-                                $_SESSION["admin"] = $admin;
-
-                                exit();
-                            } else {
-                                $password_err = "Invalid password.";
-                            }
+                            // Store data in session variables
+                            $_SESSION["loggedin"] = true;
+                            $_SESSION["id"] = $id;
+                            $_SESSION["navn"] = $navn;
+                            $_SESSION["bruker"] = $username;
+                            $_SESSION["passord"] = $password;
+                            $_SESSION["admin"] = $admin;
                         }
                     }
                 }
-                    }
+            }
         }
     }
 }
