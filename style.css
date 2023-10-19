@@ -309,7 +309,57 @@ form{
 /*---------------------
     Profil side
 ---------------------*/
+.Profil-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.Endreprofil {
+  width: 50%;
+  margin-top: 2.5%;
+  border-radius: 20px;
+  height: fit-content;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  display: flex;
+  justify-content: space-evenly;
+
+}
+
+.endretable {
+  padding: 2%;
+}
+
+
+#logutbtn {
+  margin-top: 50px;
+  font-weight: bold;
+  font-size: 35px;
+  width: fit-content;
+  border-color: black;
+  border-radius: 10px;
+  border-width: 4px;
+  background-color: #4EA6B6;
+  cursor: pointer;
+}
+#logutDIV {
+  display: flex;
+  justify-content: center;
+}
+
+#endretable {   
+  width: 95%;
+  height: fit-content;
+  margin-left: 2.5%;
+  margin-bottom: 100px;  
+  margin-top: 100px;
+}
+  #endretable td, #endretable th {
+    padding: 1%;
+  }
 
 @media only screen and (max-width: 600px) {
-
+  .Endreprofil {
+      width: 100%;
+      margin-left: 2.5;
+  }
 }

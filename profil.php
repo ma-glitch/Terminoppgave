@@ -72,7 +72,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     ?>
     <div class="Profil-wrapper">
         <div class="Endreprofil">
-            <table class="endretable">
+            <table id="endretable">
                 <tr>
                     <td class="headerinfo">Navn:</td>
                     <?php
@@ -102,9 +102,9 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                 </tr>
             </table>
         </div>
-        <div id="logutDIV">
-            <a href="logut.php" ><button id="logutbtn">Log ut</button></a>
-        </div>
+    </div>
+    <div id="logutDIV">
+        <a href="logut.php" ><button id="logutbtn">Log ut</button></a>
     </div>
 </body>
 
