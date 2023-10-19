@@ -3,49 +3,61 @@
 session_start();
 require_once "config.php";
 
-// Check if the user is logged in, if not then redirect him to login page
+if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
+    // If not logged in via session, check for a cookie named "bruker"
+    if (isset($_COOKIE["bruker"])) {
+        // Assuming your "bruker" cookie contains the user's credentials or identifier
+        // You may need to adjust this based on your specific cookie structure
+        $bruker = $_COOKIE["bruker"];
+
+        // Query your database to check if the user with "bruker" exists and get their information
+        $sql = "SELECT * FROM login WHERE bruker = ?";
+        $stmt = $link->prepare($sql);
+        $stmt->bind_param("s", $bruker);
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        // If a user with matching credentials is found, set the session
+        if ($result->num_rows === 1) {
+            $sql2 = "SELECT id, navn, bruker, passord, admin FROM login WHERE bruker = '" . $username . "' ";
+
+            if ($stmt2 = $link->prepare($sql2)) {
+
+                if ($stmt2->execute()) {
+                    $stmt2->store_result();
+
+                    if ($stmt2->num_rows == 1) {
+                        $stmt2->bind_result($id, $navn, $username, $password, $admin);
+
+                        if ($stmt2->fetch()) {
+                            if (password_verify($password, $hashed_password)) {
+                                // Password is correct, start a new session
+                                session_start();
+
+                                // Store data in session variables
+                                $_SESSION["loggedin"] = true;
+                                $_SESSION["id"] = $id;
+                                $_SESSION["navn"] = $navn;
+                                $_SESSION["bruker"] = $username;
+                                $_SESSION["passord"] = $password;
+                                $_SESSION["admin"] = $admin;
+
+                                exit();
+                            } else {
+                                $password_err = "Invalid password.";
+                            }
+                        }
+                    }
+                }
+                    }
+        }
+    }
+}
+
+// If the user is not logged in via session or cookie, redirect to the login page
 if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     header("location: login.php");
     exit();
-}
-
-if (!isset($_COOKIE['bruker'])) {
-    echo "Cookie is not set";
-} else {
-    $sql = "SELECT id, navn, bruker, passord, admin FROM login WHERE bruker = '" . $_COOKIE['bruker'] . "' ";
-
-    if ($stmt = $link->prepare($sql)) {
-
-        if ($stmt->execute()) {
-            $stmt->store_result();
-
-            if ($stmt->num_rows == 1) {
-                $stmt->bind_result($id, $navn, $username, $password, $admin);
-
-                if ($stmt->fetch()) {
-                    if ($password == $_COOKIE['pass']) {
-                        // Password is correct, start a new session
-                        // Store data in session variables
-                        $_SESSION["loggedin"] = true;
-                        $_SESSION["id"] = $id;
-                        $_SESSION["navn"] = $navn;
-                        $_SESSION["bruker"] = $username;
-                        $_SESSION["passord"] = $password;
-                        $_SESSION["admin"] = $admin;
-                        // No need to redirect here, as the user is already on the correct page
-                    } else {
-                        echo "Invalid password.";
-                    }
-                }
-            } else {
-                echo "Username not found.";
-            }
-        } else {
-            echo "Something went wrong. Please try again later.";
-        }
-
-        $stmt->close();
-    }
 }
 ?>
 <!DOCTYPE html>
