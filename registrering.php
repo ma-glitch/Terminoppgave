@@ -113,29 +113,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta charset="UTF-8">
     <title>Registration</title>
     <link rel="stylesheet" type="text/css" href="style.css" />
-    <link rel="icon" type="image/x-icon" href="linje5.jpg">
+    <link rel="icon" type="image/x-icon" href="Bilder/linje5.jpg">
 </head>
 
 <body>
-            <div class="form-group">
-                <label>Confirm Password</label>
-                <input type="password" name="confirm_password"
-                    class="form-control <?php echo (!empty($confirm_password_err)) ? 'is-invalid' : ''; ?>"
-                    value="<?php echo $confirm_password; ?>">
-                <span class="invalid-feedback">
-                    <?php echo $confirm_password_err; ?>
-                </span>
-            </div>
-            <div class="LogInbtn">
-                <input type="submit" class="leggtilbtn" value="Submit">
-                <input type="reset" class="leggtilbtn" value="Reset">
-            </div>
-            <p>Har du en bruker? <a href="login.php">Login her</a>.</p>
-        </form>
-    </div>
     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?> " method="post" class="registrer-form">
         <div class="imgcontainer">
-          <img src="Linje5.jpg" alt="linje5" class="avatar">
+          <img src="Linje5.jpg" alt="Bilder/linje5" class="avatar">
         </div>
           <h2>Register</h2>
           <div class="form-group">
