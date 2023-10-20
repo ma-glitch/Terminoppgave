@@ -6,6 +6,7 @@ body {margin: 0; font-family: Arial, Helvetica, sans-serif;}
     font-weight: 600;
     display: flex;
     justify-content: center;
+    text-align: center;
 }
 
 
@@ -407,6 +408,18 @@ form{
   font-size: 20px;
 }
 
+.profilbtn {
+  text-decoration: none;
+  width: 200px;
+  font-size: 20px;
+  font-weight: bold;
+  border-color: black;
+  border-radius: 10px;
+  border-width: 2px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
 @media only screen and (max-width: 600px) {
     .Endreprofil {
         width: 100%;
@@ -417,5 +430,12 @@ form{
     }
     .headerinfo {
       font-size: 15px;
+    }
+    .profilbtn {
+      border-color: black;
+      border-radius: 10px;
+      border-width: 2px;
+      border-radius: 8px;
+      cursor: pointer;
     }
 } 

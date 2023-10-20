@@ -78,7 +78,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                     <?php
                     echo "<form action='' method='post'>";
                     echo "<td class='headerinfo'><input type='text' name='navn' placeholder='" . $_SESSION["navn"] . "'></td>";
-                    echo "<td class='headerinfo'><input type='submit' name='Endrenavn' value='Endre navn' id='sumbit' class='oppdaterbtn'></td>";
+                    echo "<td class='headerinfo'><input type='submit' name='Endrenavn' value='Endre navn' id='sumbit' class='profilbtn'></td>";
                     echo "</form>";
                     ?>
                 </tr>
@@ -87,7 +87,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                     <?php
                     echo "<form action='' method='post'>";
                     echo "<td class='headerinfo'><input type='text' name='bruker' placeholder='" . $_SESSION["bruker"] . "'></td>";
-                    echo "<td class='headerinfo'><input type='submit' name='Endrebruker' value='Endre Brukernavn' id='sumbit' class='oppdaterbtn'></td>";
+                    echo "<td class='headerinfo'><input type='submit' name='Endrebruker' value='Endre Brukernavn' id='sumbit' class='profilbtn'></td>";
                     echo "</form>";
                     ?>
                 </tr>
@@ -96,7 +96,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                     <?php
                     echo "<form action='' method='post'>";
                     echo "<td class='headerinfo' ><input type='text' name='passord' placeholder='" . $_SESSION["passord"] . "'></td>";
-                    echo "<td class='headerinfo' ><input type='submit' name='Endrepassord' value='Endre passord' id='sumbit' class='oppdaterbtn'></td>";
+                    echo "<td class='headerinfo' ><input type='submit' name='Endrepassord' value='Endre passord' id='sumbit' class='profilbtn'></td>";
                     echo "</form>";
                     ?>
                 </tr>

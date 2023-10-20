@@ -36,11 +36,11 @@ if (!isset($_SESSION["admin"]) || $_SESSION["admin"] !== "yes") {
     include "menu.php";
     ?>
   </ul>
-
-  <h1 class="velkommen">Velkommen administrator
+<div class="velkommen">
+  <h1 >Velkommen administrator
     <?php echo ($_SESSION["navn"]); ?>!
   </h1>
-
+</div>
   <div class="updatebuttons">
     <button onclick="opptnavn()" class="betalebtn">Oppdater navn</button>
     <button onclick="oppttotal()" class="betalebtn">Oppdater total</button>
