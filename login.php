@@ -84,17 +84,17 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
     <link rel="icon" type="image/x-icon" href="Bilder/linje5.jpg">
 </head>
 <body>
-    <form action="<?=$_SERVER['PHP_SELF'];?>" method="post" class="form-group">
+    <form action="<?=$_SERVER['PHP_SELF'];?>" method="GET" class="form-group">
         <div class="imgcontainer">
           <img src="Bilder/Linje5.jpg" alt="linje5" class="avatar">
         </div>
       
         <div class="container">
           <label for="uname"><b>Brukernavn</b></label>
-          <input type="text" placeholder="Skriv in Brukernavn" name="uname">
+          <input type="text" placeholder="Skriv in Brukernavn" name="bruker">
       
           <label for="psw"><b>Passord</b></label>
-          <input type="password" placeholder="Skriv in Passord" name="psw">
+          <input type="password" placeholder="Skriv in Passord" name="passord">
               
           <button type="submit" id="loginbtn">Login</button>
           <label>
