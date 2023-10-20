@@ -329,6 +329,10 @@ form{
   padding: 2%;
 }
 
+.headerinfo {
+  font-weight: bold;
+  font-size: 20px;
+}
 
 #logutbtn {
   margin-top: 50px;
@@ -357,9 +361,22 @@ form{
     padding: 1%;
   }
 
-@media only screen and (max-width: 600px) {
-  .Endreprofil {
-      width: 100%;
-      margin-left: 2.5;
-  }
+.textinput {
+  border-radius: 10px;
+  border-width: 2px;
+  border-color: black;
+  font-size: 20px;
 }
+
+@media only screen and (max-width: 600px) {
+    .Endreprofil {
+        width: 100%;
+        margin-left: 2.5;
+    }
+    .textinput {
+      font-size: 15px;
+    }
+    .headerinfo {
+      font-size: 15px;
+    }
+} 
