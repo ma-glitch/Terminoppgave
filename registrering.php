@@ -117,38 +117,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 
 <body>
-    <div class="wrapper">
-        <h2>Register</h2>
-        <p>Fyll in her for registrere deg.</p>
-
-        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-            <div class="form-group">
-                <label>Navn</label>
-                <input type="text" name="navn"
-                    class="form-control <?php echo (!empty($navn_err)) ? 'is-invalid' : ''; ?>"
-                    value="<?php echo $navn; ?>">
-                <span class="invalid-feedback">
-                    <?php echo $navn_err; ?>
-                </span>
-            </div>
-            <div class="form-group">
-                <label>Username</label>
-                <input type="text" name="username"
-                    class="form-control <?php echo (!empty($username_err)) ? 'is-invalid' : ''; ?>"
-                    value="<?php echo $username; ?>">
-                <span class="invalid-feedback">
-                    <?php echo $username_err; ?>
-                </span>
-            </div>
-            <div class="form-group">
-                <label>Password</label>
-                <input type="password" name="password"
-                    class="form-control <?php echo (!empty($password_err)) ? 'is-invalid' : ''; ?>"
-                    value="<?php echo $password; ?>">
-                <span class="invalid-feedback">
-                    <?php echo $password_err; ?>
-                </span>
-            </div>
             <div class="form-group">
                 <label>Confirm Password</label>
                 <input type="password" name="confirm_password"
@@ -165,6 +133,53 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <p>Har du en bruker? <a href="login.php">Login her</a>.</p>
         </form>
     </div>
+    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?> " method="post" class="registrer-form">
+        <div class="imgcontainer">
+          <img src="Linje5.jpg" alt="linje5" class="avatar">
+        </div>
+          <h2>Register</h2>
+          <div class="form-group">
+                <label>Navn</label>
+                <input type="text" name="navn"
+                    class="form-control <?php echo (!empty($navn_err)) ? 'is-invalid' : ''; ?>"
+                    value="<?php echo $username; ?>">
+                <span class="invalid-feedback">
+                    <?php echo $username_err; ?>
+                </span>
+            </div>
+            <div class="form-group">
+                <label>Brukernavn</label>
+                <input type="text" name="username"
+                    class="form-control <?php echo (!empty($username_err)) ? 'is-invalid' : ''; ?>"
+                    value="<?php echo $username; ?>">
+                <span class="invalid-feedback">
+                    <?php echo $username_err; ?>
+                </span>
+            </div>
+            <div class="form-group">
+                <label>Passord</label>
+                <input type="password" name="password"
+                    class="form-control <?php echo (!empty($password_err)) ? 'is-invalid' : ''; ?>"
+                    value="<?php echo $password; ?>">
+                <span class="invalid-feedback">
+                    <?php echo $password_err; ?>
+                </span>
+            </div>
+            <div class="form-group">
+                <label>Verifiser Passord</label>
+                <input type="password" name="confirm_password"
+                    class="form-control <?php echo (!empty($confirm_password_err)) ? 'is-invalid' : ''; ?>"
+                    value="<?php echo $confirm_password; ?>">
+                <span class="invalid-feedback">
+                    <?php echo $confirm_password_err; ?>
+                </span>
+            </div>
+            <div class="regbtn">
+                <input type="submit" class="Registrerbtn" value="Registrer">
+                <input type="reset" class="Cancel" value="Cancel">
+            </div>
+            <p>Har du en bruker? <a href="login.php">Login her</a>.</p>
+        </form>
 </body>
 
 </html>
