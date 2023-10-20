@@ -282,29 +282,68 @@ form{
     color: black;
   }
 
-/* Login og registreringsside */
-.wrapper {
-  font-weight: bold;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+/*-------------------------
+   login og registrering
+-------------------------*/
 
+/* log in */
+
+#loginbtn {
+  background-color: rgb(153, 209, 209);
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 8px;
+  color: black;
+  font-weight: 600;
 }
 
-.form-group {
- padding: 10px;
- font-weight: bold;
- font-size: 20px;
+#loginbtn:hover {
+  opacity: 0.8;
 }
 
-#LogInbtn {
-  display: flex;
- justify-content: center;
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
 }
 
-#logintekst {
-  margin-top: 50px;
+.avatar {
+  width: 100%;
+  border-radius: 50%;
 }
+
+.container {
+  padding: 16px;
+}
+
+.wrapperlog{
+  width: 40%;
+  padding: 16px;
+  border-radius: 5px;
+}
+
+.psw {
+  float: right;
+  padding: 8.5px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  .psw {
+     display: block;
+     float: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .wrapperlog {
+     width: 90%;
+  }
+}
+
 
 /*---------------------
     Profil side

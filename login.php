@@ -84,26 +84,27 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
     <link rel="icon" type="image/x-icon" href="linje5.jpg">
 </head>
 <body>
-    <div class="wrapper">
-        <h2>Login</h2>
-        <p>Fyll in bruker navn og passord</p>
-
-        <form action="<?=$_SERVER['PHP_SELF'];?>" method="GET"> 
-            <div class="form-group">
-                <label>Username</label>
-                <input type="text" name="bruker" class="form-control">
-            </div>    
-            <div class="form-group">
-                <label>Password</label>
-                <input type="password" name="passord" class="form-control" >
-            </div>
-            
-            Remember me <input type="checkbox" name="remember_me" id="remember_me">
-            <div id="LogInbtn">
-                <input type="submit" class="leggtilbtn" value="Login">
-            </div>
-            <p id="logintekst">Har du ingen bruker? <a href="registrering.php">Registrer her</a>.</p>
-        </form>
-    </div>
+    <form action="<?=$_SERVER['PHP_SELF'];?>" method="post" class="form-group">
+        <div class="imgcontainer">
+          <img src="Linje5.jpg" alt="linje5" class="avatar">
+        </div>
+      
+        <div class="container">
+          <label for="uname"><b>Brukernavn</b></label>
+          <input type="text" placeholder="Skriv in Brukernavn" name="uname">
+      
+          <label for="psw"><b>Passord</b></label>
+          <input type="password" placeholder="Skriv in Passord" name="psw">
+              
+          <button type="submit" id="loginbtn">Login</button>
+          <label>
+            <input type="checkbox" checked="checked" name="remember_me"> Remember me
+          </label>
+        </div>
+      
+        <div class="wrapperlog" style="background-color:#f1f1f1">
+          <a class="psw" href="registrering.php">Registrering</a>
+        </div>
+      </form>
 </body>
 </html>
