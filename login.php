@@ -89,7 +89,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
           <img src="Bilder/Linje5.jpg" alt="linje5" class="avatar">
         </div>
       
-        <div class="container">
+        <div class="containerlogin">
           <label for="uname"><b>Brukernavn</b></label>
           <input type="text" placeholder="Skriv in Brukernavn" name="bruker">
       

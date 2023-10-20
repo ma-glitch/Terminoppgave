@@ -296,7 +296,7 @@ form{
  justify-content: center;
 }
 
-.container input[type=text], .container input[type=password] {
+.containerlogin input[type=text], .containerlogin input[type=password] {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -337,7 +337,7 @@ form{
   border-radius: 50%;
 }
 
-.container {
+.containerlogin {
   padding: 16px;
 }
 
