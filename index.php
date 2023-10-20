@@ -81,7 +81,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     <div class="betal">
         <img src="Bilder/vipps-rgb-orange-pos.svg" height="100px" width="auto" onclick="betalbtn()">
     </div>
-    <h1 id="betal">Vipps</h1>
+    <h1 id="betal">+47 468 30 672</h1>
     <script>
         function betalbtn() {
             console.log("test");
