@@ -122,7 +122,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
           <img src="Bilder/Linje5.jpg" alt="linje5" class="avatar">
         </div>
           <h2>Register</h2>
-          <div class="form-group">
+          <div >
                 <label>Navn</label>
                 <input type="text" name="navn"
                     class="form-control <?php echo (!empty($navn_err)) ? 'is-invalid' : ''; ?>"
@@ -131,7 +131,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <?php echo $username_err; ?>
                 </span>
             </div>
-            <div class="form-group">
+            <div>
                 <label>Brukernavn</label>
                 <input type="text" name="username"
                     class="form-control <?php echo (!empty($username_err)) ? 'is-invalid' : ''; ?>"
@@ -140,7 +140,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <?php echo $username_err; ?>
                 </span>
             </div>
-            <div class="form-group">
+            <div>
                 <label>Passord</label>
                 <input type="password" name="password"
                     class="form-control <?php echo (!empty($password_err)) ? 'is-invalid' : ''; ?>"
@@ -149,7 +149,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <?php echo $password_err; ?>
                 </span>
             </div>
-            <div class="form-group">
+            <div>
                 <label>Verifiser Passord</label>
                 <input type="password" name="confirm_password"
                     class="form-control <?php echo (!empty($confirm_password_err)) ? 'is-invalid' : ''; ?>"
