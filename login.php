@@ -81,12 +81,12 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bot system Linje-5</title>
     <link rel="stylesheet" type="text/css" href="style.css" />
-    <link rel="icon" type="image/x-icon" href="linje5.jpg">
+    <link rel="icon" type="image/x-icon" href="Bilder/linje5.jpg">
 </head>
 <body>
     <form action="<?=$_SERVER['PHP_SELF'];?>" method="post" class="form-group">
         <div class="imgcontainer">
-          <img src="Linje5.jpg" alt="linje5" class="avatar">
+          <img src="Bilder/Linje5.jpg" alt="linje5" class="avatar">
         </div>
       
         <div class="container">
