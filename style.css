@@ -352,7 +352,7 @@ form{
   padding: 8.5px;
 }
 
-/* Change styles for span and cancel button on extra small screens */
+
 @media screen and (max-width: 300px) {
   .psw {
      display: block;
@@ -366,6 +366,7 @@ form{
   }
 }
 
+/* registrering */
 
 /*---------------------
     Profil side
