@@ -38,7 +38,9 @@ body {font-family: Arial, Helvetica, sans-serif;}
     padding: 0;
     overflow: hidden;
     font-weight: 550;
-
+  }
+  .velkommen {
+    font-size: 20px;
   }
 }
 
@@ -127,15 +129,21 @@ form{
 .betalebtn{
   color:white;
   font-size: 25px;
-  font-weight: bold;  
+  font-weight: bold;
+  border-top-style: none ;
+  border-right-style: none ; 
+  border-left-style: none ; 
+  border-bottom-style: solid ;   
   background-color: #27535B;
   border-color: #a7d3d8;
-  border-radius: 25px;
-  border-width: 10px;
+  border-radius: 5px;
+  border-width: 7px;
   width: 300px;
   height: 50px;
   margin-bottom: 15px;
+  cursor: pointer;
 }
+
 .betal {
   cursor: pointer;
   display: flex;
@@ -155,8 +163,7 @@ form{
   .updatebuttons{
     display: flex;
     flex-direction: column;
-    margin-left: 5%;
-    margin-right: 5%;
+    margin-left: 20%;
     margin-top: 2%;
   }
 }
