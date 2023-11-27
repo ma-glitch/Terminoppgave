@@ -144,6 +144,11 @@ form{
   cursor: pointer;
 }
 
+.betalebtn:hover {
+  color: #27535B;
+  background-color: #a7d3d8;
+}
+
 .betal {
   cursor: pointer;
   display: flex;
