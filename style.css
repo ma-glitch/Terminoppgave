@@ -385,14 +385,14 @@ form{
 
 .registrer-form input[type=text], .registrer-form input[type=password] {
   width: 100%;
-  padding: 15px;
-  margin: 5px 0 22px 0;
+  padding: 12px 20px;
+  margin: 8px 0;
   display: inline-block;
-  border: none;
   border-top:none;
   border-left: none;
   border-right: none;
   border-bottom: 1px solid black;
+  box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
   border-radius: 5px;
   background-color: rgb(128, 128, 128, 0.2);
