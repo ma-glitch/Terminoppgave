@@ -290,8 +290,9 @@ form{
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: left;
-    background-color: #4EA6B6;
+    background-color:linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet);
     color: black;
+    
   }
 
 /*-------------------------
