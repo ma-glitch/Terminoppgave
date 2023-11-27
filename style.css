@@ -426,6 +426,7 @@ form{
 
 .regbtn{
   width: 40%;
+  border-radius: 5px;
 }
 
 .regbtn::after{
