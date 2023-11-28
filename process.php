@@ -10,6 +10,7 @@ function calculateBotValue()
         "glemmeDrakt" => 500,
         "glemmeViktig" => 50,
         "haandspol" => 50,
+        "Draktgulv" => 500,
         // Add more values here if needed
     ];
 
