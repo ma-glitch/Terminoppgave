@@ -634,13 +634,18 @@ form{
 }
 
 .profilbtn {
+  border-top-style:none ;
+  border-left-style:none ;
+  border-right-style:none ;
+  border-bottom-style: solid;
   text-decoration: none;
   width: 200px;
   font-size: 20px;
   font-weight: bold;
-  border-color: black;
+  border-color: #27535B;
+  background-color: #a7d3d8;
   border-radius: 10px;
-  border-width: 2px;
+  border-width: 5px;
   border-radius: 8px;
   cursor: pointer;
 }
