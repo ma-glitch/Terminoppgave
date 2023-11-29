@@ -612,7 +612,9 @@ form{
   height: fit-content;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
 
 }
 
@@ -620,6 +622,29 @@ form{
   padding: 2%;
   table-layout: fixed;
   text-align: center;
+}
+
+#submit{
+ width: 5%;
+}
+
+#endretable input[type=text]{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border-top:none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid black;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  border-radius: 5px;
+  background-color: rgb(128, 128, 128, 0.2);
+}
+
+.Endreprofil td{
+    margin: 20px;
 }
 
 .headerinfo {
