@@ -76,7 +76,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 
 
     <h1 class="velkommen">Velkommen
-        <?php echo ($_SESSION["navn"]); ?>!
+        <?php echo ($_SESSION["navn"]); ?>
     </h1>
 
     <div class="betal">
