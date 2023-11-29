@@ -165,7 +165,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
             </div>
             
 </div>
-            <input type="submit" class="leggtilbtn">
+            <input type="submit" class="leggtilbtn" value="Legg til">
         </form>
 
     <script src="script.js"></script>
