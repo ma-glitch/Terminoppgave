@@ -734,15 +734,25 @@ form{
 }
 
 .profilbtn {
+  background-color: #a7d3d8;
   text-decoration: none;
   width: 200px;
+  height: 35px;
   font-size: 20px;
   font-weight: bold;
-  border-color: black;
-  border-radius: 10px;
-  border-width: 2px;
-  border-radius: 8px;
+  border-color: #27535B;
+  border-radius: 1px;
+  border-width: 7px;
+  border-bottom-style: none;
+  border-top-style: none;
+  border-right-style:solid   ;
   cursor: pointer;
+}
+
+.profilbtn:hover {
+  background-color: #27535B;
+  border-color: #a7d3d8;
+  color: #fff;
 }
 
 @media only screen and (max-width: 600px) {
@@ -757,10 +767,11 @@ form{
       font-size: 15px;
     }
     .profilbtn {
-      border-color: black;
-      border-radius: 10px;
-      border-width: 2px;
-      border-radius: 8px;
+      width: 125px;
+      font-size: small;
+      border-color: #27535B;
+      border-radius: 1px;
+      border-width: 7px;
       cursor: pointer;
     }
 } 
