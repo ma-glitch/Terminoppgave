@@ -242,6 +242,8 @@ form{
 }
 
 
+/* Admin Siden */
+
 .betalebtn{
   background-color: #27535B;
   position: relative;
@@ -293,9 +295,7 @@ form{
   display: flex;
   justify-content: center;
 }
-#betal {
-  display: none;
-}
+
 .updatebuttons{
   display: flex;
   justify-content: space-evenly;
@@ -390,6 +390,9 @@ form{
   border-radius: 8px;
   cursor: pointer;
 }
+
+
+/* Felles css for tabelene på Admin og Index sidene */
 
 #score {   
   font-family: Arial, Helvetica, sans-serif;
