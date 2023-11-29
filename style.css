@@ -234,20 +234,27 @@ form{
     text-align: center;
   }
 
-
-
-
-
-
 .leggtilbtn{
     margin-top: 20px;
     padding: 10px 16px;
     font-size: 20px;
-    background-color: transparent;
-    background-color:  rgba(78,166,182,255);
-    border: 2px black solid;
+    font-weight: bold;
+    width: 150px;
+    color: #fff;
+    background-color: #27535B;
+    border-top-style: none ;
+    border-right-style: none ; 
+    border-left-style: none ; 
+    border-bottom-style: solid ;
     border-radius: 8px;
+    border-width: 5px;
+    border-color: #a7d3d8;
     cursor: pointer;
+}
+
+.leggtilbtn:hover {
+  background-color: #a7d3d8 ;
+  border-color: #27535B;
 }
 
 
