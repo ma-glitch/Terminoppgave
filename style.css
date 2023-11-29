@@ -121,6 +121,14 @@ form{
     display: flex;
     justify-content: center;
 }
+
+.betal {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+}
+
+
 .checkbox-wrapper-16 {
   margin: 20px;
 }
@@ -291,12 +299,6 @@ form{
   top: 0;
 }
 
-.betal {
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-}
-
 .updatebuttons{
   display: flex;
   justify-content: space-evenly;
@@ -411,6 +413,7 @@ form{
   #score td, #score th {
     padding: 14px;
     text-align: center;
+    max-width: 25%;
   }
   
   #score tr:nth-child(even){background-color: #f2f2f2;}
@@ -587,6 +590,8 @@ form{
 .Profil-wrapper {
   display: flex;
   justify-content: center;
+  height: 50%;
+  width: 100%;
 }
 
 .Endreprofil {
@@ -661,6 +666,8 @@ form{
 #logutDIV {
   display: flex;
   justify-content: center;
+  height: 50%;
+  width: 100%;
 }
 
 #endretable {   
