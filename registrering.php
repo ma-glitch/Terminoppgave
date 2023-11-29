@@ -121,7 +121,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
           <img src="Bilder/Linje5.jpg" alt="linje5" class="avatar">
         </div>
           <h2>Register</h2>
-          <div >
+          <div>
                 <label>Navn</label>
                 <input type="text" name="navn" placeholder="Skriv in navnet ditt"
                     class="form-control <?php echo (!empty($navn_err)) ? 'is-invalid' : ''; ?>"
@@ -129,29 +129,26 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <span class="invalid-feedback">
                     <?php echo $username_err; ?>
                 </span>
-            </div>
-            <div>
+          
                 <label>Brukernavn</label>
                 <input type="text" name="username" placeholder="Lag et Brukernavn"
-                    class="form-control <?php echo (!empty($username_err)) ? 'is-invalid' : ''; ?>"
+                    class="form-control <?php echo (!empty($username_err)) ? 'er feil' : ''; ?>"
                     value="<?php echo $username; ?>">
                 <span class="invalid-feedback">
                     <?php echo $username_err; ?>
                 </span>
-            </div>
-            <div>
+            
                 <label>Passord</label>
                 <input type="password" name="password" placeholder="Lag et Brukernavn"
-                    class="form-control <?php echo (!empty($password_err)) ? 'is-invalid' : ''; ?>"
+                    class="form-control <?php echo (!empty($password_err)) ? 'er feil' : ''; ?>"
                     value="<?php echo $password; ?>">
                 <span class="invalid-feedback">
                     <?php echo $password_err; ?>
                 </span>
-            </div>
-            <div>
+           
                 <label>Verifiser Passord</label>
                 <input type="password" name="confirm_password" placeholder="Skriv in passordet på nytt"
-                    class="form-control <?php echo (!empty($confirm_password_err)) ? 'is-invalid' : ''; ?>"
+                    class="form-control <?php echo (!empty($confirm_password_err)) ? 'er feil' : ''; ?>"
                     value="<?php echo $confirm_password; ?>">
                 <span class="invalid-feedback">
                     <?php echo $confirm_password_err; ?>
