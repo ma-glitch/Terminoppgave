@@ -107,20 +107,29 @@ form{
 
 
 #BotOversikt {
-  margin-bottom: 70px;
   display: flex;
-  width: 80%;
-  align-items: center;
-  height: 100%;
-  flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 100px;
 }
 
 .leggtil{
-    width: 100%;
+    width: 80%;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
+
+.betal {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+}
+
+
 .checkbox-wrapper-16 {
   margin: 20px;
 }
@@ -298,12 +307,6 @@ form{
   top: 0;
 }
 
-.betal {
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-}
-
 .updatebuttons{
   display: flex;
   justify-content: space-evenly;
@@ -418,6 +421,7 @@ form{
   #score td, #score th {
     padding: 14px;
     text-align: center;
+    max-width: 25%;
   }
   
   #score tr:nth-child(even){background-color: #f2f2f2;}
@@ -501,6 +505,12 @@ form{
   padding: 8.5px;
 }
 
+.error{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 
 @media screen and (max-width: 300px) {
   .psw {
@@ -518,11 +528,11 @@ form{
 /* registrering */
 
 .registrer-form{
+  margin: 20px;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
-  width: 100%;
 }
 
 .registrer-form input[type=text], .registrer-form input[type=password] {
@@ -540,6 +550,9 @@ form{
   background-color: rgb(128, 128, 128, 0.2);
 }
 
+.registrer-form label{
+  font-weight: bold;
+}
 
 .Registrerbtn{
   background-color: rgb(153, 209, 209);
@@ -580,10 +593,11 @@ form{
     opacity: 0.8;
 }
 
+
+
 @media screen and (max-width: 600px) {
-  .registrer-form {
-     width: 100%;
-     height: 100%;
+  .regbtn{
+     width: 90%;
   }
 }
 
@@ -594,6 +608,8 @@ form{
 .Profil-wrapper {
   display: flex;
   justify-content: center;
+  height: 50%;
+  width: 100%;
 }
 
 .Endreprofil {
@@ -607,8 +623,10 @@ form{
 
 }
 
-.endretable {
+#endretable {
   padding: 2%;
+  table-layout: fixed;
+  text-align: center;
 }
 
 .headerinfo {
@@ -668,6 +686,8 @@ form{
 #logutDIV {
   display: flex;
   justify-content: center;
+  height: 50%;
+  width: 100%;
 }
 
 #endretable {   

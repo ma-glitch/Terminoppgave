@@ -17,11 +17,11 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
         $hashed_password = password_hash($password, PASSWORD_DEFAULT);
        
         if (empty($username)) {
-            $username_err = "Username is required.";
+            $username_err = "Brukernavn er nødvendig.";
         }
 
         if (empty($password)) {
-            $password_err = "Password is required.";
+            $password_err = "Passord er nødvendig.";
         }
 
        
@@ -58,14 +58,14 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
                                 header("location: index.php");
                                 exit();
                             } else {
-                                $password_err = "Invalid password.";
+                                $password_err = "Passordet er feil.";
                             }
                         }
                     } else {
-                        $username_err = "Username not found.";
+                        $username_err = "Fant ingen Brukere med det bruker navnet.";
                     }
                 } else {
-                    echo "Something went wrong. Please try again later.";
+                    echo "Passordet eller bruker navnet er feil.";
                 }
 
                 $stmt->close();
@@ -106,5 +106,12 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
           <a class="psw" href="registrering.php">Registrering</a>
         </div>
       </form>
+
+<?php
+echo "<div class='error'>";
+echo $password_err;
+echo $username_err;
+echo "</div>";
+?>
 </body>
 </html>

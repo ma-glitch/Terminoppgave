@@ -38,135 +38,135 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 
 
 
-    <h1 class="leggtilover">Legg til bot</h1>
-    <div class="leggtil">
         <form action="process.php" method="post" id="BotOversikt">
 
-<div class="checkbox-wrapper-16">
-  <label class="checkbox-wrapper">
-    <input type="checkbox" class="checkbox-input" name="glemmeDrakt" value="500"/>
-    <span class="checkbox-tile">
-      <span class="checkbox-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" fill="currentColor" viewBox="0 0 256 256">
-          <rect width="auto" height="auto" fill="none" />
-          <foreignobject x="0" y="0" width="200" height="200">
-            <h1>500</h1>
-          </foreignobject>
-        </svg>
-      </span>
-      <span class="checkbox-label">Glemme drakt</span>
-    </span>
-  </label>
+        <h1 class="leggtilover">Legg til bot</h1>
+
+<div class="leggtil">
+            <div class="checkbox-wrapper-16">
+              <label class="checkbox-wrapper">
+                <input type="checkbox" class="checkbox-input" name="glemmeDrakt" value="500"/>
+                <span class="checkbox-tile">
+                  <span class="checkbox-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" fill="currentColor" viewBox="0 0 256 256">
+                      <rect width="auto" height="auto" fill="none" />
+                      <foreignobject x="0" y="0" width="200" height="200">
+                        <h1>500</h1>
+                      </foreignobject>
+                    </svg>
+                  </span>
+                  <span class="checkbox-label">Glemme drakt</span>
+                </span>
+              </label>
+            </div>
+            
+            
+            <div class="checkbox-wrapper-16">
+              <label class="checkbox-wrapper">
+                <input type="checkbox" class="checkbox-input" name="kina" value="25"/>
+                <span class="checkbox-tile">
+                  <span class="checkbox-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" fill="currentColor" viewBox="0 0 256 256">
+                      <rect width="auto" height="auto" fill="none" />
+                      <foreignobject x="0" y="0" width="200" height="200">
+                        <h1>25</h1>
+                      </foreignobject>
+                    </svg>
+                  </span>
+                  <span class="checkbox-label">Kina</span>
+                </span>
+              </label>
+            </div>
+            
+            <div class="checkbox-wrapper-16">
+              <label class="checkbox-wrapper">
+                <input type="checkbox" class="checkbox-input" name="glemmeViktig" value="50"/>
+                <span class="checkbox-tile">
+                  <span class="checkbox-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" fill="currentColor" viewBox="0 0 256 256">
+                      <rect width="auto" height="auto" fill="none" />
+                      <foreignobject x="0" y="0" width="200" height="200">
+                        <h1>50</h1>
+                      </foreignobject>
+                    </svg>
+                  </span>
+                  <span class="checkbox-label">Glemme utstyr</span>
+                </span>
+              </label>
+            </div>
+            
+            
+            <div class="checkbox-wrapper-16">
+              <label class="checkbox-wrapper">
+                <input type="checkbox" class="checkbox-input" name="haandspol" value="50"/>
+                <span class="checkbox-tile">
+                  <span class="checkbox-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" fill="currentColor" viewBox="0 0 256 256">
+                      <rect width="auto" height="auto" fill="none" />
+                      <foreignobject x="0" y="0" width="200" height="200">
+                        <h1>50</h1>
+                      </foreignobject>
+                    </svg>
+                  </span>
+                  <span class="checkbox-label">En Håndspol</span>
+                </span>
+              </label>
+            </div>
+            
+            <div class="checkbox-wrapper-16">
+              <label class="checkbox-wrapper">
+                <input type="checkbox" class="checkbox-input" name="kina" value="25"/>
+                <span class="checkbox-tile">
+                  <span class="checkbox-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" fill="currentColor" viewBox="0 0 256 256">
+                      <rect width="auto" height="auto" fill="none" />
+                      <foreignobject x="0" y="0" width="200" height="200">
+                        <h1>25</h1>
+                      </foreignobject>
+                    </svg>
+                  </span>
+                  <span class="checkbox-label">Kina</span>
+                </span>
+              </label>
+            </div>
+            
+            <div class="checkbox-wrapper-16">
+              <label class="checkbox-wrapper">
+                <input type="checkbox" class="checkbox-input" name="haandspol" value="50"/>
+                <span class="checkbox-tile">
+                  <span class="checkbox-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" fill="currentColor" viewBox="0 0 256 256">
+                      <rect width="auto" height="auto" fill="none" />
+                      <foreignobject x="0" y="0" width="200" height="200">
+                        <h1>50</h1>
+                      </foreignobject>
+                    </svg>
+                  </span>
+                  <span class="checkbox-label">En Håndspol</span>
+                </span>
+              </label>
+            </div>
+            
+            <div class="checkbox-wrapper-16">
+              <label class="checkbox-wrapper">
+                <input type="checkbox" class="checkbox-input" name="Draktgulv" value="500"/>
+                <span class="checkbox-tile">
+                  <span class="checkbox-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" fill="currentColor" viewBox="0 0 256 256">
+                      <rect width="auto" height="auto" fill="none" />
+                      <foreignobject x="0" y="0" width="200" height="200">
+                        <h1>500</h1>
+                      </foreignobject>
+                    </svg>
+                  </span>
+                  <span class="checkbox-label">Drakt på gulvet</span>
+                </span>
+              </label>
+            </div>
+            
 </div>
-
-
-<div class="checkbox-wrapper-16">
-  <label class="checkbox-wrapper">
-    <input type="checkbox" class="checkbox-input" name="kina" value="25"/>
-    <span class="checkbox-tile">
-      <span class="checkbox-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" fill="currentColor" viewBox="0 0 256 256">
-          <rect width="auto" height="auto" fill="none" />
-          <foreignobject x="0" y="0" width="200" height="200">
-            <h1>25</h1>
-          </foreignobject>
-        </svg>
-      </span>
-      <span class="checkbox-label">Kina</span>
-    </span>
-  </label>
-</div>
-
-<div class="checkbox-wrapper-16">
-  <label class="checkbox-wrapper">
-    <input type="checkbox" class="checkbox-input" name="glemmeViktig" value="50"/>
-    <span class="checkbox-tile">
-      <span class="checkbox-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" fill="currentColor" viewBox="0 0 256 256">
-          <rect width="auto" height="auto" fill="none" />
-          <foreignobject x="0" y="0" width="200" height="200">
-            <h1>50</h1>
-          </foreignobject>
-        </svg>
-      </span>
-      <span class="checkbox-label">Glemme utstyr</span>
-    </span>
-  </label>
-</div>
-
-
-<div class="checkbox-wrapper-16">
-  <label class="checkbox-wrapper">
-    <input type="checkbox" class="checkbox-input" name="haandspol" value="50"/>
-    <span class="checkbox-tile">
-      <span class="checkbox-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" fill="currentColor" viewBox="0 0 256 256">
-          <rect width="auto" height="auto" fill="none" />
-          <foreignobject x="0" y="0" width="200" height="200">
-            <h1>50</h1>
-          </foreignobject>
-        </svg>
-      </span>
-      <span class="checkbox-label">En Håndspol</span>
-    </span>
-  </label>
-</div>
-
-<div class="checkbox-wrapper-16">
-  <label class="checkbox-wrapper">
-    <input type="checkbox" class="checkbox-input" name="kina" value="25"/>
-    <span class="checkbox-tile">
-      <span class="checkbox-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" fill="currentColor" viewBox="0 0 256 256">
-          <rect width="auto" height="auto" fill="none" />
-          <foreignobject x="0" y="0" width="200" height="200">
-            <h1>25</h1>
-          </foreignobject>
-        </svg>
-      </span>
-      <span class="checkbox-label">Kina</span>
-    </span>
-  </label>
-</div>
-
-<div class="checkbox-wrapper-16">
-  <label class="checkbox-wrapper">
-    <input type="checkbox" class="checkbox-input" name="haandspol" value="50"/>
-    <span class="checkbox-tile">
-      <span class="checkbox-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" fill="currentColor" viewBox="0 0 256 256">
-          <rect width="auto" height="auto" fill="none" />
-          <foreignobject x="0" y="0" width="200" height="200">
-            <h1>50</h1>
-          </foreignobject>
-        </svg>
-      </span>
-      <span class="checkbox-label">En Håndspol</span>
-    </span>
-  </label>
-</div>
-
-<div class="checkbox-wrapper-16">
-  <label class="checkbox-wrapper">
-    <input type="checkbox" class="checkbox-input" name="Draktgulv" value="500"/>
-    <span class="checkbox-tile">
-      <span class="checkbox-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" fill="currentColor" viewBox="0 0 256 256">
-          <rect width="auto" height="auto" fill="none" />
-          <foreignobject x="0" y="0" width="200" height="200">
-            <h1>500</h1>
-          </foreignobject>
-        </svg>
-      </span>
-      <span class="checkbox-label">Drakt på gulvet</span>
-    </span>
-  </label>
-</div>
-
-
             <input type="submit" class="leggtilbtn">
         </form>
-    </div>
 
     <script src="script.js"></script>
 </body>
