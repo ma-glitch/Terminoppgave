@@ -105,6 +105,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     </div>
     <div id="logutDIV">
         <a href="logut.php" ><button id="logutbtn">Log ut</button></a>
+        <a href="delete.php" ><button id="logutbtn">Slett bruker</button></a>
     </div>
 </body>
 
