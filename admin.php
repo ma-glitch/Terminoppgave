@@ -55,15 +55,15 @@ if (!isset($_SESSION["admin"]) || $_SESSION["admin"] !== "yes") {
       <th class="TABLE">Oppdatere tabel</td>
     </tr>
     <?php
-    // Define the SQL query to retrieve data from your table
+  
     $sql = "SELECT navn, total, ubetalt FROM login ORDER BY CONVERT(total,INTEGER) DESC";
 
-    // Execute the query
+   
     $result = $link->query($sql);
 
-    // Check if there are rows in the result
+    
     if ($result->num_rows > 0) {
-      // Output data of each row
+    
       while ($row = $result->fetch_assoc()) {
         echo "<tr>";
         echo "<td class='TABEL'>" . $row["navn"] . "</td>";
@@ -88,7 +88,7 @@ if (!isset($_SESSION["admin"]) || $_SESSION["admin"] !== "yes") {
                 <input type='image' src='Bilder/check-svgrepo-com.svg'  alt='Submit' name='submit3' value='Oppdater' id='' class='oppdaterbtn'style='width: auto; height: 20px;'/>
                 </form></td>";
         echo "</tr>";
-        // Close the MySQLi connectio
+      
       }
     }
     ?>
@@ -97,7 +97,7 @@ if (!isset($_SESSION["admin"]) || $_SESSION["admin"] !== "yes") {
       <?php
       $count = "SELECT SUM(total) FROM login";
       $result = $link->query($count);
-      //display data on web page
+    
       while ($row = mysqli_fetch_array($result)) {
         echo "<td>" . $row['SUM(total)'] . "</td>";
       }
