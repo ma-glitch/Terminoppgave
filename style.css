@@ -714,6 +714,7 @@ form{
 #logutDIV {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   height: 50%;
   width: 100%;
 }
