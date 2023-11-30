@@ -85,6 +85,11 @@ ul.topnav li.right {float: right;}
   ul.topnav li {float: none;}
 }
 
+.menyiconAktiv {
+  border-bottom: solid;
+  border-color: #27535B;
+  border-width: 5px;
+}
 
 /*---------------------------*/
 /*      Legge til bot        */
