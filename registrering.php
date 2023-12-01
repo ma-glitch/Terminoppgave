@@ -111,7 +111,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
     <meta charset="UTF-8">
     <title>Registration</title>
-    <link rel="stylesheet" type="text/css" href="style.css" />
+    <?php
+    include "css.php";
+    ?>
     <link rel="icon" type="image/x-icon" href="Bilder/linje5.jpg">
 </head>
 

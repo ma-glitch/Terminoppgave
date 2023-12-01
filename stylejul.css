@@ -474,11 +474,11 @@ body {
   }
 
   .containerlogin ::placeholder{
-    color: black;
+    color: white;
   }
 
   #loginbtn {
-    background-color: rgb(153, 209, 209);
+    background-color: #00873E;
     color: white;
     padding: 14px 20px;
     margin: 8px 0;
@@ -517,6 +517,7 @@ body {
   .psw {
     float: right;
     padding: 8.5px;
+    color: red;
   }
   
   .error{
@@ -557,11 +558,15 @@ body {
     border-top:none;
     border-left: none;
     border-right: none;
-    border-bottom: 1px solid black;
+    border-bottom: 2px solid red;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
     border-radius: 5px;
-    background-color: rgb(128, 128, 128, 0.2);
+    background-color: #00873E;
+  }
+
+  .registrer-form ::placeholder {
+    color: white;
   }
   
   .registrer-form label{
@@ -569,7 +574,7 @@ body {
   }
   
   .Registrerbtn{
-    background-color: rgb(153, 209, 209);
+    background-color: #00873E;
     float: left;
     color: white;
     padding: 14px 20px;
@@ -577,7 +582,6 @@ body {
     border: none;
     cursor: pointer;
     width: 50%;
-    color: black;
     font-weight: 600;
   }
   
