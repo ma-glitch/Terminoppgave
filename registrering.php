@@ -139,7 +139,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 </span>
             
                 <label>Passord</label>
-                <input type="password" name="password" placeholder="Lag et Brukernavn"
+                <input type="password" name="password" placeholder="Lag et Passord"
                     class="form-control <?php echo (!empty($password_err)) ? 'er feil' : ''; ?>"
                     value="<?php echo $password; ?>">
                 <span class="invalid-feedback">
