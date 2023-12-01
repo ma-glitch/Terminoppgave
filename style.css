@@ -89,6 +89,7 @@ ul.topnav li.right {float: right;}
   border-bottom: solid;
   border-color: #27535B;
   border-width: 5px;
+  background-image: linear-gradient(#27535B, #a7d3d8);
 }
 
 /*---------------------------*/
