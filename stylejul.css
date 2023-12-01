@@ -157,23 +157,23 @@ body {
       width: 1px;
     }
     .checkbox-wrapper-16 .checkbox-input:checked + .checkbox-tile {
-      border-color: #2260ff;
+      border-color: #00873E;
       box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-      color: #2260ff;
+      color: #00873E;
     }
     .checkbox-wrapper-16 .checkbox-input:checked + .checkbox-tile:before {
       transform: scale(1);
       opacity: 1;
-      background-color: #2260ff;
-      border-color: #2260ff;
+      background-color: #00873E;
+      border-color: #00873E;
     }
     .checkbox-wrapper-16 .checkbox-input:checked + .checkbox-tile .checkbox-icon,
     .checkbox-wrapper-16 .checkbox-input:checked + .checkbox-tile .checkbox-label {
-      color: #2260ff;
+      color: red;
     }
     .checkbox-wrapper-16 .checkbox-input:focus + .checkbox-tile {
-      border-color: #2260ff;
-      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1), 0 0 0 4px #b5c9fc;
+      border-color: #00873E;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1), 0 0 0 4px #00873E;
     }
     .checkbox-wrapper-16 .checkbox-input:focus + .checkbox-tile:before {
       transform: scale(1);
@@ -188,7 +188,7 @@ body {
       width: 7rem;
       min-height: 7rem;
       border-radius: 0.5rem;
-      border: 2px solid #b5bfd9;
+      border: 2px solid #00873E;
       background-color: #fff;
       box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
       transition: 0.15s ease;
@@ -201,7 +201,7 @@ body {
       display: block;
       width: 1.25rem;
       height: 1.25rem;
-      border: 2px solid #b5bfd9;
+      border: 2px solid #00873E;
       background-color: #fff;
       border-radius: 50%;
       top: 0.25rem;
@@ -215,7 +215,7 @@ body {
       background-position: 50% 50%;
     }
     .checkbox-wrapper-16 .checkbox-tile:hover {
-      border-color: #2260ff;
+      border-color: #00873E;
     }
     .checkbox-wrapper-16 .checkbox-tile:hover:before {
       transform: scale(1);
@@ -246,20 +246,20 @@ body {
       font-weight: bold;
       width: 150px;
       color: #fff;
-      background-color: #27535B;
+      background-color:#00873E;
       border-top-style: none ;
       border-right-style: none ; 
       border-left-style: none ; 
       border-bottom-style: solid ;
       border-radius: 8px;
       border-width: 5px;
-      border-color: #a7d3d8;
+      border-color: red;
       cursor: pointer;
   }
   
   .leggtilbtn:hover {
-    background-color: #a7d3d8 ;
-    border-color: #27535B;
+    background-color: red ;
+    border-color: #00873E;
   }
   
   
@@ -624,12 +624,12 @@ body {
     margin-top: 2.5%;
     border-radius: 20px;
     height: fit-content;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    box-shadow: 0 0px 10px 5px red;
+    outline: dashed 5px #00873E;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     align-items: center;
-  
   }
   
   #endretable {
@@ -658,6 +658,7 @@ body {
   
   .Endreprofil td{
       margin: 20px;
+      color: #00873E;
   }
   
   .headerinfo {
@@ -668,7 +669,7 @@ body {
   #logutbtn {
     margin-left: 10px;
     margin-top: 50px;
-    background-color: #27535B;
+    background-color: #00873E;
     position: relative;
     height: 50px;
     width: 300px;
@@ -742,25 +743,25 @@ body {
   }
   
   .profilbtn {
-    background-color: #a7d3d8;
+    background-color: #00873E;
     text-decoration: none;
     width: 200px;
     height: 35px;
     font-size: 20px;
     font-weight: bold;
-    border-color: #27535B;
+    border-color: red;
     border-radius: 1px;
     border-width: 7px;
     border-bottom-style: none;
     border-top-style: none;
-    border-right-style:solid   ;
+    border-right-style:solid;
     cursor: pointer;
+    color: white;
   }
   
   .profilbtn:hover {
-    background-color: #27535B;
-    border-color: #a7d3d8;
-    color: #fff;
+    background-color: red;
+    border-color: #00873E;
   }
   
   @media only screen and (max-width: 600px) {
