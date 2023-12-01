@@ -35,7 +35,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             $stmt->bind_param("iis", $botValue, $botValue, $_SESSION["bruker"]);
             if ($stmt->execute()) {
                 echo "Boten har blitt lagt til";
-                header("Location: leggtil.php");
+                header("Location: index.php");
                 exit;
             } else {
                 echo "En feil har oppstått, prøv igjen senere";

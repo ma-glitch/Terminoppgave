@@ -108,5 +108,4 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         <a href="delete.php" ><button id="logutbtn">Slett bruker</button></a>
     </div>
 </body>
-
 </html>

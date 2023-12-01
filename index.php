@@ -54,13 +54,13 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Bot system Linje-5</title>
     <link rel="stylesheet" type="text/css" href="style.css" />
     <link rel="icon" type="image/x-icon" href="Bilder/linje5.jpg">
 </head>
 
-<body onload="close()">
+<body>
     <ul class="topnav">
         <li><a href="index.php"><img src="Bilder/house-03-svgrepo-com.svg" class="menyiconAktiv" height="40px"
                     width="auto"></a></li>
