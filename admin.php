@@ -19,7 +19,7 @@ if (!isset($_SESSION["admin"]) || $_SESSION["admin"] !== "yes") {
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bot system Linje-5</title>
-  <link rel="stylesheet" type="text/css" href="style.css" />
+  <link rel="stylesheet" type="text/css" href="stylejul.css" />
   <link rel="icon" type="image/x-icon" href="Bilder/linje5.jpg">
 </head>
 
