@@ -619,12 +619,12 @@ body {
     margin-top: 2.5%;
     border-radius: 20px;
     height: fit-content;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    box-shadow: 0 0px 10px 5px red;
+    outline: dashed 5px #00873E;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     align-items: center;
-  
   }
   
   #endretable {
@@ -653,6 +653,7 @@ body {
   
   .Endreprofil td{
       margin: 20px;
+      color: #00873E;
   }
   
   .headerinfo {
@@ -663,7 +664,7 @@ body {
   #logutbtn {
     margin-left: 10px;
     margin-top: 50px;
-    background-color: #27535B;
+    background-color: #00873E;
     position: relative;
     height: 50px;
     width: 300px;
@@ -737,25 +738,25 @@ body {
   }
   
   .profilbtn {
-    background-color: #a7d3d8;
+    background-color: #00873E;
     text-decoration: none;
     width: 200px;
     height: 35px;
     font-size: 20px;
     font-weight: bold;
-    border-color: #27535B;
+    border-color: red;
     border-radius: 1px;
     border-width: 7px;
     border-bottom-style: none;
     border-top-style: none;
-    border-right-style:solid   ;
+    border-right-style:solid;
     cursor: pointer;
+    color: white;
   }
   
   .profilbtn:hover {
-    background-color: #27535B;
-    border-color: #a7d3d8;
-    color: #fff;
+    background-color: red;
+    border-color: #00873E;
   }
   
   @media only screen and (max-width: 600px) {
