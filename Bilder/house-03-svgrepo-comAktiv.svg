@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 733.33 611.41">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke-miterlimit: 10;
+      }
+
+      .cls-1, .cls-2 {
+        stroke: #000;
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 66.67px;
+      }
+    </style>
+  </defs>
+  <g id="Navigation_House_03" data-name="Navigation / House_03">
+    <path id="Vector" class="cls-2" d="m33.33,578.08h66.67m0,0h200m-200,0v-284.93c0-17.81,0-26.72,2.17-35.01,1.92-7.34,5.09-14.29,9.36-20.58,4.81-7.09,11.5-12.97,24.9-24.69l160.05-140.05c24.85-21.74,37.27-32.62,51.27-36.75,12.34-3.65,25.49-3.65,37.83,0,14,4.14,26.45,15.02,51.33,36.8l160,140c13.4,11.73,20.09,17.61,24.91,24.69,4.26,6.28,7.41,13.23,9.33,20.58,2.16,8.29,2.18,17.2,2.18,35.01v284.93m-333.33,0h133.33m-133.33,0v-133.33c0-36.82,29.85-66.67,66.67-66.67s66.67,29.85,66.67,66.67v133.33m0,0h200m0,0h66.67"/>
+  </g>
+  <rect class="cls-1" x="125.67" y="252.41" width="154" height="325.67"/>
+  <rect class="cls-1" x="433.33" y="213.41" width="184.33" height="340"/>
+  <rect class="cls-1" x="116.67" y="203.41" width="490" height="199"/>
+  <rect class="cls-1" x="193.67" y="144.41" width="355" height="102"/>
+  <rect class="cls-1" x="239.67" y="88.41" width="236" height="61"/>
+  <rect class="cls-1" x="323.67" y="59.41" width="92" height="59.5"/>
+</svg>
