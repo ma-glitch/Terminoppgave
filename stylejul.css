@@ -423,6 +423,8 @@ body {
     margin-top: 100px;
     border-radius: 8px;
     border:1px solid #EEEEEE;
+    box-shadow: 0 0px 10px 5px red;
+    outline: dashed 5px #00873E;
   }
     
     #score td, #score th {
