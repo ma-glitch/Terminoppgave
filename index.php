@@ -60,7 +60,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     <link rel="icon" type="image/x-icon" href="Bilder/linje5.jpg">
 </head>
 
-<body onload="close()">
+<body>
     <ul class="topnav">
         <li><a href="index.php"><img src="Bilder/house-03-svgrepo-com.svg" class="menyiconAktiv" height="40px"
                     width="auto"></a></li>
