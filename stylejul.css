@@ -56,6 +56,9 @@ body {
   }
   .menyicon {
     height: 40px; width: auto;
+    border-width: 5px;
+    border-bottom-style: dashed;
+    border-color: red;
   }
   ul.topnav li {float: left;}
   
@@ -79,11 +82,11 @@ body {
   }
   
   .menyiconAktiv {
-    border-bottom: solid;
-    border-color: #27535B;
+    border-bottom-style: dashed;
+    border-color: #00873E;
     border-width: 5px;
   }
-  
+
   /*---------------------------*/
   /*      Legge til bot        */
   /*---------------------------*/
@@ -263,7 +266,9 @@ body {
   /* Admin Siden */
   
   .betalebtn{
-    background-color: #27535B;
+    margin-left: 10px;
+    margin-top: 50px;
+    background-color: #00873E;
     position: relative;
     height: 50px;
     width: 300px;
@@ -271,7 +276,7 @@ body {
     font-weight: bold;
     font-size: 25px;
     color: white;
-    border: 7px #a7d3d8;
+    border: 7px red;
     border-top-style: none ;
     border-right-style: none ; 
     border-left-style: none ; 
@@ -288,14 +293,14 @@ body {
   }
   
   .betalebtn:hover {
-    color: #27535B;
+    color: #00873E;
   }
   
   .betalebtn:before {
-    color: #27535B;
+    color: whitesmoke;
     content: "";
     position: absolute;
-    background-color: #a7d3d8;
+    background-color: red;
     bottom: 0;
     left: 0;
     right: 0;
@@ -418,6 +423,8 @@ body {
     margin-top: 100px;
     border-radius: 8px;
     border:1px solid #EEEEEE;
+    box-shadow: 0 0px 10px 5px red;
+    outline: dashed 5px #00873E;
   }
     
     #score td, #score th {
@@ -434,8 +441,8 @@ body {
       padding-top: 12px;
       padding-bottom: 12px;
       text-align: center;
-      background-color: #4EA6B6;
-      color: black;
+      background-color: #00873E;
+      color: red;
     }
   
   /*-------------------------
