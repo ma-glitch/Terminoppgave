@@ -10,17 +10,10 @@ body {
     display: flex;
     justify-content: center;
     text-align: center;
+    max-width: 100%;
 }
 
 
-.betal{
-  display: none;
-  text-align: center;
-}
-
-.betalblock {
-  display: block;
-}
 
 @media only screen and (max-width: 600px) {
   ul.topnav {
@@ -136,6 +129,7 @@ form{
   cursor: pointer;
   display: flex;
   justify-content: center;
+  max-width: 100%;
 }
 
 
@@ -797,6 +791,7 @@ form{
   height: 154px;
   perspective: 1000px;
   color: #ff5a25;
+  max-width: 100%;
 }
 
 .heading_8264 {
@@ -837,17 +832,17 @@ form{
 .valid_thru {
   position: absolute;
   font-weight: bold;
-  top: 635.8em;
+  top: 67%;
   font-size: .01em;
-  left: 140.3em;
+  left: 9%;
 }
 
 .date_8264 {
   position: absolute;
   font-weight: bold;
   font-size: 0.5em;
-  top: 13.6em;
-  left: 3.2em;
+  top: 71%;
+  left: 10%;
   color: #ffff;
 }
 
@@ -855,12 +850,13 @@ form{
   position: absolute;
   font-weight: bold;
   font-size: 0.5em;
-  top: 16.1em;
-  left: 2em;
+  top: 83%;
+  left: 7%;
 }
 
 .strip {
   position: absolute;
+  text-align: center;
   background-color: black;
   width: 15em;
   height: 1.5em;
