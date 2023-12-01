@@ -154,23 +154,23 @@ body {
       width: 1px;
     }
     .checkbox-wrapper-16 .checkbox-input:checked + .checkbox-tile {
-      border-color: #2260ff;
+      border-color: #00873E;
       box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-      color: #2260ff;
+      color: #00873E;
     }
     .checkbox-wrapper-16 .checkbox-input:checked + .checkbox-tile:before {
       transform: scale(1);
       opacity: 1;
-      background-color: #2260ff;
-      border-color: #2260ff;
+      background-color: #00873E;
+      border-color: #00873E;
     }
     .checkbox-wrapper-16 .checkbox-input:checked + .checkbox-tile .checkbox-icon,
     .checkbox-wrapper-16 .checkbox-input:checked + .checkbox-tile .checkbox-label {
-      color: #2260ff;
+      color: red;
     }
     .checkbox-wrapper-16 .checkbox-input:focus + .checkbox-tile {
-      border-color: #2260ff;
-      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1), 0 0 0 4px #b5c9fc;
+      border-color: #00873E;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1), 0 0 0 4px #00873E;
     }
     .checkbox-wrapper-16 .checkbox-input:focus + .checkbox-tile:before {
       transform: scale(1);
@@ -185,7 +185,7 @@ body {
       width: 7rem;
       min-height: 7rem;
       border-radius: 0.5rem;
-      border: 2px solid #b5bfd9;
+      border: 2px solid #00873E;
       background-color: #fff;
       box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
       transition: 0.15s ease;
@@ -198,7 +198,7 @@ body {
       display: block;
       width: 1.25rem;
       height: 1.25rem;
-      border: 2px solid #b5bfd9;
+      border: 2px solid #00873E;
       background-color: #fff;
       border-radius: 50%;
       top: 0.25rem;
@@ -212,7 +212,7 @@ body {
       background-position: 50% 50%;
     }
     .checkbox-wrapper-16 .checkbox-tile:hover {
-      border-color: #2260ff;
+      border-color: #00873E;
     }
     .checkbox-wrapper-16 .checkbox-tile:hover:before {
       transform: scale(1);
@@ -243,20 +243,20 @@ body {
       font-weight: bold;
       width: 150px;
       color: #fff;
-      background-color: #27535B;
+      background-color:#00873E;
       border-top-style: none ;
       border-right-style: none ; 
       border-left-style: none ; 
       border-bottom-style: solid ;
       border-radius: 8px;
       border-width: 5px;
-      border-color: #a7d3d8;
+      border-color: red;
       cursor: pointer;
   }
   
   .leggtilbtn:hover {
-    background-color: #a7d3d8 ;
-    border-color: #27535B;
+    background-color: red ;
+    border-color: #00873E;
   }
   
   
