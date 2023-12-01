@@ -30,8 +30,8 @@ if (!isset($_SESSION["admin"]) || $_SESSION["admin"] !== "yes") {
     </li>
     <li><a href="leggtil.php"><img src="Bilder/file-add-svgrepo-com.svg" class="menyicon" height="40px"
           width="auto"></a></li>
-    <li><a href="profil.php"><img src="Bilder/user-01-svgrepo-com.svg" class="menyicon" height="40px" width="auto"></a>
-    </li>
+          <li><a href="profil.php"><img src="Bilder/user-01-svgrepo-comJul.svg" class="menyicon" height="40px"
+                    width="auto"></a></li>
     <li><a href='admin.php'><img src='Bilder/file-edit-svgrepo-com.svg' class='menyiconAktiv' height='40px' width='auto'></a></li>
 
   </ul>
