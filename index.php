@@ -57,16 +57,16 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Bot system Linje-5</title>
     <link rel="stylesheet" type="text/css" href="stylejul.css" />
-    <link rel="icon" type="image/x-icon" href="Bilder/linje5.jpg">
+    <link rel="icon" type="image/x-icon" href="assets/jpg/linje5.jpg">
 </head>
 
 <body>
     <ul class="topnav">
-        <li><a href="index.php"><img src="Bilder/house-03-svgrepo-com.svg" class="menyiconAktiv" height="40px"
+        <li><a href="index.php"><img src="assets\svg\house-03-svgrepo-com.svg" class="menyiconAktiv" height="40px"
                     width="auto"></a></li>
-        <li><a href="leggtil.php"><img src="Bilder/file-add-svgrepo-com.svg" class="menyicon" height="40px"
+        <li><a href="leggtil.php"><img src="assets\svg\file-add-svgrepo-com.svg" class="menyicon" height="40px"
                     width="auto"></a></li>
-        <li><a href="profil.php"><img src="Bilder/user-01-svgrepo-comJul.svg" class="menyicon" height="40px"
+        <li><a href="profil.php"><img src="assets\svg\user-01-svgrepo-comJul.svg" class="menyicon" height="40px"
                     width="auto"></a></li>
         <?php
         include "menu.php";
@@ -84,7 +84,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         <div class="flip-card-front">
             <p class="heading_8264">VIPPSCARD</p>
             <svg class="logo" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="36" height="36" viewBox="0 0 48 48">
-            <image id="image0" width="50" height="50" x="0" y="0" href="Bilder\vipps-rgb-orange-pos.svg"></image>
+            <image id="image0" width="50" height="50" x="0" y="0" href="assets\svg\vipps-rgb-orange-pos.svg"></image>
         </svg>
             <svg version="1.1" class="chip" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="30px" height="30px" viewBox="0 0 50 50" xml:space="preserve">  <image id="image0" width="50" height="50" x="0" y="0" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAMAAAAp4XiDAAAABGdBTUEAALGPC/xhBQAAACBjSFJN
               AAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAB6VBMVEUAAACNcTiVeUKVeUOY

@@ -83,12 +83,12 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
     <?php
     include "css.php";
     ?>
-    <link rel="icon" type="image/x-icon" href="Bilder/linje5.jpg">
+    <link rel="icon" type="image/x-icon" href="assets/jpg/linje5.jpg">
 </head>
 <body>
     <form action="<?=$_SERVER['PHP_SELF'];?>" method="GET" class="form-group">
         <div class="imgcontainer">
-          <img src="Bilder/Linje5.jpg" alt="linje5" class="avatar">
+          <img src="assets/jpg/Linje5.jpg" alt="linje5" class="avatar">
         </div>
       
         <div class="containerlogin">

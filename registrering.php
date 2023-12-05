@@ -114,13 +114,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <?php
     include "css.php";
     ?>
-    <link rel="icon" type="image/x-icon" href="Bilder/linje5.jpg">
+    <link rel="icon" type="image/x-icon" href="assets/jpg/linje5.jpg">
 </head>
 
 <body>
     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?> " method="post" class="registrer-form">
         <div class="imgcontainer">
-          <img src="Bilder/Linje5.jpg" alt="linje5" class="avatar">
+          <img src="assets/jpg/Linje5.jpg" alt="linje5" class="avatar">
         </div>
           <h2>Register</h2>
           <div>

@@ -20,19 +20,19 @@ if (!isset($_SESSION["admin"]) || $_SESSION["admin"] !== "yes") {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bot system Linje-5</title>
   <link rel="stylesheet" type="text/css" href="stylejul.css" />
-  <link rel="icon" type="image/x-icon" href="Bilder/linje5.jpg">
+  <link rel="icon" type="image/x-icon" href="assets/jpg/linje5.jpg">
 </head>
 
 <body>
 
   <ul class="topnav">
-    <li><a href="index.php"><img src="Bilder/house-03-svgrepo-com.svg" class="menyicon" height="40px" width="auto"></a>
+    <li><a href="index.php"><img src="assets/svg/house-03-svgrepo-com.svg" class="menyicon" height="40px" width="auto"></a>
     </li>
-    <li><a href="leggtil.php"><img src="Bilder/file-add-svgrepo-com.svg" class="menyicon" height="40px"
+    <li><a href="leggtil.php"><img src="assets/svg/file-add-svgrepo-com.svg" class="menyicon" height="40px"
           width="auto"></a></li>
-          <li><a href="profil.php"><img src="Bilder/user-01-svgrepo-comJul.svg" class="menyicon" height="40px"
+          <li><a href="profil.php"><img src="assets/svg/user-01-svgrepo-comJul.svg" class="menyicon" height="40px"
                     width="auto"></a></li>
-    <li><a href='admin.php'><img src='Bilder/file-edit-svgrepo-com.svg' class='menyiconAktiv' height='40px' width='auto'></a></li>
+    <li><a href='admin.php'><img src='assets/svg/file-edit-svgrepo-com.svg' class='menyiconAktiv' height='40px' width='auto'></a></li>
 
   </ul>
   
@@ -85,7 +85,7 @@ if (!isset($_SESSION["admin"]) || $_SESSION["admin"] !== "yes") {
                 <input type='hidden' name='submit3' value='submit3'>
                 <input type='hidden' name='id3' value='" . $row["navn"] . "'>
                 <input type='text' name='navn' placeholder='" . $row["navn"] . "'>
-                <input type='image' src='Bilder/check-svgrepo-com.svg'  alt='Submit' name='submit3' value='Oppdater' id='' class='oppdaterbtn'style='width: auto; height: 20px;'/>
+                <input type='image' src='assets/svg/check-svgrepo-com.svg'  alt='Submit' name='submit3' value='Oppdater' id='' class='oppdaterbtn'style='width: auto; height: 20px;'/>
                 </form></td>";
         echo "</tr>";
       
