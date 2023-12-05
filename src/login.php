@@ -106,6 +106,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
       
         <div class="wrapperlog" style="background-color:#f1f1f1">
           <a class="psw" href="registrering.php">Registrering</a>
+          <a class="psw" href="FAQ.php">FAQ</a>
         </div>
       </form>
 

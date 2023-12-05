@@ -31,6 +31,8 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         <?php
         include "menu.php";
         ?>
+         <li><a href="FAQ.php"><img src="assets\svg\circle-help-svgrepo-com.svg" class="menyicon" height="40px"
+                    width="auto"></a></li>
     </ul>
 
 
