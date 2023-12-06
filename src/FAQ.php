@@ -32,7 +32,8 @@ require_once "config.php";
     
     <div class="faq-item" onclick="toggleAnswer('q1')">
         <div class="question">Hvordan registrere bruker?</div>
-        <div class="answer" id="q1">For å registrere en bruker må man først in på registrerings siden. For å komme til registreringssiden,</div>
+        <div class="answer" id="q1">For å registrere en bruker må man først in på registrerings siden. 
+            For å komme til registreringssiden,</div>
     </div>
 
     <div class="faq-item" onclick="toggleAnswer('q2')">
@@ -47,7 +48,8 @@ require_once "config.php";
 
     <div class="faq-item" onclick="toggleAnswer('q4')">
         <div class="question">Hvordan endre Navn/Brukernavn/Passord?</div>
-        <div class="answer" id="q4">Får å endre navn, brukernavn eller passord må du inn på profil siden. Trykk på profil ikonet i topmenyen </div>
+        <div class="answer" id="q4">Får å endre navn, brukernavn eller passord må du inn på profil siden. 
+            Trykk på profil ikonet i topmenyen, tredije fra venstre. </div>
     </div>
 
     <div class="faq-item" onclick="toggleAnswer('q5')">

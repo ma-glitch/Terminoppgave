@@ -1,5 +1,5 @@
 # Terminoppgave
-dette er min terminoppgave som jeg skal levere før jul 2023.
+dette er min terminoppgave som jeg skal levere før jul 2023 og jeg suger baller
 
 det er en bot nettside for alle mulige idretts lag og fungerer med penger og andre bøter som slag eller løpe runder.
 
