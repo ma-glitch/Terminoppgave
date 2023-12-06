@@ -60,9 +60,9 @@ require_once "config.php";
         <div class="answer" id="q6"></div>
     </div>
 
-    <div class="faq-item" onclick="toggleAnswer('q6')">
+    <div class="faq-item" onclick="toggleAnswer('q7')">
         <div class="question">Hvordan skaffe administrator retigheter?</div>
-        <div class="answer" id="q6"></div>
+        <div class="answer" id="q7">Viss du trenger administrator retigheter på nettsiden må du kontakte vår support annsvarlig her: example@exampleemail.com</div>
     </div>
 
 
