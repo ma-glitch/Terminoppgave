@@ -21,9 +21,6 @@ require_once "config.php";
                     width="auto"></a></li>
         <li><a href="profil.php"><img src="assets\svg\user-01-svgrepo-com.svg" class="menyicon" height="40px"
                     width="auto"></a></li>
-        <?php
-        include "menu.php";
-        ?>
         <li><a href="FAQ.php"><img src="assets\svg\circle-help-svgrepo-com.svg" class="menyiconAktiv" height="40px"
                     width="auto"></a></li>
     </ul>
@@ -34,7 +31,7 @@ require_once "config.php";
     
     <div class="faq-item" onclick="toggleAnswer('q1')">
         <div class="question"><h2>Hvordan registrere bruker?</div>
-        <div class="answer" id="q1">This FAQ page provides answers to frequently asked questions about our services.</div>
+        <div class="answer" id="q1">For å registrere en bruker må man først in på registrerings siden. For å komme til registreringssiden,</div>
     </div>
 
     <div class="faq-item" onclick="toggleAnswer('q2')">
@@ -52,8 +49,23 @@ require_once "config.php";
         <div class="answer" id="q4">You can contact our customer support team through email at support@example.com.</div>
     </div>
 
+    <div class="faq-item" onclick="toggleAnswer('q5')">
+        <div class="question"><h2>Hvordan betale bot?</div>
+        <div class="answer" id="q5"></div>
+    </div>
+
+    <div class="faq-item" onclick="toggleAnswer('q')">
+        <div class="question"><h2></div>
+        <div class="answer" id="q"></div>
+    </div>
+
+    <div class="faq-item" onclick="toggleAnswer('q')">
+        <div class="question"><h2></div>
+        <div class="answer" id="q"></div>
+    </div>
+
+
 </div>
-    <!-- Add more FAQ items as needed -->
 
     <script>
         function toggleAnswer(questionId) {

@@ -1,3 +1,4 @@
+
 body {
   font-family: Arial, Helvetica, sans-serif;
   overflow-x: hidden;
@@ -54,9 +55,11 @@ ul.topnav {
   display: flex;
   justify-content: center;
 }
+
 .menyicon {
   height: 40px; width: auto;
 }
+
 ul.topnav li {float: left;}
 
 ul.topnav li a {
@@ -527,6 +530,7 @@ form{
   }
 }
 
+
 /* registrering */
 
 .registrer-form{
@@ -607,6 +611,7 @@ form{
 /*---------------------
     Profil side
 ---------------------*/
+
 .Profil-wrapper {
   display: flex;
   justify-content: center;
@@ -869,6 +874,7 @@ form{
   );
 }
 
+
 .mstrip {
   position: absolute;
   background-color: rgb(255, 255, 255);
@@ -934,8 +940,10 @@ form{
 }
 
 
-/*    FAQ side */
 
+/*-------------*/
+/*   FAQ side  */
+/*-------------*/
 
 
 #FAQ {
@@ -953,6 +961,7 @@ form{
 }
 
 .faq-item {
+  border-radius: 10px;
   width: 50%;
   margin-bottom: 20px;
   padding: 10px;
