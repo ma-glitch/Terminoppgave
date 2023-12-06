@@ -37,17 +37,17 @@ require_once "config.php";
 
     <div class="faq-item" onclick="toggleAnswer('q2')">
         <div class="question">Hvordan log in?</div>
-        <div class="answer" id="q2">You can contact our customer support team through email at support@example.com.</div>
+        <div class="answer" id="q2"></div>
     </div>
 
     <div class="faq-item" onclick="toggleAnswer('q3')">
         <div class="question">Hvordan legge til bot?</div>
-        <div class="answer" id="q3">You can contact our customer support team through email at support@example.com.</div>
+        <div class="answer" id="q3"></div>
     </div>
 
     <div class="faq-item" onclick="toggleAnswer('q4')">
         <div class="question">Hvordan endre Navn/Brukernavn/Passord?</div>
-        <div class="answer" id="q4">You can contact our customer support team through email at support@example.com.</div>
+        <div class="answer" id="q4">Får å endre navn, brukernavn eller passord må du inn på profil siden. Trykk på profil ikonet i topmenyen </div>
     </div>
 
     <div class="faq-item" onclick="toggleAnswer('q5')">
