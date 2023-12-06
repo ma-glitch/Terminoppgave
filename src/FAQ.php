@@ -30,38 +30,38 @@ require_once "config.php";
     <div id="FAQ">
     
     <div class="faq-item" onclick="toggleAnswer('q1')">
-        <div class="question"><h2>Hvordan registrere bruker?</div>
+        <div class="question">Hvordan registrere bruker?</div>
         <div class="answer" id="q1">For å registrere en bruker må man først in på registrerings siden. For å komme til registreringssiden,</div>
     </div>
 
     <div class="faq-item" onclick="toggleAnswer('q2')">
-        <div class="question"><h2>Hvordan log in?</div>
+        <div class="question">Hvordan log in?</div>
         <div class="answer" id="q2">You can contact our customer support team through email at support@example.com.</div>
     </div>
 
     <div class="faq-item" onclick="toggleAnswer('q3')">
-        <div class="question"><h2>Hvordan legge til bot?</div>
+        <div class="question">Hvordan legge til bot?</div>
         <div class="answer" id="q3">You can contact our customer support team through email at support@example.com.</div>
     </div>
 
     <div class="faq-item" onclick="toggleAnswer('q4')">
-        <div class="question"><h2>Hvordan endre Navn?</div>
+        <div class="question">Hvordan endre Navn/Brukernavn/Passord?</div>
         <div class="answer" id="q4">You can contact our customer support team through email at support@example.com.</div>
     </div>
 
     <div class="faq-item" onclick="toggleAnswer('q5')">
-        <div class="question"><h2>Hvordan betale bot?</div>
+        <div class="question">Hvordan betale bot?</div>
         <div class="answer" id="q5"></div>
     </div>
 
-    <div class="faq-item" onclick="toggleAnswer('q')">
-        <div class="question"><h2></div>
-        <div class="answer" id="q"></div>
+    <div class="faq-item" onclick="toggleAnswer('q6')">
+        <div class="question">Hvordan endre total?</div>
+        <div class="answer" id="q6"></div>
     </div>
 
-    <div class="faq-item" onclick="toggleAnswer('q')">
-        <div class="question"><h2></div>
-        <div class="answer" id="q"></div>
+    <div class="faq-item" onclick="toggleAnswer('q6')">
+        <div class="question">Hvordan skaffe administrator retigheter?</div>
+        <div class="answer" id="q6"></div>
     </div>
 
 
