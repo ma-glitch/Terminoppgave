@@ -971,11 +971,8 @@ form{
   background-color: rgb(231, 231, 231);
 }
 
-.question::after{
-  background-color: #202020;
-}
-
 .question {
+  
   font-weight: bold;
   font-size: 30px;
   text-align: center;

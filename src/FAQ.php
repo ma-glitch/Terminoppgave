@@ -23,9 +23,7 @@ require_once "config.php";
                     width="auto"></a></li>
         <li><a href="FAQ.php"><img src="assets\svg\circle-help-svgrepo-com.svg" class="menyiconAktiv" height="40px"
                     width="auto"></a></li>
-                    <?php
-        include "menu.php";
-        ?>
+
     </ul>
 
     <h1 id="head">FAQ</h1>
