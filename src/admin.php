@@ -58,6 +58,8 @@ if (!isset($_SESSION["admin"]) || $_SESSION["admin"] !== "yes") {
       <th class="TABLE">Total ubetalt</th>
       <th class="TABLE">Oppdatere tabel</td>
     </tr>
+    <!--Her henter man ut alle brukere fra databasen og vier dem fremm på amdin siden
+    med knapper forå endre data i databasen -->
     <?php
   
     $sql = "SELECT navn, total, ubetalt FROM login ORDER BY CONVERT(total,INTEGER) DESC";
