@@ -1,7 +1,7 @@
 <?php
 session_start();
 require_once "config.php";
-// Check if the user is logged in, if not then redirect him to login page
+// se om brukeren er koblet til og sende han til log in siden hvis han ikke er det.
 if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
   header("location: login.php");
   exit;
@@ -42,7 +42,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 
 
 
-
+ <!-- her lagger man formen for å legge til bot -->
         <form action="process.php" method="post" id="BotOversikt">
 
         <h1 class="leggtilover">Legg til bot</h1>
