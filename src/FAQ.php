@@ -49,7 +49,7 @@ require_once "config.php";
 
     <div class="faq-item" onclick="toggleAnswer('q3')">
         <div class="question">Hvordan legge til bot?</div>
-        <div class="answer" id="q3"><h3>Får å legge til bot må du være på botsiden. </div>
+        <div class="answer" id="q3"><h3>Får å legge til bot må du være på botsiden. For å komme til botsiden</div>
     </div>
 
     <div class="faq-item" onclick="toggleAnswer('q4')">
@@ -64,12 +64,16 @@ require_once "config.php";
 
     <div class="faq-item" onclick="toggleAnswer('q5')">
         <div class="question">Hvordan betale bot?</div>
-        <div class="answer" id="q5"><h3></div>
+        <div class="answer" id="q5"><h3>Når du ønsker å betale bot går du til hjemmesiden. På toppen av siden 
+            under menyen finner du et kort. Hold musen over for å sunnu korte.(Holde inn/trykke på mobil) 
+            På baksiden ser du et telefonnumer, vipps den mengen av din totale ubetale som du ønsker å betale 
+            og skriv i vipps sammen med pengene at du betaler bot. </div>
     </div>
 
     <div class="faq-item" onclick="toggleAnswer('q6')">
         <div class="question">Hvordan endre total/ubetalt?</div>
-        <div class="answer" id="q6"><h3></div>
+        <div class="answer" id="q6"><h3>Ønsker du å fjerne/endre total/ubetalt må du kontakte en av netsidens 
+            adminiastratorer.</div>
     </div>
 
     <div class="faq-item" onclick="toggleAnswer('q7')">
