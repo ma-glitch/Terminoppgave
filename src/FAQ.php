@@ -32,39 +32,50 @@ require_once "config.php";
     
     <div class="faq-item" onclick="toggleAnswer('q1')">
         <div class="question">Hvordan registrere bruker?</div>
-        <div class="answer" id="q1">For å registrere en bruker må man først in på registrerings siden. 
-            For å komme til registreringssiden,</div>
+        <div class="answer" id="q1"><h3>For å registrere en bruker må man først in på registrerings siden. 
+            For å komme til registreringssiden, når du er inne på log in siden. Nede i hjørne av log in 
+            siden til høyre for FAQ linken står det "registrering". Trykk på "Registrering. Når du har 
+            kommet inn på registerings siden vil du se fire felter, fyll ut dise feltene med navn 
+            brukernavn og passord som du ønsker å bruke. Etter å ha fylt ut alle fire feltene 
+            trykker du på "Registrer". Nå har du blitt registrert.</div>
     </div>
 
     <div class="faq-item" onclick="toggleAnswer('q2')">
         <div class="question">Hvordan log in?</div>
-        <div class="answer" id="q2"></div>
+        <div class="answer" id="q2"><h3>På login siden bruk brukernavnet og passoret du valgte i 
+            registreringen og fyller det inn i feltene og trykk på "login". Du blir nå sent til 
+            hjemmesiden.</div>
     </div>
 
     <div class="faq-item" onclick="toggleAnswer('q3')">
         <div class="question">Hvordan legge til bot?</div>
-        <div class="answer" id="q3"></div>
+        <div class="answer" id="q3"><h3>Får å legge til bot må du være på botsiden. </div>
     </div>
 
     <div class="faq-item" onclick="toggleAnswer('q4')">
         <div class="question">Hvordan endre Navn/Brukernavn/Passord?</div>
-        <div class="answer" id="q4">Får å endre navn, brukernavn eller passord må du inn på profil siden. 
-            Trykk på profil ikonet i topmenyen, tredije fra venstre. </div>
+        <div class="answer" id="q4"><h3>Får å endre navn, brukernavn eller passord må du inn på profil siden. 
+            Trykk på profil ikonet i topmenyen, tredije fra venstre. Når du er inne på profil siden vill 
+            du se tre rader nedover. Den første raden er for navn, andre for brukernavn og siste for passord.
+            Får å endre navn går du til raden Navn og putter in det nye navne i boksen til høyre. 
+            Etter å ha puttet in den nye navnet trykker du på kanappen til høyre for boksen. For å ender 
+            brukernavn eller passord gjør du det samme, men i brukernavn eller passor raden.</div>
     </div>
 
     <div class="faq-item" onclick="toggleAnswer('q5')">
         <div class="question">Hvordan betale bot?</div>
-        <div class="answer" id="q5"></div>
+        <div class="answer" id="q5"><h3></div>
     </div>
 
     <div class="faq-item" onclick="toggleAnswer('q6')">
-        <div class="question">Hvordan endre total?</div>
-        <div class="answer" id="q6"></div>
+        <div class="question">Hvordan endre total/ubetalt?</div>
+        <div class="answer" id="q6"><h3></div>
     </div>
 
     <div class="faq-item" onclick="toggleAnswer('q7')">
         <div class="question">Hvordan skaffe administrator retigheter?</div>
-        <div class="answer" id="q7">Viss du trenger administrator retigheter på nettsiden må du kontakte vår support annsvarlig her: support@example.com</div>
+        <div class="answer" id="q7"><h3>Viss du trenger administrator retigheter på nettsiden må du kontakte 
+            vår support annsvarlig her: support@example.com</div>
     </div>
 
 
