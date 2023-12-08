@@ -47,6 +47,8 @@ body {
     border-right-style: none;
     border-bottom-style: solid;
     border-left-style: none;
+    border-color: #00873E;
+    
     margin: 0;
     padding: 0;
     overflow: hidden;
@@ -56,6 +58,9 @@ body {
   }
   .menyicon {
     height: 40px; width: auto;
+    border-width: 5px;
+    border-bottom-style: dashed;
+    border-color: red;
   }
   ul.topnav li {float: left;}
   
@@ -79,11 +84,12 @@ body {
   }
   
   .menyiconAktiv {
-    border-bottom: solid;
-    border-color: #27535B;
+    border-bottom-style: dashed;
+    border-color: #00873E;
     border-width: 5px;
+    box-shadow: 0 0px 10px 5px red;
   }
-  
+
   /*---------------------------*/
   /*      Legge til bot        */
   /*---------------------------*/
@@ -154,23 +160,23 @@ body {
       width: 1px;
     }
     .checkbox-wrapper-16 .checkbox-input:checked + .checkbox-tile {
-      border-color: #2260ff;
+      border-color: #00873E;
       box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-      color: #2260ff;
+      color: #00873E;
     }
     .checkbox-wrapper-16 .checkbox-input:checked + .checkbox-tile:before {
       transform: scale(1);
       opacity: 1;
-      background-color: #2260ff;
-      border-color: #2260ff;
+      background-color: #00873E;
+      border-color: #00873E;
     }
     .checkbox-wrapper-16 .checkbox-input:checked + .checkbox-tile .checkbox-icon,
     .checkbox-wrapper-16 .checkbox-input:checked + .checkbox-tile .checkbox-label {
-      color: #2260ff;
+      color: red;
     }
     .checkbox-wrapper-16 .checkbox-input:focus + .checkbox-tile {
-      border-color: #2260ff;
-      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1), 0 0 0 4px #b5c9fc;
+      border-color: #00873E;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1), 0 0 0 4px #00873E;
     }
     .checkbox-wrapper-16 .checkbox-input:focus + .checkbox-tile:before {
       transform: scale(1);
@@ -185,7 +191,7 @@ body {
       width: 7rem;
       min-height: 7rem;
       border-radius: 0.5rem;
-      border: 2px solid #b5bfd9;
+      border: 2px solid #00873E;
       background-color: #fff;
       box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
       transition: 0.15s ease;
@@ -198,7 +204,7 @@ body {
       display: block;
       width: 1.25rem;
       height: 1.25rem;
-      border: 2px solid #b5bfd9;
+      border: 2px solid #00873E;
       background-color: #fff;
       border-radius: 50%;
       top: 0.25rem;
@@ -212,7 +218,7 @@ body {
       background-position: 50% 50%;
     }
     .checkbox-wrapper-16 .checkbox-tile:hover {
-      border-color: #2260ff;
+      border-color: #00873E;
     }
     .checkbox-wrapper-16 .checkbox-tile:hover:before {
       transform: scale(1);
@@ -243,27 +249,29 @@ body {
       font-weight: bold;
       width: 150px;
       color: #fff;
-      background-color: #27535B;
+      background-color:#00873E;
       border-top-style: none ;
       border-right-style: none ; 
       border-left-style: none ; 
       border-bottom-style: solid ;
       border-radius: 8px;
       border-width: 5px;
-      border-color: #a7d3d8;
+      border-color: red;
       cursor: pointer;
   }
   
   .leggtilbtn:hover {
-    background-color: #a7d3d8 ;
-    border-color: #27535B;
+    background-color: red ;
+    border-color: #00873E;
   }
   
   
   /* Admin Siden */
   
   .betalebtn{
-    background-color: #27535B;
+    margin-left: 10px;
+    margin-top: 50px;
+    background-color: #00873E;
     position: relative;
     height: 50px;
     width: 300px;
@@ -271,7 +279,7 @@ body {
     font-weight: bold;
     font-size: 25px;
     color: white;
-    border: 7px #a7d3d8;
+    border: 7px red;
     border-top-style: none ;
     border-right-style: none ; 
     border-left-style: none ; 
@@ -288,14 +296,14 @@ body {
   }
   
   .betalebtn:hover {
-    color: #27535B;
+    color: #00873E;
   }
   
   .betalebtn:before {
-    color: #27535B;
+    color: whitesmoke;
     content: "";
     position: absolute;
-    background-color: #a7d3d8;
+    background-color: red;
     bottom: 0;
     left: 0;
     right: 0;
@@ -418,6 +426,8 @@ body {
     margin-top: 100px;
     border-radius: 8px;
     border:1px solid #EEEEEE;
+    box-shadow: 0 0px 10px 5px red;
+    outline: dashed 5px #00873E;
   }
     
     #score td, #score th {
@@ -434,8 +444,8 @@ body {
       padding-top: 12px;
       padding-bottom: 12px;
       text-align: center;
-      background-color: #4EA6B6;
-      color: black;
+      background-color: #00873E;
+      color: red;
     }
   
   /*-------------------------
@@ -459,14 +469,19 @@ body {
     border-top:none;
     border-left: none;
     border-right: none;
-    border-bottom: 1px solid black;
+    border-bottom: 2px solid red;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
     border-radius: 5px;
-    background-color: rgb(128, 128, 128, 0.2);
+    background-color: #00873E;
   }
+
+  .containerlogin ::placeholder{
+    color: white;
+  }
+
   #loginbtn {
-    background-color: rgb(153, 209, 209);
+    background-color: #00873E;
     color: white;
     padding: 14px 20px;
     margin: 8px 0;
@@ -505,6 +520,7 @@ body {
   .psw {
     float: right;
     padding: 8.5px;
+    color: red;
   }
   
   .error{
@@ -545,11 +561,15 @@ body {
     border-top:none;
     border-left: none;
     border-right: none;
-    border-bottom: 1px solid black;
+    border-bottom: 2px solid red;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
     border-radius: 5px;
-    background-color: rgb(128, 128, 128, 0.2);
+    background-color: #00873E;
+  }
+
+  .registrer-form ::placeholder {
+    color: white;
   }
   
   .registrer-form label{
@@ -557,7 +577,7 @@ body {
   }
   
   .Registrerbtn{
-    background-color: rgb(153, 209, 209);
+    background-color: #00873E;
     float: left;
     color: white;
     padding: 14px 20px;
@@ -565,7 +585,6 @@ body {
     border: none;
     cursor: pointer;
     width: 50%;
-    color: black;
     font-weight: 600;
   }
   
@@ -619,12 +638,12 @@ body {
     margin-top: 2.5%;
     border-radius: 20px;
     height: fit-content;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    box-shadow: 0 0px 10px 5px red;
+    outline: dashed 5px #00873E;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     align-items: center;
-  
   }
   
   #endretable {
@@ -653,6 +672,7 @@ body {
   
   .Endreprofil td{
       margin: 20px;
+      color: #00873E;
   }
   
   .headerinfo {
@@ -663,7 +683,7 @@ body {
   #logutbtn {
     margin-left: 10px;
     margin-top: 50px;
-    background-color: #27535B;
+    background-color: #00873E;
     position: relative;
     height: 50px;
     width: 300px;
@@ -737,25 +757,25 @@ body {
   }
   
   .profilbtn {
-    background-color: #a7d3d8;
+    background-color: #00873E;
     text-decoration: none;
     width: 200px;
     height: 35px;
     font-size: 20px;
     font-weight: bold;
-    border-color: #27535B;
+    border-color: red;
     border-radius: 1px;
     border-width: 7px;
     border-bottom-style: none;
     border-top-style: none;
-    border-right-style:solid   ;
+    border-right-style:solid;
     cursor: pointer;
+    color: white;
   }
   
   .profilbtn:hover {
-    background-color: #27535B;
-    border-color: #a7d3d8;
-    color: #fff;
+    background-color: red;
+    border-color: #00873E;
   }
   
   @media only screen and (max-width: 600px) {

@@ -14,22 +14,26 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profil</title>
-    <link rel="stylesheet" type="text/css" href="stylejul.css" />
-    <link rel="icon" type="image/x-icon" href="Bilder/linje5.jpg">
+    <?php
+    include "css.php";
+    ?>
+    <link rel="icon" type="image/x-icon" href="assets/jpg/linje5.jpg">
 </head>
 
 <body>
 <ul class="topnav">
-        <li><a href="index.php"><img src="Bilder/house-03-svgrepo-com.svg" class="menyicon" height="40px"
+        <li><a href="index.php"><img src="assets/svg/house-03-svgrepo-com.svg" class="menyicon" height="40px"
                     width="auto"></a></li>
-        <li><a href="leggtil.php"><img src="Bilder/file-add-svgrepo-com.svg" class="menyicon" height="40px"
+        <li><a href="leggtil.php"><img src="assets/svg/file-add-svgrepo-com.svg" class="menyicon" height="40px"
                     width="auto"></a></li>
-        <li><a href="profil.php"><img src="Bilder/user-01-svgrepo-com.svg" class="menyiconAktiv" height="40px"
+                    <li><a href="profil.php"><img src="assets/svg/user-01-svgrepo-com.svg" class="menyiconAktiv" height="40px"
+                    width="auto"></a></li>
+       <li><a href="FAQ.php"><img src="assets\svg\circle-help-svgrepo-com.svg" class="menyicon" height="40px"
                     width="auto"></a></li>
         <?php
         include "menu.php";
         ?>
-    </ul>
+    </ul> 
 
     <?php
 

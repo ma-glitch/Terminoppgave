@@ -80,13 +80,15 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
 <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bot system Linje-5</title>
-    <link rel="stylesheet" type="text/css" href="style.css" />
-    <link rel="icon" type="image/x-icon" href="Bilder/linje5.jpg">
+    <?php
+    include "css.php";
+    ?>
+    <link rel="icon" type="image/x-icon" href="assets/jpg/linje5.jpg">
 </head>
 <body>
     <form action="<?=$_SERVER['PHP_SELF'];?>" method="GET" class="form-group">
         <div class="imgcontainer">
-          <img src="Bilder/Linje5.jpg" alt="linje5" class="avatar">
+          <img src="assets/jpg/Linje5.jpg" alt="linje5" class="avatar">
         </div>
       
         <div class="containerlogin">
@@ -104,6 +106,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
       
         <div class="wrapperlog" style="background-color:#f1f1f1">
           <a class="psw" href="registrering.php">Registrering</a>
+          <a class="psw" href="FAQ.php">FAQ</a>
         </div>
       </form>
 
