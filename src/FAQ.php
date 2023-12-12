@@ -31,7 +31,7 @@ require_once "config.php";
     <div id="FAQ">
     
     <div class="faq-item" onclick="toggleAnswer('q1')">
-        <div class="question">Hvordan registrere bruker?</div>
+        <div class="question">Hvordan registrerer jeg en bruker?</div>
         <div class="answer" id="q1"><h3>For å registrere en bruker må man først in på registrerings siden. 
             For å komme til registeringssiden, når du er inne på log in siden. Nede i hjørne av log in 
             siden til høyre for FAQ lenken står det "registrering". Trykk på "Registrering. Når du har 
@@ -41,14 +41,14 @@ require_once "config.php";
     </div>
 
     <div class="faq-item" onclick="toggleAnswer('q2')">
-        <div class="question">Hvordan log in?</div>
+        <div class="question">Hvordan logger jeg in?</div>
         <div class="answer" id="q2"><h3>På login siden bruk brukernavnet og passordet du valgte i 
             registreringen og fyller det inn i feltene og trykk på "login". Du blir nå sent til 
             hjemmesiden.</div>
     </div>
 
     <div class="faq-item" onclick="toggleAnswer('q3')">
-        <div class="question">Hvordan legge til bot?</div>
+        <div class="question">Hvordan legger jeg til bot på meg selv?</div>
         <div class="answer" id="q3"><h3>Får å legge til bot må du være på botsiden. For å komme til botsiden 
             trykker du på legg til ikonet i toppmenyen, andre fra venstre. Når du er inne på bot siden vill du se 
             forskjellige bokser, vær boks er en spesifikk bot. Velg de/den boten du skal legge til ved å trykke 
@@ -57,17 +57,22 @@ require_once "config.php";
     </div>
 
     <div class="faq-item" onclick="toggleAnswer('q4')">
-        <div class="question">Hvordan endre Navn/Brukernavn/Passord?</div>
-        <div class="answer" id="q4"><h3>Får å endre navn, brukernavn eller passord må du inn på profil siden. 
-            Trykk på profil ikonet i toppmenyen, tredje fra venstre. Når du er inne på profil siden vill 
-            du se tre rader nedover. Den første raden er for navn, andre for brukernavn og siste for passord.
-            Får å endre navn går du til raden Navn og putter in det nye navne i boksen til høyre. 
-            Etter å ha puttet in den nye navnet trykker du på knappen til høyre for boksen. For å ende 
-            brukernavn eller passord gjør du det samme, men i brukernavn eller passord raden.</div>
+        <div class="question">Hvordan endrer jeg Navn/Brukernavn/Passord?</div>
+        <div class="answer" id="q4"><h3>
+        <ul>
+            <li>For å endre navn, brukernavn eller passord må du inn på profil siden. </li>
+            <li>Trykk på profil ikonet i toppmenyen, tredje fra venstre.</li>
+            <li>Når du er inne på profil siden vil du se tre rader nedover.</li>
+            <li>Den første raden er for navn, andre for brukernavn og siste for passord.</li>
+            <li>For å endre navn går du til raden Navn og putter in det nye navne i boksen til høyre.</li>
+            <li>Etter å ha puttet in den nye navnet trykker du på knappen til høyre for boksen.</li>
+            <li>For å endre brukernavn eller passord gjør du det samme, men i brukernavn eller passord raden.</li>
+        </ul>
+        </div>
     </div>
 
     <div class="faq-item" onclick="toggleAnswer('q5')">
-        <div class="question">Hvordan betale bot?</div>
+        <div class="question">Hvordan betaler jeg bot?</div>
         <div class="answer" id="q5"><h3>Når du ønsker å betale bot går du til hjemmesiden. På toppen av siden 
             under menyen finner du et kort. Hold musen over for å snu korte. (Holde inn/trykke på mobil) 
             På baksiden ser du et telefonnummer, vipps den mengden av din totale utbetale som du ønsker å betale 
@@ -75,13 +80,13 @@ require_once "config.php";
     </div>
 
     <div class="faq-item" onclick="toggleAnswer('q6')">
-        <div class="question">Hvordan endre total/ubetalt?</div>
+        <div class="question">Hvordan endrer jeg total/ubetalt på meg selv?</div>
         <div class="answer" id="q6"><h3>Ønsker du å fjerne/endre total/ubetalt må du kontakte en av nettsidens 
             administratorer.</div>
     </div>
 
     <div class="faq-item" onclick="toggleAnswer('q7')">
-        <div class="question">Hvordan skaffe administrator retigheter?</div>
+        <div class="question">Hvordan skaffer jeg administrator retigheter?</div>
         <div class="answer" id="q7"><h3>Hvis du trenger administrator rettigheter på nettsiden må du kontakte 
             vår support ansvarlig her: support@example.com</div>
     </div>
